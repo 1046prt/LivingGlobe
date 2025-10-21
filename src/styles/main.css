@@ -657,6 +657,25 @@ body {
   font-weight: bold;
 }
 
+/* Custom scrollbar for help modal */
+.help-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.help-content::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.help-content::-webkit-scrollbar-thumb {
+  background: rgba(0, 212, 255, 0.6);
+  border-radius: 4px;
+}
+
+.help-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 212, 255, 0.8);
+}
+
 /* Responsive Help Modal */
 @media (max-width: 768px) {
   .help-content {
