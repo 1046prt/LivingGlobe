@@ -5,65 +5,323 @@ export class SimpleGlobe {
     this.scene = scene;
     this.dataManager = dataManager;
     this.globeMesh = null;
+    this.atmosphereMesh = null;
+    this.cloudsMesh = null;
     this.countryMarkers = [];
+    this.isRotating = true;
+    this.rotationSpeed = 0.002;
 
     // Mouse interaction
     this.mouse = new THREE.Vector2();
     this.raycaster = new THREE.Raycaster();
     this.hoveredCountry = null;
 
+    // Animation properties
+    this.time = 0;
+    this.pulsePhase = 0;
+
     this.initMouseEvents();
   }
 
   async init() {
-    console.log("SimpleGlobe: Creating basic globe...");
+    console.log("SimpleGlobe: Creating realistic globe...");
 
-    // Create a simple blue sphere
+    await this.createRealisticEarth();
+    this.createAtmosphere();
+    this.createClouds();
+    this.createStarField();
+    this.createSimpleCountries();
+
+    console.log("SimpleGlobe: Realistic globe created successfully");
+  }
+
+  async createRealisticEarth() {
     const geometry = new THREE.SphereGeometry(1, 32, 32);
+
+    // Create simple Earth material - start with basic color to ensure visibility
     const material = new THREE.MeshPhongMaterial({
-      color: 0x4a90e2,
-      shininess: 100,
+      color: 0x2a5f7f, // Ocean blue
+      shininess: 30,
     });
 
     this.globeMesh = new THREE.Mesh(geometry, material);
+    this.globeMesh.receiveShadow = true;
+    this.globeMesh.castShadow = true;
     this.scene.add(this.globeMesh);
 
-    // Add some simple country markers
-    this.createSimpleCountries();
-
-    console.log("SimpleGlobe: Basic globe created successfully");
+    console.log("Globe mesh created and added to scene");
   }
 
-  createCountryLabel(countryName, x, y, z) {
-    // Create a canvas for the text
+  createEarthDayTexture() {
     const canvas = document.createElement("canvas");
-    const context = canvas.getContext("2d");
-    canvas.width = 256;
-    canvas.height = 64;
+    canvas.width = 1024;
+    canvas.height = 512;
+    const ctx = canvas.getContext("2d");
 
-    // Style the text
-    context.fillStyle = "rgba(0, 0, 0, 0.8)";
-    context.fillRect(0, 0, canvas.width, canvas.height);
+    // Create realistic Earth colors - minimal and natural
+    ctx.fillStyle = "#1a4d66"; // Deep ocean blue
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    context.fillStyle = "white";
-    context.font = "16px Arial";
-    context.textAlign = "center";
-    context.fillText(countryName, canvas.width / 2, canvas.height / 2 + 6);
+    // Add realistic continent shapes with natural colors
+    const continents = [
+      { x: 150, y: 200, w: 200, h: 150, color: "#2d5016" }, // Dark green land
+      { x: 400, y: 180, w: 180, h: 120, color: "#3d4a2e" }, // Forest green
+      { x: 650, y: 220, w: 160, h: 100, color: "#4a5d23" }, // Land green
+      { x: 200, y: 350, w: 140, h: 80, color: "#2d5016" }, // More land
+      { x: 500, y: 320, w: 120, h: 90, color: "#3d4a2e" }, // More forest
+      { x: 750, y: 300, w: 100, h: 70, color: "#4a5d23" }, // More land
+    ];
 
-    // Create texture from canvas
-    const texture = new THREE.CanvasTexture(canvas);
+    continents.forEach((continent) => {
+      ctx.fillStyle = continent.color;
+      ctx.beginPath();
+      ctx.ellipse(
+        continent.x,
+        continent.y,
+        continent.w / 2,
+        continent.h / 2,
+        0,
+        0,
+        Math.PI * 2
+      );
+      ctx.fill();
+    });
 
-    // Create sprite material
-    const spriteMaterial = new THREE.SpriteMaterial({
-      map: texture,
+    // Add some subtle terrain variation
+    for (let i = 0; i < 15; i++) {
+      const x = Math.random() * canvas.width;
+      const y = Math.random() * canvas.height;
+      const radius = Math.random() * 40 + 20;
+      ctx.fillStyle = `rgba(45, 80, 22, ${Math.random() * 0.3 + 0.2})`;
+      ctx.beginPath();
+      ctx.arc(x, y, radius, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    return new THREE.CanvasTexture(canvas);
+  }
+
+  createEarthNightTexture() {
+    const canvas = document.createElement("canvas");
+    canvas.width = 1024;
+    canvas.height = 512;
+    const ctx = canvas.getContext("2d");
+
+    // Dark base
+    ctx.fillStyle = "#0a0a0a";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    // Add subtle, realistic city lights - fewer and more natural
+    ctx.fillStyle = "#ffcc66";
+    for (let i = 0; i < 150; i++) {
+      const x = Math.random() * canvas.width;
+      const y = Math.random() * canvas.height;
+      const size = Math.random() * 2 + 0.5;
+      const opacity = Math.random() * 0.8 + 0.2;
+
+      ctx.globalAlpha = opacity;
+      ctx.beginPath();
+      ctx.arc(x, y, size, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    ctx.globalAlpha = 1;
+
+    return new THREE.CanvasTexture(canvas);
+  }
+
+  createEarthNormalMap() {
+    const canvas = document.createElement("canvas");
+    canvas.width = 512;
+    canvas.height = 256;
+    const ctx = canvas.getContext("2d");
+
+    // Create noise for surface details
+    const imageData = ctx.createImageData(canvas.width, canvas.height);
+    for (let i = 0; i < imageData.data.length; i += 4) {
+      const noise = Math.random() * 0.5 + 0.5;
+      imageData.data[i] = noise * 255; // R
+      imageData.data[i + 1] = noise * 255; // G
+      imageData.data[i + 2] = 255; // B
+      imageData.data[i + 3] = 255; // A
+    }
+    ctx.putImageData(imageData, 0, 0);
+
+    return new THREE.CanvasTexture(canvas);
+  }
+
+  createEarthSpecularMap() {
+    const canvas = document.createElement("canvas");
+    canvas.width = 512;
+    canvas.height = 256;
+    const ctx = canvas.getContext("2d");
+
+    // Water areas are more specular
+    ctx.fillStyle = "#000000";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    // Add specular water areas
+    ctx.fillStyle = "#ffffff";
+    for (let i = 0; i < 30; i++) {
+      const x = Math.random() * canvas.width;
+      const y = Math.random() * canvas.height;
+      const width = Math.random() * 200 + 100;
+      const height = Math.random() * 100 + 50;
+      ctx.fillRect(x, y, width, height);
+    }
+
+    return new THREE.CanvasTexture(canvas);
+  }
+
+  createAtmosphere() {
+    const atmosphereGeometry = new THREE.SphereGeometry(1.02, 16, 16);
+    const atmosphereMaterial = new THREE.MeshBasicMaterial({
+      color: 0x87ceeb,
+      transparent: true,
+      opacity: 0.1,
+      side: THREE.BackSide,
+    });
+
+    this.atmosphereMesh = new THREE.Mesh(
+      atmosphereGeometry,
+      atmosphereMaterial
+    );
+    this.scene.add(this.atmosphereMesh);
+  }
+
+  createClouds() {
+    const cloudGeometry = new THREE.SphereGeometry(1.005, 16, 16);
+    const cloudMaterial = new THREE.MeshBasicMaterial({
+      map: this.createCloudTexture(),
+      transparent: true,
+      opacity: 0.3,
+    });
+
+    this.cloudsMesh = new THREE.Mesh(cloudGeometry, cloudMaterial);
+    this.scene.add(this.cloudsMesh);
+  }
+
+  createCloudTexture() {
+    const canvas = document.createElement("canvas");
+    canvas.width = 1024;
+    canvas.height = 512;
+    const ctx = canvas.getContext("2d");
+
+    // Create cloud noise
+    ctx.fillStyle = "rgba(0, 0, 0, 0)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    // Add cloud formations
+    for (let i = 0; i < 100; i++) {
+      const x = Math.random() * canvas.width;
+      const y = Math.random() * canvas.height;
+      const radius = Math.random() * 50 + 20;
+      const opacity = Math.random() * 0.8 + 0.2;
+
+      const gradient = ctx.createRadialGradient(x, y, 0, x, y, radius);
+      gradient.addColorStop(0, `rgba(255, 255, 255, ${opacity})`);
+      gradient.addColorStop(1, "rgba(255, 255, 255, 0)");
+
+      ctx.fillStyle = gradient;
+      ctx.beginPath();
+      ctx.arc(x, y, radius, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    return new THREE.CanvasTexture(canvas);
+  }
+
+  createStarField() {
+    const starsGeometry = new THREE.BufferGeometry();
+    const starsMaterial = new THREE.PointsMaterial({
+      color: 0xffffff,
+      size: 1,
+      sizeAttenuation: false,
       transparent: true,
       opacity: 0.8,
     });
 
+    const starsVertices = [];
+    // Fewer stars for a more realistic look
+    for (let i = 0; i < 2000; i++) {
+      const x = (Math.random() - 0.5) * 2000;
+      const y = (Math.random() - 0.5) * 2000;
+      const z = (Math.random() - 0.5) * 2000;
+      starsVertices.push(x, y, z);
+    }
+
+    starsGeometry.setAttribute(
+      "position",
+      new THREE.Float32BufferAttribute(starsVertices, 3)
+    );
+    const starField = new THREE.Points(starsGeometry, starsMaterial);
+    this.scene.add(starField);
+  }
+
+  createCountryLabel(countryName, x, y, z) {
+    // Create a larger canvas for better text quality
+    const canvas = document.createElement("canvas");
+    const context = canvas.getContext("2d");
+    canvas.width = 400;
+    canvas.height = 100;
+
+    // Clear canvas
+    context.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Create clean background with subtle styling
+    context.fillStyle = "rgba(255, 255, 255, 0.95)";
+    context.beginPath();
+    if (context.roundRect) {
+      context.roundRect(6, 6, canvas.width - 12, canvas.height - 12, 12);
+    } else {
+      context.rect(6, 6, canvas.width - 12, canvas.height - 12);
+    }
+    context.fill();
+
+    // Add subtle border
+    context.strokeStyle = "rgba(0, 0, 0, 0.2)";
+    context.lineWidth = 2;
+    context.stroke();
+
+    // Style the text - larger and bolder
+    context.font = "bold 24px Arial, sans-serif";
+    context.textAlign = "center";
+    context.textBaseline = "middle";
+
+    const centerX = canvas.width / 2;
+    const centerY = canvas.height / 2;
+
+    // Draw text outline for better contrast
+    context.strokeStyle = "#ffffff";
+    context.lineWidth = 4;
+    context.strokeText(countryName, centerX, centerY);
+
+    // Draw the main text - dark and bold
+    context.fillStyle = "#1a1a1a";
+    context.fillText(countryName, centerX, centerY);
+
+    // Create texture from canvas
+    const texture = new THREE.CanvasTexture(canvas);
+    texture.needsUpdate = true;
+
+    // Create sprite material with better settings
+    const spriteMaterial = new THREE.SpriteMaterial({
+      map: texture,
+      transparent: true,
+      opacity: 0.9,
+      alphaTest: 0.1,
+    });
+
     // Create sprite
     const sprite = new THREE.Sprite(spriteMaterial);
-    sprite.position.set(x * 1.2, y * 1.2, z * 1.2); // Position slightly outside the globe
-    sprite.scale.set(0.3, 0.1, 1);
+    sprite.position.set(x * 1.15, y * 1.15, z * 1.15);
+    sprite.scale.set(0.5, 0.15, 1); // Larger scale for better visibility
+
+    // Store label data for updates
+    sprite.userData = {
+      isLabel: true,
+      countryName: countryName,
+      originalPosition: new THREE.Vector3(x * 1.15, y * 1.15, z * 1.15),
+    };
 
     this.scene.add(sprite);
   }
@@ -71,7 +329,7 @@ export class SimpleGlobe {
   createSimpleCountries() {
     const countries = this.dataManager.getCountries();
     console.log(
-      "SimpleGlobe: Creating markers for",
+      "SimpleGlobe: Creating enhanced markers for",
       countries.length,
       "countries"
     );
@@ -83,33 +341,64 @@ export class SimpleGlobe {
       // Convert lat/lon to 3D position
       const phi = (90 - lat) * (Math.PI / 180);
       const theta = (lon + 180) * (Math.PI / 180);
-      const radius = 1.05;
+      const radius = 1.06;
 
       const x = -(radius * Math.sin(phi) * Math.cos(theta));
       const z = radius * Math.sin(phi) * Math.sin(theta);
       const y = radius * Math.cos(phi);
 
-      // Create a marker with size based on population
+      // Create enhanced marker with glow effect
       const populationScale =
         Math.log(country.population || 1000000) / Math.log(1000000000);
       const markerSize = Math.max(
-        0.015,
-        Math.min(0.035, 0.015 + populationScale * 0.02)
+        0.012,
+        Math.min(0.025, 0.012 + populationScale * 0.015)
       );
 
-      const markerGeometry = new THREE.SphereGeometry(markerSize, 8, 8);
+      // Create marker group for complex effects
+      const markerGroup = new THREE.Group();
+
+      // Main marker sphere - simple and minimal
+      const markerGeometry = new THREE.SphereGeometry(markerSize, 12, 12);
       const markerMaterial = new THREE.MeshBasicMaterial({
-        color: 0xff6b6b,
+        color: 0xffffff,
+        transparent: true,
+        opacity: 0.8,
       });
 
       const marker = new THREE.Mesh(markerGeometry, markerMaterial);
-      marker.position.set(x, y, z);
-      marker.userData = { country };
+      markerGroup.add(marker);
 
-      this.countryMarkers.push(marker);
-      this.scene.add(marker);
+      // Simple ring indicator - minimal design
+      const ringGeometry = new THREE.RingGeometry(
+        markerSize * 1.2,
+        markerSize * 1.5,
+        8
+      );
+      const ringMaterial = new THREE.MeshBasicMaterial({
+        color: 0xcccccc,
+        transparent: true,
+        opacity: 0.4,
+        side: THREE.DoubleSide,
+      });
 
-      // Add country name label
+      const ring = new THREE.Mesh(ringGeometry, ringMaterial);
+      ring.lookAt(0, 0, 0); // Face the center
+      markerGroup.add(ring);
+
+      markerGroup.position.set(x, y, z);
+      markerGroup.userData = {
+        country,
+        originalPosition: new THREE.Vector3(x, y, z),
+        pulsePhase: Math.random() * Math.PI * 2,
+        marker: marker,
+        ring: ring,
+      };
+
+      this.countryMarkers.push(markerGroup);
+      this.scene.add(markerGroup);
+
+      // Add enhanced country name label
       this.createCountryLabel(country.name, x, y, z);
     });
   }
@@ -131,28 +420,82 @@ export class SimpleGlobe {
     if (!camera) return;
 
     this.raycaster.setFromCamera(this.mouse, camera);
-    const intersects = this.raycaster.intersectObjects(this.countryMarkers);
+
+    // Create array of all marker meshes for raycasting
+    const markerMeshes = [];
+    this.countryMarkers.forEach((markerGroup) => {
+      if (markerGroup.userData.marker) {
+        markerMeshes.push(markerGroup.userData.marker);
+      }
+    });
+
+    const intersects = this.raycaster.intersectObjects(markerMeshes);
 
     if (intersects.length > 0) {
-      const country = intersects[0].object.userData.country;
+      // Find the parent group
+      const intersectedMesh = intersects[0].object;
+      const markerGroup = this.countryMarkers.find(
+        (group) => group.userData.marker === intersectedMesh
+      );
 
-      if (this.hoveredCountry !== country) {
-        this.hoveredCountry = country;
-        this.showTooltip(country);
+      if (markerGroup) {
+        const country = markerGroup.userData.country;
 
-        // Highlight the marker
-        intersects[0].object.material.color.setHex(0x00ff00);
+        if (this.hoveredCountry !== country) {
+          // Reset previous hover state
+          if (this.hoveredCountry) {
+            this.resetMarkerState(this.hoveredCountry);
+          }
+
+          this.hoveredCountry = country;
+          this.showTooltip(country);
+
+          // Highlight the marker with enhanced effects
+          this.highlightMarker(markerGroup);
+        }
       }
     } else {
       if (this.hoveredCountry) {
+        this.resetMarkerState(this.hoveredCountry);
         this.hoveredCountry = null;
         this.hideTooltip();
-
-        // Reset all marker colors
-        this.countryMarkers.forEach((marker) => {
-          marker.material.color.setHex(0xff6b6b);
-        });
       }
+    }
+  }
+
+  highlightMarker(markerGroup) {
+    const marker = markerGroup.userData.marker;
+    const ring = markerGroup.userData.ring;
+
+    // Simple color change for highlight
+    marker.material.color.setHex(0x66ccff);
+    marker.material.opacity = 1.0;
+
+    ring.material.color.setHex(0x66ccff);
+    ring.material.opacity = 0.7;
+
+    // Subtle scale animation
+    markerGroup.scale.setScalar(1.3);
+  }
+
+  resetMarkerState(country) {
+    const markerGroup = this.countryMarkers.find(
+      (group) => group.userData.country === country
+    );
+
+    if (markerGroup) {
+      const marker = markerGroup.userData.marker;
+      const ring = markerGroup.userData.ring;
+
+      // Reset to default colors
+      marker.material.color.setHex(0xffffff);
+      marker.material.opacity = 0.8;
+
+      ring.material.color.setHex(0xcccccc);
+      ring.material.opacity = 0.4;
+
+      // Reset scale
+      markerGroup.scale.setScalar(1.0);
     }
   }
 
@@ -839,15 +1182,137 @@ export class SimpleGlobe {
   }
 
   update() {
-    if (this.globeMesh) {
-      this.globeMesh.rotation.y += 0.005;
+    this.time += 0.016; // Assuming 60fps
+
+    // Rotate globe naturally
+    if (this.isRotating && this.globeMesh) {
+      this.globeMesh.rotation.y += this.rotationSpeed;
     }
 
-    // Animate markers
-    this.countryMarkers.forEach((marker, index) => {
-      const time = Date.now() * 0.001;
-      const scale = 1 + Math.sin(time + index * 0.5) * 0.3;
-      marker.scale.setScalar(scale);
+    // Update atmosphere rotation
+    if (this.atmosphereMesh) {
+      this.atmosphereMesh.rotation.y += this.rotationSpeed * 0.5;
+    }
+
+    // Update clouds rotation
+    if (this.cloudsMesh) {
+      this.cloudsMesh.rotation.y += this.rotationSpeed * 1.2; // Clouds move slightly faster
+    }
+
+    // Animate markers with subtle effects
+    this.countryMarkers.forEach((markerGroup, index) => {
+      const userData = markerGroup.userData;
+
+      // Very subtle floating animation
+      const floatOffset =
+        Math.sin(this.time * 1.5 + userData.pulsePhase) * 0.001;
+      const originalPos = userData.originalPosition;
+      const direction = originalPos.clone().normalize();
+      markerGroup.position.copy(
+        originalPos.clone().add(direction.multiplyScalar(floatOffset))
+      );
+
+      // Rotate markers to always face outward
+      markerGroup.lookAt(
+        markerGroup.position.x * 2,
+        markerGroup.position.y * 2,
+        markerGroup.position.z * 2
+      );
+    });
+
+    // Update country labels to always face camera
+    this.updateCountryLabels();
+  }
+
+  updateCountryLabels() {
+    // Get camera from scene
+    const camera = this.scene.userData.camera;
+    if (!camera) return;
+
+    // Update all label sprites to face the camera
+    this.scene.traverse((child) => {
+      if (child.userData && child.userData.isLabel) {
+        // Make label face camera
+        child.lookAt(camera.position);
+
+        // Calculate distance-based scaling
+        const distance = camera.position.distanceTo(child.position);
+        const scale = Math.max(0.3, Math.min(0.8, 3.0 / distance));
+        child.scale.set(scale * 0.5, scale * 0.15, 1);
+
+        // Fade labels based on angle to camera
+        const cameraDirection = camera.position.clone().normalize();
+        const labelDirection = child.userData.originalPosition
+          .clone()
+          .normalize();
+        const dot = cameraDirection.dot(labelDirection);
+
+        // Only show labels on the visible side of the globe
+        if (dot > -0.1) {
+          child.material.opacity = Math.max(
+            0.4,
+            Math.min(0.9, (dot + 0.1) * 1.5)
+          );
+          child.visible = true;
+        } else {
+          child.visible = false;
+        }
+      }
+    });
+  }
+
+  setViewMode(isDayMode) {
+    // Update atmosphere color for day/night mode
+    if (this.atmosphereMesh) {
+      const atmosphereColor = isDayMode
+        ? new THREE.Color(0x87ceeb)
+        : new THREE.Color(0x1a1a2e);
+
+      this.atmosphereMesh.material.color = atmosphereColor;
+    }
+
+    // Update rotation speed for different modes
+    this.rotationSpeed = isDayMode ? 0.002 : 0.001;
+  }
+
+  updateDataVisualization(mode) {
+    // Update marker colors based on data mode - minimal color scheme
+    const data = this.dataManager.getDataForVisualization(mode);
+
+    this.countryMarkers.forEach((markerGroup) => {
+      const country = markerGroup.userData.country;
+      const countryData = data.find((d) => d.country === country.name);
+
+      if (countryData && markerGroup.userData.marker) {
+        const marker = markerGroup.userData.marker;
+        const intensity = countryData.normalized;
+
+        // Simple, minimal color scheme based on data mode
+        let color;
+        switch (mode) {
+          case "population":
+            // Blue tones for population
+            color = new THREE.Color().setHSL(0.6, 0.5, 0.4 + intensity * 0.4);
+            break;
+          case "gdp":
+            // Green tones for GDP
+            color = new THREE.Color().setHSL(0.3, 0.5, 0.4 + intensity * 0.4);
+            break;
+          case "environment":
+            // Green tones for environment
+            color = new THREE.Color().setHSL(0.25, 0.4, 0.4 + intensity * 0.3);
+            break;
+          case "culture":
+            // Purple tones for culture
+            color = new THREE.Color().setHSL(0.8, 0.4, 0.4 + intensity * 0.3);
+            break;
+          default:
+            color = new THREE.Color(0xffffff);
+        }
+
+        marker.material.color = color;
+        marker.material.opacity = 0.6 + intensity * 0.4;
+      }
     });
   }
 }

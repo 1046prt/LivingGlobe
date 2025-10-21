@@ -92,19 +92,16 @@ class LivingGlobe {
     );
     this.camera.position.set(0, 0, 2.5);
 
-    // Create renderer with better settings
+    // Create renderer with basic settings to ensure visibility
     this.renderer = new THREE.WebGLRenderer({
       antialias: true,
       alpha: true,
-      powerPreference: "high-performance",
     });
     this.renderer.setSize(window.innerWidth, window.innerHeight);
     this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    this.renderer.setClearColor(0x000000, 0);
-    this.renderer.shadowMap.enabled = true;
-    this.renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-    this.renderer.toneMapping = THREE.ACESFilmicToneMapping;
-    this.renderer.toneMappingExposure = 1.2;
+    this.renderer.setClearColor(0x000011, 1); // Deep space color
+
+    console.log("Renderer created successfully");
 
     // Add renderer to DOM
     const container = document.getElementById("globe-container");
@@ -121,36 +118,19 @@ class LivingGlobe {
   }
 
   addLights() {
-    // Ambient light for overall illumination
-    const ambientLight = new THREE.AmbientLight(0x404040, 0.4);
+    // Simple ambient light
+    const ambientLight = new THREE.AmbientLight(0x404040, 0.6);
     this.scene.add(ambientLight);
 
-    // Main directional light (sun)
-    const sunLight = new THREE.DirectionalLight(0xffffff, 1.2);
+    // Main directional light
+    const sunLight = new THREE.DirectionalLight(0xffffff, 1.0);
     sunLight.position.set(5, 3, 5);
-    sunLight.castShadow = true;
-    sunLight.shadow.mapSize.width = 4096;
-    sunLight.shadow.mapSize.height = 4096;
-    sunLight.shadow.camera.near = 0.1;
-    sunLight.shadow.camera.far = 50;
-    sunLight.shadow.camera.left = -10;
-    sunLight.shadow.camera.right = 10;
-    sunLight.shadow.camera.top = 10;
-    sunLight.shadow.camera.bottom = -10;
     this.scene.add(sunLight);
 
-    // Secondary light for fill lighting
-    const fillLight = new THREE.DirectionalLight(0x87ceeb, 0.3);
-    fillLight.position.set(-3, -2, -3);
-    this.scene.add(fillLight);
-
-    // Rim light for atmosphere
-    const rimLight = new THREE.PointLight(0x00d4ff, 0.8, 10);
-    rimLight.position.set(0, 0, 4);
-    this.scene.add(rimLight);
-
-    // Store sun light for day/night cycle
+    // Store sun light for reference
     this.sunLight = sunLight;
+
+    console.log("Lights added to scene");
   }
 
   initCameraControls() {
@@ -260,11 +240,58 @@ class LivingGlobe {
   animate() {
     requestAnimationFrame(() => this.animate());
 
+    // Update globe
     if (this.globe) {
       this.globe.update();
     }
 
     this.renderer.render(this.scene, this.camera);
+  }
+
+  updateDynamicLighting() {
+    const time = Date.now() * 0.001;
+
+    // Animate sun light position for realistic day/night cycle
+    if (this.sunLight) {
+      const sunAngle = time * 0.1;
+      this.sunLight.position.x = Math.cos(sunAngle) * 5;
+      this.sunLight.position.z = Math.sin(sunAngle) * 5;
+      this.sunLight.position.y = Math.sin(sunAngle * 0.5) * 3 + 2;
+    }
+
+    // Animate atmospheric lights
+    if (this.atmosphereLights) {
+      this.atmosphereLights.forEach((light, index) => {
+        const phase = time + index * Math.PI;
+        light.intensity = 0.4 + Math.sin(phase) * 0.2;
+
+        // Subtle position animation
+        const radius = 4 + Math.sin(phase * 0.5) * 0.5;
+        const angle = phase * 0.3;
+        light.position.x = Math.cos(angle) * radius;
+        light.position.z = Math.sin(angle) * radius;
+      });
+    }
+
+    // Animate rim light
+    if (this.rimLight) {
+      this.rimLight.intensity = 1.0 + Math.sin(time * 2) * 0.2;
+    }
+  }
+
+  updateCameraEffects() {
+    // Update atmosphere shader uniforms if globe has atmosphere
+    if (this.globe && this.globe.atmosphereMesh) {
+      const atmosphereMaterial = this.globe.atmosphereMesh.material;
+      if (
+        atmosphereMaterial.uniforms &&
+        atmosphereMaterial.uniforms.viewVector
+      ) {
+        atmosphereMaterial.uniforms.viewVector.value = this.camera.position
+          .clone()
+          .normalize();
+      }
+    }
   }
 
   onWindowResize() {
