@@ -1,0 +1,1037 @@
+{
+  "iso2": "CN",
+  "iso3": "CHN",
+  "name": "China",
+  "region": "Asia",
+  "capital": "Beijing",
+  "population": 1412000000,
+  "image": "/images/country/cn.svg",
+  "flag": "/images/flags/cn.png",
+  "currency": {
+    "code": "CNY",
+    "name": "Chinese Yuan",
+    "symbol": "¥",
+    "image": "/images/currencies/cny.png"
+  },
+  "languages": ["Mandarin Chinese"],
+  "timezones": ["UTC+08:00"],
+  "geography": {
+    "climateZones": [
+      "Tropical",
+      "Subtropical",
+      "Temperate",
+      "Continental",
+      "Alpine"
+    ],
+    "geologicalFormations": [
+      {
+        "name": "Himalayas",
+        "type": "Mountain Range",
+        "description": "World's highest mountain range forming southern border"
+      },
+      {
+        "name": "Tibetan Plateau",
+        "type": "Plateau",
+        "description": "World's highest plateau, often called 'Roof of the World'"
+      },
+      {
+        "name": "Gobi Desert",
+        "type": "Desert",
+        "description": "Large desert region in northern China and southern Mongolia"
+      }
+    ],
+    "naturalDisasters": [
+      {
+        "type": "Earthquake",
+        "name": "Sichuan Earthquake",
+        "year": 2008,
+        "impact": "Devastating earthquake that killed over 87,000 people"
+      },
+      {
+        "type": "Flood",
+        "name": "Yangtze River Floods",
+        "year": 1998,
+        "impact": "Major flooding affecting 240 million people"
+      }
+    ],
+    "majorWaterBodies": [
+      {
+        "name": "South China Sea",
+        "type": "Sea",
+        "coastline": "Southeast Coast"
+      },
+      {
+        "name": "East China Sea",
+        "type": "Sea",
+        "coastline": "East Coast"
+      },
+      {
+        "name": "Yellow Sea",
+        "type": "Sea",
+        "coastline": "Northeast Coast"
+      }
+    ]
+  },
+  "heritage": {
+    "independenceDate": "October 1, 1949",
+    "foundingEvent": "Establishment of People's Republic of China",
+    "majorHistoricalFigures": [
+      {
+        "name": "Mao Zedong",
+        "role": "Founding Chairman",
+        "period": "1949-1976",
+        "achievement": "Founded the People's Republic of China"
+      },
+      {
+        "name": "Deng Xiaoping",
+        "role": "Economic Reformer",
+        "period": "1978-1989",
+        "achievement": "Introduced market reforms and opened China to the world"
+      },
+      {
+        "name": "Confucius",
+        "role": "Philosopher",
+        "period": "551-479 BC",
+        "achievement": "Influential philosopher whose teachings shaped Chinese culture"
+      }
+    ],
+    "colonialHistory": [
+      {
+        "period": "1839-1949",
+        "description": "Century of Humiliation with foreign concessions and unequal treaties"
+      },
+      {
+        "period": "1937-1945",
+        "description": "Japanese occupation during World War II"
+      }
+    ],
+    "unescoSites": [
+      {
+        "name": "Great Wall of China",
+        "year": 1987,
+        "type": "Cultural"
+      },
+      {
+        "name": "Forbidden City",
+        "year": 1987,
+        "type": "Cultural"
+      },
+      {
+        "name": "Terracotta Army",
+        "year": 1987,
+        "type": "Cultural"
+      },
+      {
+        "name": "Mount Huangshan",
+        "year": 1990,
+        "type": "Natural"
+      }
+    ]
+  },
+  "politics": {
+    "currentLeaders": [
+      {
+        "position": "President",
+        "name": "Xi Jinping",
+        "party": "Communist Party of China",
+        "termStart": "March 14, 2013"
+      },
+      {
+        "position": "Premier",
+        "name": "Li Qiang",
+        "party": "Communist Party of China",
+        "termStart": "March 11, 2023"
+      }
+    ],
+    "governmentType": "Socialist Republic",
+    "internationalMemberships": [
+      "United Nations (UN)",
+      "World Trade Organization (WTO)",
+      "Shanghai Cooperation Organization (SCO)",
+      "BRICS",
+      "G20",
+      "Asian Infrastructure Investment Bank (AIIB)"
+    ]
+  },
+  "economy": {
+    "gdp": 17734000000000,
+    "gdpPerCapita": 12556,
+    "majorIndustries": [
+      "Manufacturing",
+      "Technology",
+      "Agriculture",
+      "Mining",
+      "Construction",
+      "Services",
+      "Textiles"
+    ],
+    "topExports": [
+      {
+        "product": "Broadcasting Equipment",
+        "value": 208400000000
+      },
+      {
+        "product": "Computers",
+        "value": 141300000000
+      },
+      {
+        "product": "Integrated Circuits",
+        "value": 130800000000
+      },
+      {
+        "product": "Office Machine Parts",
+        "value": 103200000000
+      }
+    ],
+    "topImports": [
+      {
+        "product": "Integrated Circuits",
+        "value": 350800000000
+      },
+      {
+        "product": "Crude Petroleum",
+        "value": 176200000000
+      },
+      {
+        "product": "Iron Ore",
+        "value": 118100000000
+      },
+      {
+        "product": "Cars",
+        "value": 43400000000
+      }
+    ],
+    "employmentRate": 95.1,
+    "employmentSectors": {
+      "services": 47.7,
+      "industry": 28.1,
+      "agriculture": 24.2
+    }
+  },
+  "culture": {
+    "officialLanguages": ["Mandarin Chinese"],
+    "regionalLanguages": [
+      "Cantonese",
+      "Wu",
+      "Min",
+      "Hakka",
+      "Gan",
+      "Xiang",
+      "Tibetan",
+      "Uyghur"
+    ],
+    "religionDemographics": {
+      "Non-religious": 52.0,
+      "Buddhism": 18.2,
+      "Christianity": 5.1,
+      "Folk Religion": 21.9,
+      "Taoism": 1.6,
+      "Islam": 1.8,
+      "Other": 0.4
+    },
+    "nationalFestivals": [
+      {
+        "name": "Chinese New Year (Spring Festival)",
+        "date": "January/February (Lunar Calendar)",
+        "description": "Most important traditional festival celebrating the lunar new year"
+      },
+      {
+        "name": "National Day",
+        "date": "October 1",
+        "description": "Celebrates the founding of the People's Republic of China"
+      },
+      {
+        "name": "Mid-Autumn Festival",
+        "date": "September/October (Lunar Calendar)",
+        "description": "Festival celebrating harvest and family reunion"
+      }
+    ],
+    "traditionalFoods": [
+      {
+        "name": "Peking Duck",
+        "description": "Famous roasted duck dish from Beijing with crispy skin"
+      },
+      {
+        "name": "Dim Sum",
+        "description": "Traditional Cantonese small plates served with tea"
+      },
+      {
+        "name": "Hot Pot",
+        "description": "Communal cooking method with shared pot of boiling broth"
+      },
+      {
+        "name": "Dumplings",
+        "description": "Traditional filled pastries, especially popular during New Year"
+      }
+    ],
+    "nationalSymbols": {
+      "flag": "Five-starred Red Flag",
+      "emblem": "National Emblem of China",
+      "anthem": "March of the Volunteers",
+      "flower": "Peony",
+      "animal": "Giant Panda",
+      "bird": "Red-crowned Crane"
+    }
+  },
+  "education": {
+    "literacyRate": 96.8,
+    "educationSystem": "9-year compulsory education, extensive higher education system",
+    "famousScientists": [
+      {
+        "name": "Tu Youyou",
+        "field": "Medicine",
+        "achievement": "Discovered artemisinin for malaria treatment, Nobel Prize winner"
+      },
+      {
+        "name": "Yang Zhenning",
+        "field": "Physics",
+        "achievement": "Nobel Prize in Physics for parity conservation laws"
+      },
+      {
+        "name": "Yuan Longping",
+        "field": "Agriculture",
+        "achievement": "Father of hybrid rice, significantly increased crop yields"
+      }
+    ],
+    "nobelPrizeWinners": 11
+  },
+  "tourism": {
+    "mostVisitedCities": [
+      {
+        "name": "Beijing",
+        "visitors": 320000000,
+        "attractions": ["Forbidden City", "Great Wall", "Temple of Heaven"]
+      },
+      {
+        "name": "Shanghai",
+        "visitors": 340000000,
+        "attractions": ["The Bund", "Yu Garden", "Oriental Pearl Tower"]
+      },
+      {
+        "name": "Xi'an",
+        "visitors": 280000000,
+        "attractions": [
+          "Terracotta Army",
+          "Ancient City Wall",
+          "Muslim Quarter"
+        ]
+      }
+    ],
+    "adventureActivities": [
+      "Great Wall Hiking",
+      "Yangtze River Cruising",
+      "Tibet Trekking",
+      "Guilin Karst Landscape Tours",
+      "Silk Road Exploration"
+    ],
+    "transportation": {
+      "airports": "Major international airports in Beijing, Shanghai, Guangzhou",
+      "railways": "Extensive high-speed rail network",
+      "highways": "National Highway System"
+    },
+    "visaRequirements": "Visa required for most visitors, some transit visa exemptions"
+  },
+  "demographics": {
+    "populationGrowth": [
+      { "year": 2020, "population": 1411778724 },
+      { "year": 2021, "population": 1412360000 },
+      { "year": 2022, "population": 1411750000 },
+      { "year": 2023, "population": 1409670000 }
+    ],
+    "urbanRural": {
+      "urban": 64.7,
+      "rural": 35.3
+    },
+    "lifeExpectancy": {
+      "total": 78.2,
+      "male": 75.7,
+      "female": 80.9
+    },
+    "ageDistribution": {
+      "youth": 17.6,
+      "workingAge": 68.1,
+      "elderly": 14.3
+    }
+  },
+  "scienceTechnology": {
+    "spaceMissions": [
+      {
+        "name": "Chang'e Lunar Program",
+        "year": "2007-present",
+        "achievement": "Lunar exploration missions"
+      },
+      {
+        "name": "Tianwen-1",
+        "year": 2021,
+        "achievement": "Mars rover mission"
+      },
+      {
+        "name": "Tiangong Space Station",
+        "year": "2021-present",
+        "achievement": "Chinese space station construction"
+      }
+    ],
+    "techStartups": [
+      "Alibaba",
+      "Tencent",
+      "Baidu",
+      "ByteDance",
+      "Huawei",
+      "Xiaomi"
+    ],
+    "patents": 696000,
+    "breakthroughs": [
+      {
+        "year": 105,
+        "invention": "Paper",
+        "inventor": "Cai Lun"
+      },
+      {
+        "year": 1040,
+        "invention": "Gunpowder",
+        "inventor": "Chinese Alchemists"
+      },
+      {
+        "year": 1040,
+        "invention": "Compass",
+        "inventor": "Chinese Inventors"
+      }
+    ]
+  },
+  "sportsEntertainment": {
+    "nationalSports": ["Table Tennis", "Badminton", "Basketball", "Football"],
+    "olympicPerformance": {
+      "totalMedals": 608,
+      "goldMedals": 263,
+      "silverMedals": 199,
+      "bronzeMedals": 146
+    },
+    "popularMovies": [
+      "Crouching Tiger, Hidden Dragon",
+      "Hero",
+      "The Wandering Earth"
+    ],
+    "musicArtists": [
+      "Teresa Teng",
+      "Jay Chou",
+      "Faye Wong",
+      "Andy Lau",
+      "Jackie Chan"
+    ],
+    "worldRecords": [
+      {
+        "record": "Most table tennis Olympic gold medals",
+        "value": "32 gold medals"
+      },
+      {
+        "record": "Largest high-speed rail network",
+        "value": "40,000+ km"
+      }
+    ]
+  },
+  "history": [
+    {
+      "year": 221,
+      "description": "Qin Dynasty unifies China under Emperor Qin Shi Huang"
+    },
+    {
+      "year": 1368,
+      "description": "Ming Dynasty established, beginning of Chinese cultural renaissance"
+    },
+    {
+      "year": 1949,
+      "description": "People's Republic of China founded under Mao Zedong"
+    },
+    {
+      "year": 1978,
+      "description": "Economic reforms begin under Deng Xiaoping"
+    },
+    {
+      "year": 2008,
+      "description": "Beijing hosts Summer Olympics, showcasing modern China"
+    }
+  ],
+  "states": [
+    {
+      "name": "Beijing Municipality",
+      "capital": "Beijing",
+      "slug": "beijing"
+    },
+    {
+      "name": "Shanghai Municipality",
+      "capital": "Shanghai",
+      "slug": "shanghai"
+    },
+    {
+      "name": "Guangdong Province",
+      "capital": "Guangzhou",
+      "slug": "guangdong"
+    },
+    {
+      "name": "Sichuan Province",
+      "capital": "Chengdu",
+      "slug": "sichuan"
+    },
+    {
+      "name": "Jiangsu Province",
+      "capital": "Nanjing",
+      "slug": "jiangsu"
+    },
+    {
+      "name": "Tianjin Municipality",
+      "capital": "Tianjin",
+      "slug": "tianjin"
+    },
+    {
+      "name": "Chongqing Municipality",
+      "capital": "Chongqing",
+      "slug": "chongqing"
+    },
+    {
+      "name": "Zhejiang Province",
+      "capital": "Hangzhou",
+      "slug": "zhejiang"
+    },
+    {
+      "name": "Shandong Province",
+      "capital": "Jinan",
+      "slug": "shandong"
+    },
+    {
+      "name": "Henan Province",
+      "capital": "Zhengzhou",
+      "slug": "henan"
+    },
+    {
+      "name": "Hebei Province",
+      "capital": "Shijiazhuang",
+      "slug": "hebei"
+    },
+    {
+      "name": "Hunan Province",
+      "capital": "Changsha",
+      "slug": "hunan"
+    },
+    {
+      "name": "Hubei Province",
+      "capital": "Wuhan",
+      "slug": "hubei"
+    },
+    {
+      "name": "Anhui Province",
+      "capital": "Hefei",
+      "slug": "anhui"
+    },
+    {
+      "name": "Fujian Province",
+      "capital": "Fuzhou",
+      "slug": "fujian"
+    },
+    {
+      "name": "Jiangxi Province",
+      "capital": "Nanchang",
+      "slug": "jiangxi"
+    },
+    {
+      "name": "Liaoning Province",
+      "capital": "Shenyang",
+      "slug": "liaoning"
+    },
+    {
+      "name": "Jilin Province",
+      "capital": "Changchun",
+      "slug": "jilin"
+    },
+    {
+      "name": "Heilongjiang Province",
+      "capital": "Harbin",
+      "slug": "heilongjiang"
+    },
+    {
+      "name": "Shaanxi Province",
+      "capital": "Xi'an",
+      "slug": "shaanxi"
+    },
+    {
+      "name": "Shanxi Province",
+      "capital": "Taiyuan",
+      "slug": "shanxi"
+    },
+    {
+      "name": "Gansu Province",
+      "capital": "Lanzhou",
+      "slug": "gansu"
+    },
+    {
+      "name": "Qinghai Province",
+      "capital": "Xining",
+      "slug": "qinghai"
+    },
+    {
+      "name": "Guizhou Province",
+      "capital": "Guiyang",
+      "slug": "guizhou"
+    },
+    {
+      "name": "Yunnan Province",
+      "capital": "Kunming",
+      "slug": "yunnan"
+    },
+    {
+      "name": "Hainan Province",
+      "capital": "Haikou",
+      "slug": "hainan"
+    },
+    {
+      "name": "Inner Mongolia Autonomous Region",
+      "capital": "Hohhot",
+      "slug": "inner-mongolia"
+    },
+    {
+      "name": "Xinjiang Uygur Autonomous Region",
+      "capital": "Ürümqi",
+      "slug": "xinjiang"
+    },
+    {
+      "name": "Guangxi Zhuang Autonomous Region",
+      "capital": "Nanning",
+      "slug": "guangxi"
+    },
+    {
+      "name": "Ningxia Hui Autonomous Region",
+      "capital": "Yinchuan",
+      "slug": "ningxia"
+    },
+    {
+      "name": "Tibet Autonomous Region",
+      "capital": "Lhasa",
+      "slug": "tibet"
+    },
+    {
+      "name": "Hong Kong Special Administrative Region",
+      "capital": "Hong Kong",
+      "slug": "hong-kong"
+    },
+    {
+      "name": "Macao Special Administrative Region",
+      "capital": "Macao",
+      "slug": "macao"
+    }
+  ],
+  "famousCities": [
+    {
+      "name": "Beijing",
+      "whyFamous": "Capital city, home to Forbidden City, Tiananmen Square, and political center",
+      "slug": "beijing",
+      "image": "/images/cities/china/beijing.jpg"
+    },
+    {
+      "name": "Shanghai",
+      "whyFamous": "Economic powerhouse, modern skyline, and major financial center",
+      "slug": "shanghai",
+      "image": "/images/cities/china/shanghai.jpg"
+    },
+    {
+      "name": "Hong Kong",
+      "whyFamous": "International financial hub, unique culture, and vibrant nightlife",
+      "slug": "hong-kong",
+      "image": "/images/cities/china/hong-kong.jpg"
+    },
+    {
+      "name": "Xi'an",
+      "whyFamous": "Ancient capital, home to Terracotta Army and Silk Road starting point",
+      "slug": "xian",
+      "image": "/images/cities/china/xian.png"
+    },
+    {
+      "name": "Shenzhen",
+      "whyFamous": "Technology hub, rapid development, and innovation center",
+      "slug": "shenzhen",
+      "image": "/images/cities/china/shenzhen.jpg"
+    },
+    {
+      "name": "Guangzhou",
+      "whyFamous": "Historic trade city, Cantonese culture, and gateway for foreign commerce",
+      "slug": "guangzhou",
+      "image": "/images/cities/china/guangzhou.jpg"
+    },
+    {
+      "name": "Chengdu",
+      "whyFamous": "Famous for Sichuan cuisine, pandas, and rich cultural heritage",
+      "slug": "chengdu",
+      "image": "/images/cities/china/chengdu.jpg"
+    },
+    {
+      "name": "Hangzhou",
+      "whyFamous": "Known for West Lake, tea culture, and e-commerce giant Alibaba",
+      "slug": "hangzhou",
+      "image": "/images/cities/china/hangzhou.jpg"
+    },
+    {
+      "name": "Tianjin",
+      "whyFamous": "Major port city, blend of European colonial architecture and Chinese culture",
+      "slug": "tianjin",
+      "image": "/images/cities/china/tianjin.jpg"
+    },
+    {
+      "name": "Macau",
+      "whyFamous": "Casino capital of Asia, Portuguese-Chinese fusion culture",
+      "slug": "macau",
+      "image": "/images/cities/china/macau.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "slug": "great-wall-of-china",
+      "name": "Great Wall of China",
+      "city": "Beijing Area",
+      "coordinates": {
+        "lat": 40.4319,
+        "lng": 116.5704
+      },
+      "whyFamous": "Ancient fortification system, UNESCO World Heritage site, and symbol of China",
+      "imagePath": "/images/landmarks/china/great-wall-china.png"
+    },
+    {
+      "slug": "forbidden-city",
+      "name": "Forbidden City",
+      "city": "Beijing",
+      "coordinates": {
+        "lat": 39.9163,
+        "lng": 116.3972
+      },
+      "whyFamous": "Imperial palace complex, served as home to emperors for nearly 500 years",
+      "imagePath": "/images/landmarks/china/forbidden-city.jpg"
+    },
+    {
+      "slug": "terracotta-army",
+      "name": "Terracotta Army",
+      "city": "Xi'an",
+      "coordinates": {
+        "lat": 34.3848,
+        "lng": 109.2734
+      },
+      "whyFamous": "Thousands of life-sized terracotta soldiers guarding Emperor Qin's tomb",
+      "imagePath": "/images/landmarks/china/terracotta-army.png"
+    },
+    {
+      "slug": "temple-of-heaven",
+      "name": "Temple of Heaven",
+      "city": "Beijing",
+      "coordinates": {
+        "lat": 39.8822,
+        "lng": 116.4067
+      },
+      "whyFamous": "Religious complex where emperors prayed for good harvests",
+      "imagePath": "/images/landmarks/china/temple-of-heaven.jpg"
+    },
+    {
+      "slug": "summer-palace",
+      "name": "Summer Palace",
+      "city": "Beijing",
+      "coordinates": {
+        "lat": 39.9996,
+        "lng": 116.2755
+      },
+      "whyFamous": "Imperial garden and palace, masterpiece of Chinese landscape design",
+      "imagePath": "/images/landmarks/china/summer-palace.jpg"
+    },
+    {
+      "slug": "potala-palace",
+      "name": "Potala Palace",
+      "city": "Lhasa",
+      "coordinates": {
+        "lat": 29.6578,
+        "lng": 91.1175
+      },
+      "whyFamous": "Historic winter residence of the Dalai Lama, UNESCO World Heritage site",
+      "imagePath": "/images/landmarks/china/potala-palace.jpg"
+    },
+    {
+      "slug": "west-lake",
+      "name": "West Lake",
+      "city": "Hangzhou",
+      "coordinates": {
+        "lat": 30.2431,
+        "lng": 120.15
+      },
+      "whyFamous": "Scenic lake celebrated in Chinese art and poetry, UNESCO World Heritage site",
+      "imagePath": "/images/landmarks/china/west-lake.jpg"
+    },
+    {
+      "slug": "mount-huangshan",
+      "name": "Mount Huangshan",
+      "city": "Anhui",
+      "coordinates": {
+        "lat": 30.1328,
+        "lng": 118.1667
+      },
+      "whyFamous": "Famous for granite peaks, hot springs, pine trees, and cloud seas",
+      "imagePath": "/images/landmarks/china/mount-huangshan.jpg"
+    },
+    {
+      "slug": "giant-panda-research-base",
+      "name": "Chengdu Research Base of Giant Panda Breeding",
+      "city": "Chengdu",
+      "coordinates": {
+        "lat": 30.7333,
+        "lng": 104.15
+      },
+      "whyFamous": "Conservation center dedicated to protecting and breeding giant pandas",
+      "imagePath": "/images/landmarks/china/giant-panda.jpg"
+    },
+    {
+      "slug": "oriental-pearl-tower",
+      "name": "Oriental Pearl Tower",
+      "city": "Shanghai",
+      "coordinates": {
+        "lat": 31.2397,
+        "lng": 121.4998
+      },
+      "whyFamous": "Iconic TV tower with futuristic design, symbol of modern Shanghai",
+      "imagePath": "/images/landmarks/china/oriental-pearl-tower.jpg"
+    }
+  ],
+  "rivers": [
+    {
+      "slug": "yangtze-river",
+      "name": "Yangtze River",
+      "length": 6300,
+      "countries": ["China"],
+      "source": "Tibetan Plateau",
+      "mouth": "East China Sea",
+      "imagePath": "/images/rivers/china/yangtze-river.jpg",
+      "pathCoordinates": [
+        { "lat": 33.25, "lng": 90.9 },
+        { "lat": 31.23, "lng": 121.5 }
+      ]
+    },
+    {
+      "slug": "yellow-river",
+      "name": "Yellow River",
+      "length": 5464,
+      "countries": ["China"],
+      "source": "Bayan Har Mountains",
+      "mouth": "Bohai Sea",
+      "imagePath": "/images/rivers/china/yellow-river.jpg",
+      "pathCoordinates": [
+        { "lat": 35.5, "lng": 96.2 },
+        { "lat": 37.75, "lng": 119.1 }
+      ]
+    },
+    {
+      "slug": "pearl-river",
+      "name": "Pearl River",
+      "length": 2400,
+      "countries": ["China"],
+      "source": "Yunnan Province",
+      "mouth": "South China Sea",
+      "imagePath": "/images/rivers/china/pearl-river.jpg",
+      "pathCoordinates": [
+        { "lat": 25.0, "lng": 104.0 },
+        { "lat": 22.2, "lng": 113.6 }
+      ]
+    },
+    {
+      "slug": "heilongjiang-river",
+      "name": "Heilongjiang (Amur) River",
+      "length": 4444,
+      "countries": ["China", "Russia", "Mongolia"],
+      "source": "Mongolia",
+      "mouth": "Sea of Okhotsk",
+      "imagePath": "/images/rivers/china/heilongjiang-river.jpg",
+      "pathCoordinates": [
+        { "lat": 50.0, "lng": 124.0 },
+        { "lat": 53.5, "lng": 140.7 }
+      ]
+    },
+    {
+      "slug": "lancang-river",
+      "name": "Lancang (Mekong) River",
+      "length": 4880,
+      "countries": ["China", "Laos", "Thailand", "Cambodia", "Vietnam"],
+      "source": "Tibetan Plateau",
+      "mouth": "South China Sea (Vietnam)",
+      "imagePath": "/images/rivers/china/lancang-river.jpg",
+      "pathCoordinates": [
+        { "lat": 32.3, "lng": 94.0 },
+        { "lat": 10.2, "lng": 106.0 }
+      ]
+    },
+    {
+      "slug": "nu-river",
+      "name": "Nu (Salween) River",
+      "length": 2815,
+      "countries": ["China", "Myanmar", "Thailand"],
+      "source": "Tibetan Plateau",
+      "mouth": "Andaman Sea",
+      "imagePath": "/images/rivers/china/nu-river.jpg",
+      "pathCoordinates": [
+        { "lat": 31.5, "lng": 94.8 },
+        { "lat": 15.9, "lng": 97.5 }
+      ]
+    },
+    {
+      "slug": "tarim-river",
+      "name": "Tarim River",
+      "length": 2137,
+      "countries": ["China"],
+      "source": "Tianshan Mountains",
+      "mouth": "Lop Nur (dry lake basin)",
+      "imagePath": "/images/rivers/china/tarim-river.jpg",
+      "pathCoordinates": [
+        { "lat": 42.0, "lng": 83.0 },
+        { "lat": 40.5, "lng": 89.5 }
+      ]
+    },
+    {
+      "slug": "songhua-river",
+      "name": "Songhua River",
+      "length": 1927,
+      "countries": ["China"],
+      "source": "Changbai Mountains",
+      "mouth": "Heilongjiang River",
+      "imagePath": "/images/rivers/china/songhua-river.jpg",
+      "pathCoordinates": [
+        { "lat": 42.0, "lng": 127.5 },
+        { "lat": 47.8, "lng": 133.6 }
+      ]
+    },
+    {
+      "slug": "han-river-china",
+      "name": "Han River",
+      "length": 1532,
+      "countries": ["China"],
+      "source": "Qinling Mountains",
+      "mouth": "Yangtze River (Wuhan)",
+      "imagePath": "/images/rivers/china/han-river.jpg",
+      "pathCoordinates": [
+        { "lat": 33.0, "lng": 106.0 },
+        { "lat": 30.6, "lng": 114.3 }
+      ]
+    },
+    {
+      "slug": "yarlung-tsangpo-river",
+      "name": "Yarlung Tsangpo River",
+      "length": 2840,
+      "countries": ["China", "India", "Bangladesh"],
+      "source": "Tibetan Plateau (Mount Kailash region)",
+      "mouth": "Brahmaputra (India) → Bay of Bengal",
+      "imagePath": "/images/rivers/china/yarlung-tsangpo-river.jpg",
+      "pathCoordinates": [
+        { "lat": 30.8, "lng": 82.7 },
+        { "lat": 25.3, "lng": 89.7 }
+      ]
+    }
+  ],
+  "institutions": [
+    {
+      "slug": "tsinghua-university",
+      "name": "Tsinghua University",
+      "city": "Beijing",
+      "founded": 1911,
+      "globalRank": 17,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/china/tsinghua-university.png"
+    },
+    {
+      "slug": "peking-university",
+      "name": "Peking University",
+      "city": "Beijing",
+      "founded": 1898,
+      "globalRank": 18,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/china/peking-university.png"
+    },
+    {
+      "slug": "fudan-university",
+      "name": "Fudan University",
+      "city": "Shanghai",
+      "founded": 1905,
+      "globalRank": 34,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/china/fudan-university.jpg"
+    },
+    {
+      "slug": "shanghai-jiao-tong-university",
+      "name": "Shanghai Jiao Tong University",
+      "city": "Shanghai",
+      "founded": 1896,
+      "globalRank": 46,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/china/shanghai-jiao-tong-university.jpg"
+    },
+    {
+      "slug": "zhejiang-university",
+      "name": "Zhejiang University",
+      "city": "Hangzhou",
+      "founded": 1897,
+      "globalRank": 44,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/china/zhejiang-university.jpg"
+    },
+    {
+      "slug": "nanjing-university",
+      "name": "Nanjing University",
+      "city": "Nanjing",
+      "founded": 1902,
+      "globalRank": 120,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/china/nanjing-university.jpg"
+    },
+    {
+      "slug": "university-of-science-and-technology-of-china",
+      "name": "University of Science and Technology of China",
+      "city": "Hefei",
+      "founded": 1958,
+      "globalRank": 137,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/china/ustc.jpg"
+    },
+    {
+      "slug": "sun-yat-sen-university",
+      "name": "Sun Yat-sen University",
+      "city": "Guangzhou",
+      "founded": 1924,
+      "globalRank": 250,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/china/sun-yat-sen-university.jpg"
+    },
+    {
+      "slug": "beijing-normal-university",
+      "name": "Beijing Normal University",
+      "city": "Beijing",
+      "founded": 1902,
+      "globalRank": 270,
+      "type": "Public Research University (Teacher Education & Humanities Focus)",
+      "imagePath": "/images/institutions/china/beijing-normal-university.jpg"
+    },
+    {
+      "slug": "harbin-institute-of-technology",
+      "name": "Harbin Institute of Technology",
+      "city": "Harbin",
+      "founded": 1920,
+      "globalRank": 300,
+      "type": "Public Research University (Engineering Focus)",
+      "imagePath": "/images/institutions/china/harbin-institute-of-technology.jpg"
+    },
+    {
+      "slug": "central-academy-of-fine-arts",
+      "name": "Central Academy of Fine Arts",
+      "city": "Beijing",
+      "founded": 1918,
+      "globalRank": null,
+      "type": "Specialized Arts Institution",
+      "imagePath": "/images/institutions/china/central-academy-of-fine-arts.jpg"
+    },
+    {
+      "slug": "chinese-academy-of-sciences",
+      "name": "Chinese Academy of Sciences",
+      "city": "Beijing",
+      "founded": 1949,
+      "globalRank": null,
+      "type": "National Research Institution",
+      "imagePath": "/images/institutions/china/chinese-academy-of-sciences.jpg"
+    }
+  ]
+}

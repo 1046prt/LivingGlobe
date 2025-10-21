@@ -1,0 +1,694 @@
+{
+  "iso2": "BR",
+  "iso3": "BRA",
+  "name": "Brazil",
+  "region": "South America",
+  "capital": "Brasília",
+  "population": 215300000,
+  "currency": {
+    "code": "BRL",
+    "name": "Brazilian Real",
+    "symbol": "R$",
+    "image": "/images/currencies/brl.png"
+  },
+  "languages": ["Portuguese"],
+  "timezones": ["UTC-5:00", "UTC-4:00", "UTC-3:00", "UTC-2:00"],
+  "geography": {
+    "climateZones": ["Tropical", "Subtropical", "Temperate"],
+    "geologicalFormations": [
+      {
+        "name": "Amazon Basin",
+        "type": "Basin",
+        "description": "World's largest river basin"
+      },
+      {
+        "name": "Brazilian Highlands",
+        "type": "Plateau",
+        "description": "Large plateau covering central Brazil"
+      }
+    ],
+    "naturalDisasters": [
+      {
+        "type": "Drought",
+        "name": "Northeast Drought",
+        "year": 2012,
+        "impact": "Severe drought affecting northeastern Brazil"
+      }
+    ],
+    "majorWaterBodies": [
+      {
+        "name": "Atlantic Ocean",
+        "type": "Ocean",
+        "coastline": "East Coast"
+      },
+      {
+        "name": "Amazon River",
+        "type": "River",
+        "description": "World's largest river by volume"
+      }
+    ]
+  },
+  "heritage": {
+    "independenceDate": "September 7, 1822",
+    "foundingEvent": "Independence from Portugal",
+    "majorHistoricalFigures": [
+      {
+        "name": "Dom Pedro I",
+        "role": "First Emperor",
+        "period": "1822-1831",
+        "achievement": "Declared Brazilian independence"
+      }
+    ],
+    "colonialHistory": [
+      {
+        "period": "1500-1822",
+        "description": "Portuguese colonial period"
+      }
+    ],
+    "unescoSites": [
+      {
+        "name": "Historic Centre of Salvador de Bahia",
+        "year": 1985,
+        "type": "Cultural"
+      },
+      {
+        "name": "Iguaçu National Park",
+        "year": 1986,
+        "type": "Natural"
+      }
+    ]
+  },
+  "politics": {
+    "currentLeaders": [
+      {
+        "position": "President",
+        "name": "Luiz Inácio Lula da Silva",
+        "party": "Workers' Party",
+        "termStart": "January 1, 2023",
+        "termEnd": "January 1, 2027"
+      }
+    ],
+    "governmentType": "Federal Presidential Constitutional Republic",
+    "internationalMemberships": [
+      "United Nations (UN)",
+      "BRICS",
+      "Mercosur",
+      "Organization of American States (OAS)"
+    ]
+  },
+  "economy": {
+    "gdp": 2055506000000,
+    "gdpPerCapita": 9673,
+    "majorIndustries": ["Agriculture", "Mining", "Manufacturing", "Services"],
+    "topExports": [
+      {
+        "product": "Soybeans",
+        "value": 33700000000
+      },
+      {
+        "product": "Iron Ore",
+        "value": 28100000000
+      }
+    ],
+    "topImports": [
+      {
+        "product": "Refined Petroleum",
+        "value": 8900000000
+      },
+      {
+        "product": "Vehicle Parts",
+        "value": 6200000000
+      }
+    ],
+    "employmentRate": 93.2,
+    "employmentSectors": {
+      "services": 73.2,
+      "industry": 20.7,
+      "agriculture": 6.1
+    }
+  },
+  "culture": {
+    "officialLanguages": ["Portuguese"],
+    "regionalLanguages": ["Spanish", "English", "French"],
+    "religionDemographics": {
+      "Christianity": 86.8,
+      "Unaffiliated": 8.0,
+      "Spiritism": 2.0,
+      "Other": 3.2
+    },
+    "nationalFestivals": [
+      {
+        "name": "Carnival",
+        "date": "February/March",
+        "description": "World's largest carnival celebration"
+      },
+      {
+        "name": "Independence Day",
+        "date": "September 7",
+        "description": "Celebrates independence from Portugal"
+      }
+    ],
+    "traditionalFoods": [
+      {
+        "name": "Feijoada",
+        "description": "Traditional black bean stew with pork"
+      },
+      {
+        "name": "Açaí",
+        "description": "Purple berry superfood from Amazon"
+      }
+    ],
+    "nationalSymbols": {
+      "flag": "Green field with yellow rhombus",
+      "emblem": "Coat of Arms of Brazil",
+      "anthem": "Hino Nacional Brasileiro",
+      "flower": "Ipê",
+      "bird": "Sabiá-laranjeira",
+      "animal": "Jaguar"
+    }
+  },
+  "education": {
+    "literacyRate": 93.2,
+    "educationSystem": "Free public education system",
+    "famousScientists": [
+      {
+        "name": "Carlos Chagas",
+        "field": "Medicine",
+        "achievement": "Discovered Chagas disease"
+      }
+    ],
+    "nobelPrizeWinners": 1
+  },
+  "tourism": {
+    "mostVisitedCities": [
+      {
+        "name": "Rio de Janeiro",
+        "visitors": 6500000,
+        "attractions": [
+          "Christ the Redeemer",
+          "Copacabana Beach",
+          "Sugarloaf Mountain"
+        ]
+      },
+      {
+        "name": "São Paulo",
+        "visitors": 15600000,
+        "attractions": ["Museums", "Nightlife", "Business District"]
+      }
+    ],
+    "adventureActivities": [
+      "Amazon Rainforest Tours",
+      "Iguazu Falls Visits",
+      "Beach Activities",
+      "Pantanal Wildlife Watching"
+    ],
+    "transportation": {
+      "airports": "Major airports in São Paulo, Rio de Janeiro, Brasília",
+      "railways": "Limited passenger rail service",
+      "highways": "Extensive highway network"
+    },
+    "visaRequirements": "Visa required for most visitors"
+  },
+  "demographics": {
+    "populationGrowth": [
+      { "year": 2020, "population": 212559417 },
+      { "year": 2021, "population": 213993437 },
+      { "year": 2022, "population": 215313498 },
+      { "year": 2023, "population": 216422446 }
+    ],
+    "urbanRural": {
+      "urban": 87.1,
+      "rural": 12.9
+    },
+    "lifeExpectancy": {
+      "total": 76.6,
+      "male": 73.1,
+      "female": 80.2
+    },
+    "ageDistribution": {
+      "youth": 21.1,
+      "workingAge": 69.6,
+      "elderly": 9.3
+    }
+  },
+  "history": [
+    {
+      "year": 1500,
+      "description": "Portuguese explorer Pedro Álvares Cabral claims Brazil for Portugal"
+    },
+    {
+      "year": 1822,
+      "description": "Brazil declares independence from Portugal"
+    },
+    {
+      "year": 1888,
+      "description": "Abolition of slavery in Brazil"
+    },
+    {
+      "year": 1960,
+      "description": "Capital moved from Rio de Janeiro to Brasília"
+    }
+  ],
+  "states": [
+    {
+      "name": "Acre",
+      "capital": "Rio Branco",
+      "slug": "acre"
+    },
+    {
+      "name": "Alagoas",
+      "capital": "Maceió",
+      "slug": "alagoas"
+    },
+    {
+      "name": "Amapá",
+      "capital": "Macapá",
+      "slug": "amapa"
+    },
+    {
+      "name": "Amazonas",
+      "capital": "Manaus",
+      "slug": "amazonas"
+    },
+    {
+      "name": "Bahia",
+      "capital": "Salvador",
+      "slug": "bahia"
+    },
+    {
+      "name": "Ceará",
+      "capital": "Fortaleza",
+      "slug": "ceara"
+    },
+    {
+      "name": "Espírito Santo",
+      "capital": "Vitória",
+      "slug": "espirito-santo"
+    },
+    {
+      "name": "Goiás",
+      "capital": "Goiânia",
+      "slug": "goias"
+    },
+    {
+      "name": "Maranhão",
+      "capital": "São Luís",
+      "slug": "maranhao"
+    },
+    {
+      "name": "Mato Grosso",
+      "capital": "Cuiabá",
+      "slug": "mato-grosso"
+    },
+    {
+      "name": "Mato Grosso do Sul",
+      "capital": "Campo Grande",
+      "slug": "mato-grosso-do-sul"
+    },
+    {
+      "name": "Minas Gerais",
+      "capital": "Belo Horizonte",
+      "slug": "minas-gerais"
+    },
+    {
+      "name": "Pará",
+      "capital": "Belém",
+      "slug": "para"
+    },
+    {
+      "name": "Paraíba",
+      "capital": "João Pessoa",
+      "slug": "paraiba"
+    },
+    {
+      "name": "Paraná",
+      "capital": "Curitiba",
+      "slug": "parana"
+    },
+    {
+      "name": "Pernambuco",
+      "capital": "Recife",
+      "slug": "pernambuco"
+    },
+    {
+      "name": "Piauí",
+      "capital": "Teresina",
+      "slug": "piaui"
+    },
+    {
+      "name": "Rio de Janeiro",
+      "capital": "Rio de Janeiro",
+      "slug": "rio-de-janeiro"
+    },
+    {
+      "name": "Rio Grande do Norte",
+      "capital": "Natal",
+      "slug": "rio-grande-do-norte"
+    },
+    {
+      "name": "Rio Grande do Sul",
+      "capital": "Porto Alegre",
+      "slug": "rio-grande-do-sul"
+    },
+    {
+      "name": "Rondônia",
+      "capital": "Porto Velho",
+      "slug": "rondonia"
+    },
+    {
+      "name": "Roraima",
+      "capital": "Boa Vista",
+      "slug": "roraima"
+    },
+    {
+      "name": "Santa Catarina",
+      "capital": "Florianópolis",
+      "slug": "santa-catarina"
+    },
+    {
+      "name": "São Paulo",
+      "capital": "São Paulo",
+      "slug": "sao-paulo"
+    },
+    {
+      "name": "Sergipe",
+      "capital": "Aracaju",
+      "slug": "sergipe"
+    },
+    {
+      "name": "Tocantins",
+      "capital": "Palmas",
+      "slug": "tocantins"
+    },
+    {
+      "name": "Federal District",
+      "capital": "Brasília",
+      "slug": "federal-district"
+    }
+  ],
+  "famousCities": [
+    {
+      "name": "Rio de Janeiro",
+      "whyFamous": "Famous for Christ the Redeemer statue, Carnival, and beautiful beaches",
+      "image": "/images/cities/brazil/rio-de-janeiro.jpg",
+      "slug": "rio-de-janeiro"
+    },
+    {
+      "name": "São Paulo",
+      "whyFamous": "Largest city in South America and major economic center",
+      "slug": "sao-paulo",
+      "image": "/images/cities/brazil/sao-paulo.jpg"
+    },
+    {
+      "name": "Salvador",
+      "whyFamous": "Historic colonial city and cultural center of Afro-Brazilian culture",
+      "slug": "salvador",
+      "image": "/images/cities/brazil/salvador.jpg"
+    },
+    {
+      "name": "Brasília",
+      "whyFamous": "Modernist capital city designed by Oscar Niemeyer and UNESCO site",
+      "slug": "brasilia",
+      "image": "/images/cities/brazil/brasilia.jpg"
+    },
+    {
+      "name": "Fortaleza",
+      "whyFamous": "Known for its stunning beaches and vibrant nightlife",
+      "slug": "fortaleza",
+      "image": "/images/cities/brazil/fortaleza.jpg"
+    },
+    {
+      "name": "Recife",
+      "whyFamous": "Venice of Brazil, historic old town, and cultural hub of the northeast",
+      "slug": "recife",
+      "image": "/images/cities/brazil/recife.jpg"
+    },
+    {
+      "name": "Manaus",
+      "whyFamous": "Gateway to the Amazon rainforest and famous opera house",
+      "slug": "manaus",
+      "image": "/images/cities/brazil/manaus.jpg"
+    },
+    {
+      "name": "Curitiba",
+      "whyFamous": "Renowned for innovative urban planning and eco-friendly design",
+      "slug": "curitiba",
+      "image": "/images/cities/brazil/curitiba.jpg"
+    },
+    {
+      "name": "Belo Horizonte",
+      "whyFamous": "Capital of Minas Gerais, known for modern architecture and cuisine",
+      "slug": "belo-horizonte",
+      "image": "/images/cities/brazil/belo-horizonte.jpg"
+    },
+    {
+      "name": "Porto Alegre",
+      "whyFamous": "Cultural hub in southern Brazil, famous for gaucho traditions",
+      "slug": "porto-alegre",
+      "image": "/images/cities/brazil/porto-alegre.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "slug": "christ-the-redeemer",
+      "name": "Christ the Redeemer",
+      "city": "Rio de Janeiro",
+      "coordinates": {
+        "lat": -22.9519,
+        "lng": -43.2105
+      },
+      "whyFamous": "Iconic Art Deco statue of Jesus Christ overlooking Rio de Janeiro",
+      "imagePath": "/images/landmarks/brazil/christ-the-redeemer.jpg"
+    },
+    {
+      "slug": "iguazu-falls",
+      "name": "Iguazu Falls",
+      "city": "Foz do Iguaçu",
+      "coordinates": {
+        "lat": -25.6953,
+        "lng": -54.4367
+      },
+      "whyFamous": "One of the world's most spectacular waterfalls of Brazil",
+      "imagePath": "/images/landmarks/brazil/iguazu-falls.jpg"
+    },
+    {
+      "slug": "sugarloaf-mountain",
+      "name": "Sugarloaf Mountain",
+      "city": "Rio de Janeiro",
+      "coordinates": {
+        "lat": -22.9486,
+        "lng": -43.1566
+      },
+      "whyFamous": "Granite peak offering cable car rides and panoramic views of Rio",
+      "imagePath": "/images/landmarks/brazil/sugarloaf-mountain.jpg"
+    },
+    {
+      "slug": "amazon-theatre",
+      "name": "Amazon Theatre",
+      "city": "Manaus",
+      "coordinates": {
+        "lat": -3.1303,
+        "lng": -60.0239
+      },
+      "whyFamous": "19th-century opera house in the heart of the Amazon rainforest",
+      "imagePath": "/images/landmarks/brazil/amazon-theatre.jpg"
+    },
+    {
+      "slug": "lençóis-maranhenses",
+      "name": "Lençóis Maranhenses National Park",
+      "city": "Maranhão",
+      "coordinates": {
+        "lat": -2.4861,
+        "lng": -43.115
+      },
+      "whyFamous": "Unique desert landscape with white sand dunes and blue lagoons",
+      "imagePath": "/images/landmarks/brazil/lencois-maranhenses.jpg"
+    },
+    {
+      "slug": "pelourinho",
+      "name": "Pelourinho",
+      "city": "Salvador",
+      "coordinates": {
+        "lat": -12.9714,
+        "lng": -38.5108
+      },
+      "whyFamous": "Historic colonial neighborhood, UNESCO World Heritage Site",
+      "imagePath": "/images/landmarks/brazil/pelourinho.jpg"
+    },
+    {
+      "slug": "oscar-niemeyer-museum",
+      "name": "Oscar Niemeyer Museum",
+      "city": "Curitiba",
+      "coordinates": {
+        "lat": -25.4106,
+        "lng": -49.2697
+      },
+      "whyFamous": "Striking contemporary art museum designed by Oscar Niemeyer",
+      "imagePath": "/images/landmarks/brazil/oscar-niemeyer-museum.jpg"
+    }
+  ],
+  "rivers": [
+    {
+      "slug": "amazon-river",
+      "name": "Amazon River",
+      "length": 6400,
+      "countries": ["Brazil", "Peru", "Colombia"],
+      "source": "Peruvian Andes",
+      "mouth": "Atlantic Ocean",
+      "imagePath": "/images/rivers/brazil/amazon-river.jpg",
+      "pathCoordinates": [
+        { "lat": -3.4653, "lng": -62.2159 },
+        { "lat": 0.1807, "lng": -51.7792 }
+      ]
+    },
+    {
+      "slug": "parana-river",
+      "name": "Paraná River",
+      "length": 4880,
+      "countries": ["Brazil", "Paraguay", "Argentina"],
+      "source": "Paraná Highlands",
+      "mouth": "Río de la Plata",
+      "imagePath": "/images/rivers/brazil/parana-river.jpg",
+      "pathCoordinates": [
+        { "lat": -23.0, "lng": -46.0 },
+        { "lat": -34.9, "lng": -58.0 }
+      ]
+    },
+    {
+      "slug": "tocantins-river",
+      "name": "Tocantins River",
+      "length": 2410,
+      "countries": ["Brazil"],
+      "source": "Brazilian Highlands",
+      "mouth": "Atlantic Ocean",
+      "imagePath": "/images/rivers/brazil/tocantins-river.jpg",
+      "pathCoordinates": [
+        { "lat": -10.5, "lng": -48.5 },
+        { "lat": -1.0, "lng": -48.5 }
+      ]
+    },
+    {
+      "slug": "sao-francisco-river",
+      "name": "São Francisco River",
+      "length": 3162,
+      "countries": ["Brazil"],
+      "source": "Minas Gerais",
+      "mouth": "Atlantic Ocean",
+      "imagePath": "/images/rivers/brazil/sao-francisco-river.jpg",
+      "pathCoordinates": [
+        { "lat": -19.9, "lng": -43.3 },
+        { "lat": -8.8, "lng": -35.0 }
+      ]
+    }
+  ],
+  "institutions": [
+    {
+      "slug": "university-of-sao-paulo",
+      "name": "University of São Paulo",
+      "city": "São Paulo",
+      "founded": 1934,
+      "globalRank": 115,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/brazil/university-of-sao-paulo.jpg"
+    },
+    {
+      "slug": "university-of-rio-de-janeiro",
+      "name": "Federal University of Rio de Janeiro",
+      "city": "Rio de Janeiro",
+      "founded": 1920,
+      "globalRank": 223,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/brazil/federal-university-rio.jpg"
+    },
+    {
+      "slug": "university-of-brasilia",
+      "name": "University of Brasília",
+      "city": "Brasília",
+      "founded": 1962,
+      "globalRank": 447,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/brazil/university-of-brasilia.jpg"
+    },
+    {
+      "slug": "state-university-of-campinas",
+      "name": "State University of Campinas",
+      "city": "Campinas, São Paulo",
+      "founded": 1966,
+      "globalRank": 314,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/brazil/state-university-campinas.jpg"
+    }
+  ],
+  "scienceTechnology": {
+    "spaceMissions": [
+      {
+        "name": "Brazilian Space Program",
+        "year": "1994-present",
+        "achievement": "INPE satellite development and space research"
+      },
+      {
+        "name": "Amazônia-1",
+        "year": 2021,
+        "achievement": "First Earth observation satellite fully developed in Brazil"
+      }
+    ],
+    "techStartups": [
+      "Nubank",
+      "StoneCo",
+      "PagSeguro",
+      "Totvs",
+      "Magazine Luiza",
+      "Mercado Libre"
+    ],
+    "patents": 6100,
+    "breakthroughs": [
+      {
+        "year": 1906,
+        "invention": "14-bis Aircraft",
+        "inventor": "Alberto Santos-Dumont"
+      },
+      {
+        "year": 1909,
+        "invention": "Chagas Disease Discovery",
+        "inventor": "Carlos Chagas"
+      },
+      {
+        "year": 1988,
+        "invention": "Biodegradable Plastic",
+        "inventor": "Brazilian researchers"
+      }
+    ]
+  },
+  "sportsEntertainment": {
+    "nationalSports": [
+      "Football (Soccer)",
+      "Volleyball",
+      "Beach Volleyball",
+      "Capoeira"
+    ],
+    "olympicPerformance": {
+      "totalMedals": 150,
+      "goldMedals": 37,
+      "silverMedals": 42,
+      "bronzeMedals": 71
+    },
+    "popularMovies": ["City of God", "Central Station", "Elite Squad"],
+    "musicArtists": [
+      "Bossa Nova (João Gilberto, Antonio Carlos Jobim)",
+      "Caetano Veloso",
+      "Gilberto Gil",
+      "Anitta",
+      "Sérgio Mendes"
+    ],
+    "worldRecords": [
+      {
+        "record": "Most FIFA World Cup wins",
+        "value": "5 titles (1958, 1962, 1970, 1994, 2002)"
+      },
+      {
+        "record": "Largest rainforest",
+        "value": "Amazon rainforest covers 60% of Brazil"
+      }
+    ]
+  }
+}

@@ -77,36 +77,40 @@ export class SimpleGlobe {
     );
 
     countries.forEach((country, index) => {
-      if (index < 20) {
-        // Show first 20 countries
-        const lat = country.lat || 0;
-        const lon = country.lon || 0;
+      const lat = country.lat || 0;
+      const lon = country.lon || 0;
 
-        // Convert lat/lon to 3D position
-        const phi = (90 - lat) * (Math.PI / 180);
-        const theta = (lon + 180) * (Math.PI / 180);
-        const radius = 1.05;
+      // Convert lat/lon to 3D position
+      const phi = (90 - lat) * (Math.PI / 180);
+      const theta = (lon + 180) * (Math.PI / 180);
+      const radius = 1.05;
 
-        const x = -(radius * Math.sin(phi) * Math.cos(theta));
-        const z = radius * Math.sin(phi) * Math.sin(theta);
-        const y = radius * Math.cos(phi);
+      const x = -(radius * Math.sin(phi) * Math.cos(theta));
+      const z = radius * Math.sin(phi) * Math.sin(theta);
+      const y = radius * Math.cos(phi);
 
-        // Create a simple marker
-        const markerGeometry = new THREE.SphereGeometry(0.02, 8, 8);
-        const markerMaterial = new THREE.MeshBasicMaterial({
-          color: 0xff6b6b,
-        });
+      // Create a marker with size based on population
+      const populationScale =
+        Math.log(country.population || 1000000) / Math.log(1000000000);
+      const markerSize = Math.max(
+        0.015,
+        Math.min(0.035, 0.015 + populationScale * 0.02)
+      );
 
-        const marker = new THREE.Mesh(markerGeometry, markerMaterial);
-        marker.position.set(x, y, z);
-        marker.userData = { country };
+      const markerGeometry = new THREE.SphereGeometry(markerSize, 8, 8);
+      const markerMaterial = new THREE.MeshBasicMaterial({
+        color: 0xff6b6b,
+      });
 
-        this.countryMarkers.push(marker);
-        this.scene.add(marker);
+      const marker = new THREE.Mesh(markerGeometry, markerMaterial);
+      marker.position.set(x, y, z);
+      marker.userData = { country };
 
-        // Add country name label
-        this.createCountryLabel(country.name, x, y, z);
-      }
+      this.countryMarkers.push(marker);
+      this.scene.add(marker);
+
+      // Add country name label
+      this.createCountryLabel(country.name, x, y, z);
     });
   }
 
@@ -198,9 +202,10 @@ export class SimpleGlobe {
     if (!panel || !nameEl || !dataEl) return;
 
     nameEl.innerHTML = `${country.flag || "🌍"} ${country.name}`;
-    dataEl.innerHTML = `
+
+    let content = `
       <div class="data-section">
-        <h4>Basic Information</h4>
+        <h4>🏛️ Basic Information</h4>
         <div class="data-item">
           <span class="data-label">Capital</span>
           <span>${country.capital || "N/A"}</span>
@@ -223,12 +228,20 @@ export class SimpleGlobe {
         </div>
         <div class="data-item">
           <span class="data-label">Currency</span>
-          <span>${country.currency || "N/A"}</span>
+          <span>${
+            country.currencyData
+              ? `${country.currencyData.name} (${country.currencyData.code})`
+              : country.currency || "N/A"
+          }</span>
+        </div>
+        <div class="data-item">
+          <span class="data-label">Independence</span>
+          <span>${country.independence || "N/A"}</span>
         </div>
       </div>
 
       <div class="data-section">
-        <h4>Economic Data</h4>
+        <h4>💰 Economic Data</h4>
         <div class="data-item">
           <span class="data-label">GDP</span>
           <span>$${((country.gdp || 0) / 1000000000).toFixed(2)}B</span>
@@ -237,21 +250,134 @@ export class SimpleGlobe {
           <span class="data-label">GDP per Capita</span>
           <span>$${(country.gdpPerCapita || 0).toLocaleString()}</span>
         </div>
+        <div class="data-item">
+          <span class="data-label">Employment Rate</span>
+          <span>${country.economy?.employmentRate || "N/A"}%</span>
+        </div>
       </div>
 
       <div class="data-section">
-        <h4>Social Indicators</h4>
+        <h4>👥 Demographics</h4>
         <div class="data-item">
           <span class="data-label">Life Expectancy</span>
-          <span>${country.lifeExpectancy || "N/A"} years</span>
+          <span>${
+            country.lifeExpectancy ||
+            country.demographics?.lifeExpectancy?.total ||
+            "N/A"
+          } years</span>
         </div>
         <div class="data-item">
           <span class="data-label">Literacy Rate</span>
-          <span>${country.literacyRate || "N/A"}%</span>
+          <span>${
+            country.literacyRate || country.education?.literacyRate || "N/A"
+          }%</span>
         </div>
-      </div>
-    `;
+        <div class="data-item">
+          <span class="data-label">Urban Population</span>
+          <span>${
+            country.urbanPopulation ||
+            country.demographics?.urbanRural?.urban ||
+            "N/A"
+          }%</span>
+        </div>
+      </div>`;
 
+    // Add government information if available
+    if (country.politics) {
+      content += `
+        <div class="data-section">
+          <h4>🏛️ Government</h4>
+          <div class="data-item">
+            <span class="data-label">Type</span>
+            <span>${country.politics.governmentType || "N/A"}</span>
+          </div>`;
+
+      if (
+        country.politics.currentLeaders &&
+        country.politics.currentLeaders.length > 0
+      ) {
+        const leader = country.politics.currentLeaders[0];
+        content += `
+          <div class="data-item">
+            <span class="data-label">${leader.position}</span>
+            <span>${leader.name} (${leader.party || "N/A"})</span>
+          </div>`;
+      }
+      content += `</div>`;
+    }
+
+    // Add cultural information if available
+    if (country.culture) {
+      content += `
+        <div class="data-section">
+          <h4>🎭 Culture</h4>`;
+
+      if (
+        country.culture.nationalFestivals &&
+        country.culture.nationalFestivals.length > 0
+      ) {
+        content += `
+          <div class="data-item">
+            <span class="data-label">Major Festival</span>
+            <span>${country.culture.nationalFestivals[0].name}</span>
+          </div>`;
+      }
+
+      if (
+        country.culture.traditionalFoods &&
+        country.culture.traditionalFoods.length > 0
+      ) {
+        content += `
+          <div class="data-item">
+            <span class="data-label">Traditional Food</span>
+            <span>${country.culture.traditionalFoods[0].name}</span>
+          </div>`;
+      }
+
+      content += `</div>`;
+    }
+
+    // Add tourism information if available
+    if (country.tourism && country.tourism.mostVisitedCities) {
+      content += `
+        <div class="data-section">
+          <h4>🏖️ Tourism</h4>`;
+
+      const topCity = country.tourism.mostVisitedCities[0];
+      if (topCity) {
+        content += `
+          <div class="data-item">
+            <span class="data-label">Top Destination</span>
+            <span>${topCity.name} (${(
+          topCity.visitors || 0
+        ).toLocaleString()} visitors)</span>
+          </div>`;
+      }
+
+      content += `</div>`;
+    }
+
+    // Add UNESCO sites if available
+    if (
+      country.heritage &&
+      country.heritage.unescoSites &&
+      country.heritage.unescoSites.length > 0
+    ) {
+      content += `
+        <div class="data-section">
+          <h4>🏛️ UNESCO Sites</h4>
+          <div class="data-item">
+            <span class="data-label">Total Sites</span>
+            <span>${country.heritage.unescoSites.length}</span>
+          </div>
+          <div class="data-item">
+            <span class="data-label">Notable Site</span>
+            <span>${country.heritage.unescoSites[0].name}</span>
+          </div>
+        </div>`;
+    }
+
+    dataEl.innerHTML = content;
     panel.classList.remove("hidden");
   }
 

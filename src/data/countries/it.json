@@ -1,0 +1,841 @@
+{
+  "iso2": "IT",
+  "iso3": "ITA",
+  "name": "Italy",
+  "region": "Europe",
+  "capital": "Rome",
+  "population": 59100000,
+  "image": "/images/country/it.svg",
+  "flag": "/images/flags/it.png",
+  "currency": {
+    "code": "EUR",
+    "name": "Euro",
+    "symbol": "€",
+    "image": "/images/currencies/eur.png"
+  },
+  "languages": ["Italian"],
+  "timezones": ["UTC+01:00"],
+  "geography": {
+    "climateZones": ["Mediterranean", "Continental", "Alpine"],
+    "geologicalFormations": [
+      {
+        "name": "Italian Alps",
+        "type": "Mountain Range",
+        "description": "Northern mountain range including Mont Blanc"
+      },
+      {
+        "name": "Apennine Mountains",
+        "type": "Mountain Range",
+        "description": "Mountain chain running down the Italian peninsula"
+      },
+      {
+        "name": "Po Valley",
+        "type": "River Valley",
+        "description": "Fertile plain in northern Italy"
+      }
+    ],
+    "naturalDisasters": [
+      {
+        "type": "Earthquake",
+        "name": "L'Aquila Earthquake",
+        "year": 2009,
+        "impact": "Devastating earthquake in central Italy"
+      },
+      {
+        "type": "Volcanic Eruption",
+        "name": "Mount Vesuvius",
+        "year": "79 AD",
+        "impact": "Historic eruption that destroyed Pompeii and Herculaneum"
+      }
+    ],
+    "majorWaterBodies": [
+      {
+        "name": "Mediterranean Sea",
+        "type": "Sea",
+        "coastline": "South and West Coast"
+      },
+      {
+        "name": "Adriatic Sea",
+        "type": "Sea",
+        "coastline": "East Coast"
+      },
+      {
+        "name": "Tyrrhenian Sea",
+        "type": "Sea",
+        "coastline": "West Coast"
+      },
+      {
+        "name": "Lake Garda",
+        "type": "Lake",
+        "description": "Largest lake in Italy"
+      }
+    ]
+  },
+  "heritage": {
+    "independenceDate": "March 17, 1861",
+    "foundingEvent": "Unification of Italy (Risorgimento)",
+    "majorHistoricalFigures": [
+      {
+        "name": "Giuseppe Garibaldi",
+        "role": "Revolutionary",
+        "period": "1807-1882",
+        "achievement": "Led the unification of Italy"
+      },
+      {
+        "name": "Julius Caesar",
+        "role": "Roman Emperor",
+        "period": "100-44 BC",
+        "achievement": "Expanded Roman Empire and reformed Roman society"
+      },
+      {
+        "name": "Leonardo da Vinci",
+        "role": "Renaissance Polymath",
+        "period": "1452-1519",
+        "achievement": "Master artist, inventor, and scientist"
+      }
+    ],
+    "colonialHistory": [
+      {
+        "period": "1882-1960",
+        "description": "Italian colonial empire in Africa and Mediterranean"
+      },
+      {
+        "period": "27 BC - 476 AD",
+        "description": "Roman Empire period of expansion and influence"
+      }
+    ],
+    "unescoSites": [
+      {
+        "name": "Historic Centre of Rome",
+        "year": 1980,
+        "type": "Cultural"
+      },
+      {
+        "name": "Venice and its Lagoon",
+        "year": 1987,
+        "type": "Cultural"
+      },
+      {
+        "name": "Historic Centre of Florence",
+        "year": 1982,
+        "type": "Cultural"
+      },
+      {
+        "name": "Archaeological Areas of Pompeii",
+        "year": 1997,
+        "type": "Cultural"
+      }
+    ]
+  },
+  "politics": {
+    "currentLeaders": [
+      {
+        "position": "Prime Minister",
+        "name": "Giorgia Meloni",
+        "party": "Brothers of Italy",
+        "termStart": "October 22, 2022"
+      },
+      {
+        "position": "President",
+        "name": "Sergio Mattarella",
+        "party": "Independent",
+        "termStart": "February 3, 2015"
+      }
+    ],
+    "governmentType": "Parliamentary Republic",
+    "internationalMemberships": [
+      "European Union (EU)",
+      "United Nations (UN)",
+      "North Atlantic Treaty Organization (NATO)",
+      "Group of Seven (G7)",
+      "Group of Twenty (G20)",
+      "Organization for Economic Co-operation and Development (OECD)"
+    ]
+  },
+  "economy": {
+    "gdp": 2107700000000,
+    "gdpPerCapita": 35657,
+    "majorIndustries": [
+      "Manufacturing",
+      "Fashion",
+      "Automotive",
+      "Food Processing",
+      "Tourism",
+      "Machinery",
+      "Chemicals"
+    ],
+    "topExports": [
+      {
+        "product": "Packaged Medicaments",
+        "value": 31800000000
+      },
+      {
+        "product": "Cars",
+        "value": 27000000000
+      },
+      {
+        "product": "Vehicle Parts",
+        "value": 16800000000
+      },
+      {
+        "product": "Refined Petroleum",
+        "value": 15200000000
+      }
+    ],
+    "topImports": [
+      {
+        "product": "Crude Petroleum",
+        "value": 43200000000
+      },
+      {
+        "product": "Cars",
+        "value": 20100000000
+      },
+      {
+        "product": "Packaged Medicaments",
+        "value": 18900000000
+      },
+      {
+        "product": "Petroleum Gas",
+        "value": 18200000000
+      }
+    ],
+    "employmentRate": 91.7,
+    "employmentSectors": {
+      "services": 73.9,
+      "industry": 25.2,
+      "agriculture": 0.9
+    }
+  },
+  "culture": {
+    "officialLanguages": ["Italian"],
+    "regionalLanguages": ["Sardinian", "German", "French", "Slovene", "Ladin"],
+    "religionDemographics": {
+      "Christianity": 79.2,
+      "Unaffiliated": 15.3,
+      "Islam": 3.7,
+      "Other": 1.8
+    },
+    "nationalFestivals": [
+      {
+        "name": "Carnival of Venice",
+        "date": "February-March",
+        "description": "Famous masked carnival celebration"
+      },
+      {
+        "name": "Palio di Siena",
+        "date": "July and August",
+        "description": "Historic horse race in Siena's main square"
+      },
+      {
+        "name": "Republic Day",
+        "date": "June 2",
+        "description": "Celebrates the birth of the Italian Republic"
+      }
+    ],
+    "traditionalFoods": [
+      {
+        "name": "Pizza",
+        "description": "Traditional flatbread with toppings, originated in Naples"
+      },
+      {
+        "name": "Pasta",
+        "description": "Various shapes of wheat-based noodles with sauces"
+      },
+      {
+        "name": "Gelato",
+        "description": "Italian-style ice cream with intense flavors"
+      },
+      {
+        "name": "Risotto",
+        "description": "Creamy rice dish from northern Italy"
+      }
+    ],
+    "nationalSymbols": {
+      "flag": "Il Tricolore (Green, White, Red)",
+      "emblem": "Emblem of Italy",
+      "anthem": "Il Canto degli Italiani",
+      "flower": "Lily",
+      "bird": "Italian Sparrow",
+      "animal": "Italian Wolf"
+    }
+  },
+  "education": {
+    "literacyRate": 99.2,
+    "educationSystem": "Free public education, regional variations",
+    "famousScientists": [
+      {
+        "name": "Galileo Galilei",
+        "field": "Astronomy",
+        "achievement": "Father of modern observational astronomy"
+      },
+      {
+        "name": "Enrico Fermi",
+        "field": "Physics",
+        "achievement": "Nuclear reactor and atomic bomb development"
+      },
+      {
+        "name": "Alessandro Volta",
+        "field": "Physics",
+        "achievement": "Invented the electric battery"
+      }
+    ],
+    "nobelPrizeWinners": 20
+  },
+  "tourism": {
+    "mostVisitedCities": [
+      {
+        "name": "Rome",
+        "visitors": 10400000,
+        "attractions": ["Colosseum", "Vatican City", "Trevi Fountain"]
+      },
+      {
+        "name": "Venice",
+        "visitors": 5500000,
+        "attractions": ["St. Mark's Square", "Grand Canal", "Doge's Palace"]
+      },
+      {
+        "name": "Florence",
+        "visitors": 5000000,
+        "attractions": ["Uffizi Gallery", "Duomo", "Ponte Vecchio"]
+      }
+    ],
+    "adventureActivities": [
+      "Alpine Skiing",
+      "Mediterranean Sailing",
+      "Tuscany Wine Tours",
+      "Amalfi Coast Hiking",
+      "Sicilian Volcano Tours"
+    ],
+    "transportation": {
+      "airports": "Major airports in Rome, Milan, Venice",
+      "railways": "High-speed rail network connecting major cities",
+      "highways": "Autostrada highway system"
+    },
+    "visaRequirements": "Schengen visa or EU passport required"
+  },
+  "demographics": {
+    "populationGrowth": [
+      { "year": 2020, "population": 60461826 },
+      { "year": 2021, "population": 59257566 },
+      { "year": 2022, "population": 58940425 },
+      { "year": 2023, "population": 58761146 }
+    ],
+    "urbanRural": {
+      "urban": 71.0,
+      "rural": 29.0
+    },
+    "lifeExpectancy": {
+      "total": 83.5,
+      "male": 81.2,
+      "female": 85.6
+    },
+    "ageDistribution": {
+      "youth": 13.2,
+      "workingAge": 63.8,
+      "elderly": 23.0
+    }
+  },
+  "scienceTechnology": {
+    "spaceMissions": [
+      {
+        "name": "Vega Launcher",
+        "year": 2012,
+        "achievement": "European small satellite launcher developed by Italy"
+      },
+      {
+        "name": "ExoMars",
+        "year": 2016,
+        "achievement": "ESA Mars exploration mission with Italian participation"
+      }
+    ],
+    "techStartups": [
+      "Bending Spoons",
+      "Casavo",
+      "Satispay",
+      "Yoox Net-A-Porter",
+      "Prima Assicurazioni"
+    ],
+    "patents": 9786,
+    "breakthroughs": [
+      {
+        "year": 1800,
+        "invention": "Electric Battery",
+        "inventor": "Alessandro Volta"
+      },
+      {
+        "year": 1896,
+        "invention": "Wireless Telegraph",
+        "inventor": "Guglielmo Marconi"
+      },
+      {
+        "year": 1942,
+        "invention": "Nuclear Reactor",
+        "inventor": "Enrico Fermi"
+      }
+    ]
+  },
+  "sportsEntertainment": {
+    "nationalSports": ["Football (Soccer)"],
+    "olympicPerformance": {
+      "totalMedals": 701,
+      "goldMedals": 259,
+      "silverMedals": 230,
+      "bronzeMedals": 212
+    },
+    "popularMovies": [
+      "Italian Neorealism",
+      "Spaghetti Westerns",
+      "Federico Fellini films"
+    ],
+    "musicArtists": [
+      "Luciano Pavarotti",
+      "Andrea Bocelli",
+      "Eros Ramazzotti",
+      "Laura Pausini",
+      "Måneskin"
+    ],
+    "worldRecords": [
+      {
+        "record": "Most UNESCO World Heritage Sites",
+        "value": "58 sites"
+      },
+      {
+        "record": "UEFA European Championship wins",
+        "value": "2 titles (1968, 2021)"
+      }
+    ]
+  },
+  "history": [
+    {
+      "year": "753 BC",
+      "description": "Traditional founding of Rome"
+    },
+    {
+      "year": "27 BC",
+      "description": "Roman Empire established under Augustus"
+    },
+    {
+      "year": 1861,
+      "description": "Kingdom of Italy proclaimed, unification completed"
+    },
+    {
+      "year": 1946,
+      "description": "Italian Republic established after referendum"
+    },
+    {
+      "year": 1957,
+      "description": "Founding member of European Economic Community"
+    }
+  ],
+  "states": [
+    {
+      "name": "Lombardy",
+      "capital": "Milan",
+      "slug": "lombardy"
+    },
+    {
+      "name": "Lazio",
+      "capital": "Rome",
+      "slug": "lazio"
+    },
+    {
+      "name": "Tuscany",
+      "capital": "Florence",
+      "slug": "tuscany"
+    },
+    {
+      "name": "Veneto",
+      "capital": "Venice",
+      "slug": "veneto"
+    },
+    {
+      "name": "Sicily",
+      "capital": "Palermo",
+      "slug": "sicily"
+    },
+    {
+      "name": "Piedmont",
+      "capital": "Turin",
+      "slug": "piedmont"
+    },
+    {
+      "name": "Emilia-Romagna",
+      "capital": "Bologna",
+      "slug": "emilia-romagna"
+    },
+    {
+      "name": "Campania",
+      "capital": "Naples",
+      "slug": "campania"
+    },
+    {
+      "name": "Apulia",
+      "capital": "Bari",
+      "slug": "apulia"
+    },
+    {
+      "name": "Calabria",
+      "capital": "Catanzaro",
+      "slug": "calabria"
+    },
+    {
+      "name": "Sardinia",
+      "capital": "Cagliari",
+      "slug": "sardinia"
+    },
+    {
+      "name": "Liguria",
+      "capital": "Genoa",
+      "slug": "liguria"
+    },
+    {
+      "name": "Marche",
+      "capital": "Ancona",
+      "slug": "marche"
+    },
+    {
+      "name": "Abruzzo",
+      "capital": "L'Aquila",
+      "slug": "abruzzo"
+    },
+    {
+      "name": "Friuli Venezia Giulia",
+      "capital": "Trieste",
+      "slug": "friuli-venezia-giulia"
+    },
+    {
+      "name": "Umbria",
+      "capital": "Perugia",
+      "slug": "umbria"
+    },
+    {
+      "name": "Trentino-Alto Adige/Südtirol",
+      "capital": "Trento",
+      "slug": "trentino-alto-adige"
+    },
+    {
+      "name": "Molise",
+      "capital": "Campobasso",
+      "slug": "molise"
+    },
+    {
+      "name": "Basilicata",
+      "capital": "Potenza",
+      "slug": "basilicata"
+    },
+    {
+      "name": "Aosta Valley",
+      "capital": "Aosta",
+      "slug": "aosta-valley"
+    }
+  ],
+  "famousCities": [
+    {
+      "name": "Rome",
+      "whyFamous": "Eternal City, capital, ancient Roman ruins and Vatican City",
+      "slug": "rome",
+      "image": "/images/cities/italy/rome.png"
+    },
+    {
+      "name": "Venice",
+      "whyFamous": "City of canals, unique architecture, romantic gondola rides",
+      "slug": "venice",
+      "image": "/images/cities/italy/venice.png"
+    },
+    {
+      "name": "Florence",
+      "whyFamous": "Renaissance art capital, birthplace of Renaissance",
+      "slug": "florence",
+      "image": "/images/cities/italy/florence.png"
+    },
+    {
+      "name": "Milan",
+      "whyFamous": "Fashion and design capital, economic powerhouse",
+      "slug": "milan",
+      "image": "/images/cities/italy/milan.png"
+    },
+    {
+      "name": "Naples",
+      "whyFamous": "Birthplace of pizza, gateway to Pompeii and Mount Vesuvius",
+      "slug": "naples",
+      "image": "/images/cities/italy/naples.png"
+    },
+    {
+      "name": "Turin",
+      "whyFamous": "Industrial hub, famous for Shroud of Turin and Fiat headquarters",
+      "slug": "turin",
+      "image": "/images/cities/italy/turin.jpg"
+    },
+    {
+      "name": "Bologna",
+      "whyFamous": "Home to the oldest university in the world, rich cuisine",
+      "slug": "bologna",
+      "image": "/images/cities/italy/bologna.jpg"
+    },
+    {
+      "name": "Genoa",
+      "whyFamous": "Historic port city, birthplace of Christopher Columbus",
+      "slug": "genoa",
+      "image": "/images/cities/italy/genoa.jpg"
+    },
+    {
+      "name": "Verona",
+      "whyFamous": "City of Romeo and Juliet, Roman Arena amphitheater",
+      "slug": "verona",
+      "image": "/images/cities/italy/verona.jpg"
+    },
+    {
+      "name": "Palermo",
+      "whyFamous": "Capital of Sicily, mix of Arab-Norman-Byzantine heritage",
+      "slug": "palermo",
+      "image": "/images/cities/italy/palermo.jpg"
+    },
+    {
+      "name": "Pisa",
+      "whyFamous": "Famous for the Leaning Tower of Pisa",
+      "slug": "pisa",
+      "image": "/images/cities/italy/pisa.jpg"
+    },
+    {
+      "name": "Siena",
+      "whyFamous": "Medieval city, famous for the Palio horse race",
+      "slug": "siena",
+      "image": "/images/cities/italy/siena.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "slug": "colosseum",
+      "name": "Colosseum",
+      "city": "Rome",
+      "coordinates": { "lat": 41.8902, "lng": 12.4922 },
+      "whyFamous": "Ancient Roman amphitheater, iconic symbol of Imperial Rome",
+      "imagePath": "/images/landmarks/italy/colosseum.jpg"
+    },
+    {
+      "slug": "leaning-tower-of-pisa",
+      "name": "Leaning Tower of Pisa",
+      "city": "Pisa",
+      "coordinates": { "lat": 43.723, "lng": 10.3966 },
+      "whyFamous": "Famous tilted bell tower, architectural marvel of Pisa",
+      "imagePath": "/images/landmarks/italy/leaning-tower-pisa.jpg"
+    },
+    {
+      "slug": "trevi-fountain",
+      "name": "Trevi Fountain",
+      "city": "Rome",
+      "coordinates": { "lat": 41.9009, "lng": 12.4833 },
+      "whyFamous": "Baroque fountain, famous for coin-throwing tradition",
+      "imagePath": "/images/landmarks/italy/trevi-fountain.jpg"
+    },
+    {
+      "slug": "duomo-florence",
+      "name": "Florence Cathedral",
+      "city": "Florence",
+      "coordinates": { "lat": 43.7731, "lng": 11.256 },
+      "whyFamous": "Gothic cathedral with iconic Renaissance dome",
+      "imagePath": "/images/landmarks/italy/duomo-florence.jpg"
+    },
+    {
+      "slug": "vatican-st-peters-basilica",
+      "name": "St. Peter's Basilica",
+      "city": "Vatican City (Rome)",
+      "coordinates": { "lat": 41.9022, "lng": 12.4539 },
+      "whyFamous": "Largest church in the world, heart of Catholicism",
+      "imagePath": "/images/landmarks/italy/st-peters-basilica.jpg"
+    },
+    {
+      "slug": "roman-forum",
+      "name": "Roman Forum",
+      "city": "Rome",
+      "coordinates": { "lat": 41.8925, "lng": 12.4853 },
+      "whyFamous": "Ancient political, religious, and social center of Rome",
+      "imagePath": "/images/landmarks/italy/roman-forum.jpg"
+    },
+    {
+      "slug": "pantheon",
+      "name": "Pantheon",
+      "city": "Rome",
+      "coordinates": { "lat": 41.8986, "lng": 12.4769 },
+      "whyFamous": "Ancient Roman temple with largest unreinforced concrete dome",
+      "imagePath": "/images/landmarks/italy/pantheon.jpg"
+    },
+    {
+      "slug": "amalfi-coast",
+      "name": "Amalfi Coast",
+      "city": "Campania",
+      "coordinates": { "lat": 40.6333, "lng": 14.6 },
+      "whyFamous": "UNESCO coastal region, picturesque towns and cliffs",
+      "imagePath": "/images/landmarks/italy/amalfi-coast.jpg"
+    },
+    {
+      "slug": "pompeii",
+      "name": "Pompeii",
+      "city": "Naples",
+      "coordinates": { "lat": 40.7497, "lng": 14.5 },
+      "whyFamous": "Ancient Roman city preserved by eruption of Mount Vesuvius",
+      "imagePath": "/images/landmarks/italy/pompeii.jpg"
+    },
+    {
+      "slug": "milan-duomo",
+      "name": "Milan Cathedral (Duomo di Milano)",
+      "city": "Milan",
+      "coordinates": { "lat": 45.4642, "lng": 9.1916 },
+      "whyFamous": "Largest Gothic cathedral in Italy",
+      "imagePath": "/images/landmarks/italy/milan-duomo.jpg"
+    },
+    {
+      "slug": "siena-piazza-del-campo",
+      "name": "Piazza del Campo",
+      "city": "Siena",
+      "coordinates": { "lat": 43.3187, "lng": 11.3316 },
+      "whyFamous": "Famous medieval square, site of Palio horse race",
+      "imagePath": "/images/landmarks/italy/piazza-del-campo.jpg"
+    },
+    {
+      "slug": "venice-grand-canal",
+      "name": "Grand Canal",
+      "city": "Venice",
+      "coordinates": { "lat": 45.4375, "lng": 12.3358 },
+      "whyFamous": "Main waterway of Venice, lined with palaces and gondolas",
+      "imagePath": "/images/landmarks/italy/grand-canal.jpg"
+    }
+  ],
+  "rivers": [
+    {
+      "slug": "po-river",
+      "name": "Po River",
+      "length": 652,
+      "countries": ["Italy"],
+      "source": "Cottian Alps",
+      "mouth": "Adriatic Sea",
+      "imagePath": "/images/rivers/italy/po-river.jpg",
+      "pathCoordinates": [
+        { "lat": 44.6989, "lng": 7.0892 },
+        { "lat": 44.9778, "lng": 12.4358 }
+      ]
+    },
+    {
+      "slug": "tiber-river",
+      "name": "Tiber River",
+      "length": 406,
+      "countries": ["Italy"],
+      "source": "Apennine Mountains",
+      "mouth": "Tyrrhenian Sea",
+      "imagePath": "/images/rivers/italy/tiber-river.jpg",
+      "pathCoordinates": [
+        { "lat": 43.5947, "lng": 12.1347 },
+        { "lat": 41.7364, "lng": 12.2847 }
+      ]
+    },
+    {
+      "slug": "arno-river",
+      "name": "Arno River",
+      "length": 241,
+      "countries": ["Italy"],
+      "source": "Apennine Mountains",
+      "mouth": "Ligurian Sea",
+      "imagePath": "/images/rivers/italy/arno-river.jpg",
+      "pathCoordinates": [
+        { "lat": 43.7833, "lng": 11.8667 },
+        { "lat": 43.6833, "lng": 10.3 }
+      ]
+    },
+    {
+      "slug": "adige-river",
+      "name": "Adige River",
+      "length": 410,
+      "countries": ["Italy"],
+      "source": "Resia Pass, Alps",
+      "mouth": "Adriatic Sea",
+      "imagePath": "/images/rivers/italy/adige-river.jpg",
+      "pathCoordinates": [
+        { "lat": 46.8167, "lng": 10.5167 },
+        { "lat": 45.2167, "lng": 12.2833 }
+      ]
+    },
+    {
+      "slug": "piave-river",
+      "name": "Piave River",
+      "length": 220,
+      "countries": ["Italy"],
+      "source": "Alps (Monte Peralba)",
+      "mouth": "Adriatic Sea",
+      "imagePath": "/images/rivers/italy/piave-river.jpg",
+      "pathCoordinates": [
+        { "lat": 46.5667, "lng": 12.7 },
+        { "lat": 45.6333, "lng": 12.8667 }
+      ]
+    },
+    {
+      "slug": "ticino-river",
+      "name": "Ticino River",
+      "length": 248,
+      "countries": ["Switzerland", "Italy"],
+      "source": "Swiss Alps (St. Gotthard Pass)",
+      "mouth": "Po River",
+      "imagePath": "/images/rivers/italy/ticino-river.jpg",
+      "pathCoordinates": [
+        { "lat": 46.55, "lng": 8.5667 },
+        { "lat": 45.1833, "lng": 9.1167 }
+      ]
+    }
+  ],
+  "institutions": [
+    {
+      "slug": "university-of-bologna",
+      "name": "University of Bologna",
+      "city": "Bologna, Emilia-Romagna",
+      "founded": 1088,
+      "globalRank": 167,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/italy/university-of-bologna.jpg"
+    },
+    {
+      "slug": "sapienza-university",
+      "name": "Sapienza University of Rome",
+      "city": "Rome, Lazio",
+      "founded": 1303,
+      "globalRank": 134,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/italy/sapienza-university.jpg"
+    },
+    {
+      "slug": "university-of-milan",
+      "name": "University of Milan",
+      "city": "Milan, Lombardy",
+      "founded": 1924,
+      "globalRank": 316,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/italy/university-of-milan.jpg"
+    },
+    {
+      "slug": "scuola-normale-superiore",
+      "name": "Scuola Normale Superiore",
+      "city": "Pisa, Tuscany",
+      "founded": 1810,
+      "globalRank": 201,
+      "type": "Public Graduate School",
+      "imagePath": "/images/institutions/italy/scuola-normale-superiore.jpg"
+    },
+    {
+      "slug": "politecnico-di-milano",
+      "name": "Politecnico di Milano",
+      "city": "Milan, Lombardy",
+      "founded": 1863,
+      "globalRank": 123,
+      "type": "Public Technical University",
+      "imagePath": "/images/institutions/italy/politecnico-di-milano.jpg"
+    },
+    {
+      "slug": "university-of-padua",
+      "name": "University of Padua",
+      "city": "Padua, Veneto",
+      "founded": 1222,
+      "globalRank": 242,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/italy/university-of-padua.jpg"
+    }
+  ]
+}

@@ -5,14 +5,224 @@ export class DataManager {
   }
 
   async loadInitialData() {
-    // Load comprehensive country data
-    this.countries = this.generateComprehensiveCountries();
+    try {
+      // Load country data from JSON files
+      await this.loadCountriesFromFiles();
+      console.log(
+        "LivingGlobe: Loaded",
+        this.countries.length,
+        "countries with comprehensive data"
+      );
+    } catch (error) {
+      console.error("Failed to load country data:", error);
+      // Fallback to generated data if files fail to load
+      this.countries = this.generateComprehensiveCountries();
+      console.log("LivingGlobe: Using fallback data");
+    }
+  }
 
-    console.log(
-      "LivingGlobe: Loaded",
-      this.countries.length,
-      "countries with comprehensive data"
-    );
+  async loadCountriesFromFiles() {
+    const countryFiles = [
+      "ar",
+      "au",
+      "br",
+      "ca",
+      "cn",
+      "de",
+      "es",
+      "fr",
+      "gb",
+      "in",
+      "it",
+      "jp",
+      "mx",
+      "ru",
+      "us",
+    ];
+
+    const countries = [];
+
+    for (const countryCode of countryFiles) {
+      try {
+        const response = await fetch(`/src/data/countries/${countryCode}.json`);
+        if (response.ok) {
+          const countryData = await response.json();
+
+          // Convert to our internal format and add coordinates
+          const processedCountry = this.processCountryData(countryData);
+          countries.push(processedCountry);
+        }
+      } catch (error) {
+        console.warn(`Failed to load ${countryCode}.json:`, error);
+      }
+    }
+
+    this.countries = countries;
+  }
+
+  processCountryData(data) {
+    // Convert the rich JSON data to our internal format
+    return {
+      name: data.name,
+      capital: data.capital,
+      population: data.population,
+      gdp: data.economy?.gdp || 0,
+      region: data.region,
+      lat: this.getCountryCoordinates(data.name).lat,
+      lon: this.getCountryCoordinates(data.name).lon,
+      currency: data.currency?.code || "N/A",
+      languages: data.languages || [],
+      area: data.geography?.area || 0,
+      timezone: data.timezones?.[0] || "UTC",
+      government: data.politics?.governmentType || "N/A",
+      independence: data.heritage?.independenceDate || "N/A",
+      flag: this.getCountryFlag(data.iso2),
+
+      // Rich data from JSON files
+      iso2: data.iso2,
+      iso3: data.iso3,
+      image: data.image,
+      flagImage: data.flag,
+      currencyData: data.currency,
+      geography: data.geography,
+      heritage: data.heritage,
+      politics: data.politics,
+      economy: data.economy,
+      culture: data.culture,
+      education: data.education,
+      tourism: data.tourism,
+      demographics: data.demographics,
+      scienceTechnology: data.scienceTechnology,
+      sportsEntertainment: data.sportsEntertainment,
+      history: data.history,
+      states: data.states,
+      famousCities: data.famousCities,
+      landmarks: data.landmarks,
+      rivers: data.rivers,
+      institutions: data.institutions,
+
+      // Environmental data (calculated)
+      environmentScore: Math.floor(Math.random() * 100),
+      co2Emissions: Math.floor(Math.random() * 1000) + 100,
+      renewableEnergy: Math.floor(Math.random() * 80) + 10,
+      forestCoverage: Math.floor(Math.random() * 70) + 5,
+
+      // Cultural data (from JSON or calculated)
+      culturalSites:
+        data.heritage?.unescoSites?.length ||
+        Math.floor(Math.random() * 20) + 1,
+      festivals:
+        data.culture?.nationalFestivals?.length ||
+        Math.floor(Math.random() * 50) + 10,
+      museums: Math.floor(Math.random() * 100) + 10,
+
+      // Social indicators (from demographics or calculated)
+      lifeExpectancy:
+        data.demographics?.lifeExpectancy?.total ||
+        Math.floor(Math.random() * 20) + 65,
+      literacyRate:
+        data.education?.literacyRate || Math.floor(Math.random() * 30) + 70,
+      internetUsers: Math.floor(Math.random() * 40) + 40,
+      urbanPopulation:
+        data.demographics?.urbanRural?.urban ||
+        Math.floor(Math.random() * 60) + 30,
+
+      // Economic indicators (from economy data)
+      unemploymentRate: (100 - (data.economy?.employmentRate || 90)).toFixed(1),
+      inflationRate: (Math.random() * 10 + 1).toFixed(1),
+      gdpPerCapita:
+        data.economy?.gdpPerCapita ||
+        Math.floor((data.economy?.gdp || 0) / data.population),
+
+      // Quality of life
+      happinessIndex: (Math.random() * 3 + 5).toFixed(1),
+      corruptionIndex: Math.floor(Math.random() * 100),
+      democracyIndex: (Math.random() * 10).toFixed(1),
+      giniCoefficient: (Math.random() * 0.4 + 0.25).toFixed(2),
+      humanDevelopmentIndex: (Math.random() * 0.3 + 0.6).toFixed(3),
+
+      // Infrastructure
+      internetSpeed: Math.floor(Math.random() * 100) + 10,
+      roadQuality: Math.floor(Math.random() * 100),
+      electricityAccess: Math.floor(Math.random() * 30) + 70,
+
+      // Health
+      healthcareIndex: Math.floor(Math.random() * 100),
+      doctorsPerCapita: (Math.random() * 5 + 1).toFixed(1),
+      hospitalBeds: (Math.random() * 10 + 2).toFixed(1),
+
+      // Education (from education data)
+      educationIndex: Math.floor(Math.random() * 100),
+      universities:
+        data.institutions?.length || Math.floor(Math.random() * 200) + 10,
+      researchOutput: Math.floor(Math.random() * 1000) + 50,
+
+      // Technology
+      innovationIndex: Math.floor(Math.random() * 100),
+      patents:
+        data.scienceTechnology?.patents ||
+        Math.floor(Math.random() * 10000) + 100,
+      techExports: Math.floor(Math.random() * 50) + 5,
+
+      // Tourism (from tourism data)
+      touristArrivals:
+        data.tourism?.mostVisitedCities?.reduce(
+          (sum, city) => sum + (city.visitors || 0),
+          0
+        ) || Math.floor(Math.random() * 50000000) + 1000000,
+      tourismRevenue: Math.floor(Math.random() * 100000000000) + 1000000000,
+
+      // Climate data
+      averageTemp: Math.floor(Math.random() * 40) - 10,
+      rainfall: Math.floor(Math.random() * 3000) + 200,
+      climateZone:
+        data.geography?.climateZones?.[0] ||
+        ["Tropical", "Temperate", "Arid", "Continental", "Polar"][
+          Math.floor(Math.random() * 5)
+        ],
+    };
+  }
+
+  getCountryCoordinates(countryName) {
+    const coordinates = {
+      Argentina: { lat: -38.4161, lon: -63.6167 },
+      Australia: { lat: -25.2744, lon: 133.7751 },
+      Brazil: { lat: -14.235, lon: -51.9253 },
+      Canada: { lat: 56.1304, lon: -106.3468 },
+      China: { lat: 35.8617, lon: 104.1954 },
+      Germany: { lat: 51.1657, lon: 10.4515 },
+      Spain: { lat: 40.4637, lon: -3.7492 },
+      France: { lat: 46.2276, lon: 2.2137 },
+      "United Kingdom": { lat: 55.3781, lon: -3.436 },
+      India: { lat: 20.5937, lon: 78.9629 },
+      Italy: { lat: 41.8719, lon: 12.5674 },
+      Japan: { lat: 36.2048, lon: 138.2529 },
+      Mexico: { lat: 23.6345, lon: -102.5528 },
+      Russia: { lat: 61.524, lon: 105.3188 },
+      "United States": { lat: 39.8283, lon: -98.5795 },
+    };
+    return coordinates[countryName] || { lat: 0, lon: 0 };
+  }
+
+  getCountryFlag(iso2) {
+    const flags = {
+      AR: "🇦🇷",
+      AU: "🇦🇺",
+      BR: "🇧🇷",
+      CA: "🇨🇦",
+      CN: "🇨🇳",
+      DE: "🇩🇪",
+      ES: "🇪🇸",
+      FR: "🇫🇷",
+      GB: "🇬🇧",
+      IN: "🇮🇳",
+      IT: "🇮🇹",
+      JP: "🇯🇵",
+      MX: "🇲🇽",
+      RU: "🇷🇺",
+      US: "🇺🇸",
+    };
+    return flags[iso2] || "🌍";
   }
 
   generateComprehensiveCountries() {

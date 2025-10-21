@@ -1,152 +1,180 @@
-# LivingGlobe 🌍
+# 🌍 LivingGlobe - Interactive 3D World Explorer
 
-A stunning 3D interactive globe where users can explore countries, cultures, and data in real time. Features a smooth-spinning Earth with glowing borders, dynamic data points, and interactive visualizations.
+An immersive 3D globe application that displays comprehensive country data with rich visualizations and interactive features.
 
 ## ✨ Features
 
-- **Interactive 3D Globe**: Smooth rotation and zoom with Three.js
-- **Multiple Data Layers**: Population, GDP, Environment, and Culture visualizations
-- **Real-time Data**: Dynamic data points that pulse with life
-- **Day/Night Modes**: Beautiful atmospheric effects
-- **Responsive Design**: Works on desktop and mobile devices
-- **Keyboard Shortcuts**: Quick navigation and mode switching
+### 🎮 Interactive Controls
 
-## 🚀 Quick Start
+- **Drag to Rotate**: Click and drag anywhere on the globe to rotate it
+- **Zoom**: Use mouse wheel or trackpad to zoom in/out
+- **Country Selection**: Click on red country markers to view detailed information
+- **Hover Tooltips**: Hover over markers for quick country info
 
-1. **Install dependencies**:
+### 📊 Rich Country Data
+
+- **15 Countries**: Argentina, Australia, Brazil, Canada, China, Germany, Spain, France, UK, India, Italy, Japan, Mexico, Russia, USA
+- **Comprehensive Information**:
+  - Basic demographics and geography
+  - Economic indicators (GDP, employment, trade)
+  - Government and political system
+  - Cultural festivals and traditions
+  - Tourism destinations and attractions
+  - UNESCO World Heritage sites
+  - Educational institutions
+  - Historical timeline
+  - Famous cities and landmarks
+
+### 🎨 Visualization Modes
+
+- **Population**: Marker sizes based on population
+- **GDP**: Economic visualization
+- **Environment**: Environmental indicators
+- **Culture**: Cultural heritage sites
+
+### 🌅 Day/Night Modes
+
+- Toggle between day and night themes
+- Dynamic lighting effects
+
+### 📱 Responsive Design
+
+- Works on desktop, tablet, and mobile devices
+- Adaptive UI controls
+
+## 🚀 Getting Started
+
+1. **Install Dependencies**:
 
    ```bash
    npm install
    ```
 
-2. **Start development server**:
+2. **Start Development Server**:
 
    ```bash
    npm run dev
    ```
 
-3. **Open your browser** to `http://localhost:3000`
+3. **Open in Browser**:
+   - Navigate to `http://localhost:3001` (or the port shown in terminal)
 
-## 🎮 Controls
+## 🎯 How to Use
 
-### Mouse Controls
+### Basic Navigation
 
-- **Drag**: Rotate the globe
-- **Hover**: Show country tooltips
-- **Click**: View detailed country information
+1. **Rotate Globe**: Click and drag anywhere on the blue globe
+2. **Zoom**: Scroll with mouse wheel or use trackpad gestures
+3. **View Country Info**: Click on any red country marker
+4. **Quick Info**: Hover over markers for tooltips
+
+### Control Panel (Left Side)
+
+- **Data Layers**: Switch between Population, GDP, Environment, Culture
+- **View Mode**: Toggle between Day and Night themes
+- **Controls Guide**: Quick reference for interactions
+
+### Information Panel (Right Side)
+
+- Opens when you click a country marker
+- Shows comprehensive country data including:
+  - Basic information (capital, population, languages)
+  - Economic data (GDP, employment)
+  - Demographics (life expectancy, literacy)
+  - Government information
+  - Cultural highlights
+  - Tourism data
+  - UNESCO sites
+
+### Footer Information
+
+- Click the "ℹ️ Info" button (bottom right) to show/hide footer
+- Contains app information and quick tips
 
 ### Keyboard Shortcuts
 
-- **1-4**: Switch between data modes (Population, GDP, Environment, Culture)
-- **D**: Switch to day mode
-- **N**: Switch to night mode
+- **1-4**: Switch data modes (Population, GDP, Environment, Culture)
+- **D**: Day mode
+- **N**: Night mode
+- **H** or **?**: Show help modal
+- **Esc**: Close panels and modals
 - **Space**: Toggle globe rotation
-- **Escape**: Close info panels
 
-## 🛠️ Tech Stack
+## 🗺️ Available Countries
 
-- **3D Engine**: Three.js for core 3D rendering and lighting
-- **Data Visualization**: D3.js for mapping data to visuals
-- **Build Tool**: Vite for fast development and building
-- **Styling**: Pure CSS with custom animations and effects
+The application includes detailed data for 15 major countries:
 
-## 📊 Data Modes
+| Country           | Capital         | Population | Notable Features                       |
+| ----------------- | --------------- | ---------- | -------------------------------------- |
+| 🇺🇸 United States  | Washington D.C. | 331M       | Tech hub, diverse geography            |
+| 🇨🇳 China          | Beijing         | 1.4B       | Ancient culture, modern economy        |
+| 🇯🇵 Japan          | Tokyo           | 126M       | Technology, traditional culture        |
+| 🇩🇪 Germany        | Berlin          | 84M        | Engineering, history                   |
+| 🇬🇧 United Kingdom | London          | 68M        | Historical influence, culture          |
+| 🇫🇷 France         | Paris           | 65M        | Art, cuisine, landmarks                |
+| 🇮🇳 India          | New Delhi       | 1.4B       | Diverse culture, growing economy       |
+| 🇮🇹 Italy          | Rome            | 60M        | Art, history, cuisine                  |
+| 🇧🇷 Brazil         | Brasília        | 215M       | Amazon, carnival, football             |
+| 🇨🇦 Canada         | Ottawa          | 38M        | Natural beauty, multiculturalism       |
+| 🇷🇺 Russia         | Moscow          | 146M       | Largest country, rich resources        |
+| 🇦🇺 Australia      | Canberra        | 26M        | Unique wildlife, natural wonders       |
+| 🇪🇸 Spain          | Madrid          | 47M        | Culture, architecture, beaches         |
+| 🇲🇽 Mexico         | Mexico City     | 129M       | Ancient civilizations, vibrant culture |
+| 🇦🇷 Argentina      | Buenos Aires    | 45M        | Tango, beef, natural beauty            |
 
-1. **Population**: Visualize country populations with color-coded intensity
-2. **GDP**: Economic data representation with dynamic scaling
-3. **Environment**: Environmental scores and sustainability metrics
-4. **Culture**: Cultural sites and heritage information
+## 🛠️ Technical Details
 
-## 🎨 Visual Features
+### Built With
 
-- **Atmospheric Glow**: Realistic atmosphere shader effects
-- **Pulsing Data Points**: Animated country markers
-- **Smooth Transitions**: Fluid mode switching and animations
-- **Responsive UI**: Clean, minimal interface overlay
+- **Three.js**: 3D graphics and globe rendering
+- **D3.js**: Data visualization utilities
+- **Vite**: Fast development and build tool
+- **Modern JavaScript**: ES6+ features and modules
 
-## 🔧 Development
+### Architecture
 
-### Project Structure
+- **Modular Design**: Separate components for globe, data, and UI
+- **Data-Driven**: JSON-based country data with rich metadata
+- **Responsive**: Adaptive layouts for all screen sizes
+- **Performance**: Optimized rendering and interactions
 
-```bash
-src/
-├── components/
-│   └── Globe.js          # Main 3D globe component
-├── data/
-│   └── DataManager.js    # Data fetching and management
-├── ui/
-│   └── UIController.js   # User interface controls
-├── styles/
-│   └── main.css         # Styling and animations
-└── main.js              # Application entry point
-```
+### Data Structure
 
-### Adding New Data Sources
+Each country includes:
 
-To integrate real APIs, modify `DataManager.js`:
+- Basic information (name, capital, population, etc.)
+- Economic data (GDP, trade, employment)
+- Demographics (age distribution, urbanization)
+- Political system and current leaders
+- Cultural information (festivals, food, symbols)
+- Tourism data (cities, attractions, visitor numbers)
+- Educational institutions and rankings
+- Historical timeline and heritage sites
+- Geographic features and climate data
 
-```javascript
-async loadRealData() {
-    // Example: REST Countries API
-    const response = await fetch('https://restcountries.com/v3.1/all');
-    const countries = await response.json();
-    return countries;
-}
-```
+## 🎨 Customization
 
-### Customizing Visualizations
+The application is designed to be easily extensible:
 
-Modify the `getCountryColor()` method in `Globe.js` to add new visualization modes:
+1. **Add New Countries**: Add JSON files to `src/data/countries/`
+2. **Modify Visualizations**: Update `SimpleGlobe.js` for new display modes
+3. **Extend Data**: Add new fields to country JSON structure
+4. **Custom Themes**: Modify CSS in `src/styles/main.css`
 
-```javascript
-case 'custom':
-    return new THREE.Color(customColorLogic(country));
-```
+## 📝 License
 
-## 🌐 API Integration Ideas
-
-- **REST Countries**: Country information and flags
-- **World Bank**: Economic and development data
-- **OpenWeatherMap**: Real-time weather data
-- **UNESCO**: World heritage sites
-- **News APIs**: Current events by country
-
-## 📱 Browser Support
-
-- Chrome 60+
-- Firefox 55+
-- Safari 12+
-- Edge 79+
+MIT License - Feel free to use and modify for your projects!
 
 ## 🤝 Contributing
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
+Contributions welcome! Areas for improvement:
 
-## 📄 License
-
-MIT License - feel free to use this project for learning and development!
-
-## 🎯 Future Enhancements
-
-- [ ] Real-time weather integration
-- [ ] Flight path animations
-- [ ] Cultural event calendar
-- [ ] VR/AR support
-- [ ] Social sharing features
-- [ ] Data export capabilities
-- [ ] Custom data upload
-- [ ] Multi-language support
-
-## 🌟 About LivingGlobe
-
-LivingGlobe transforms the way we explore and understand our world. By combining cutting-edge 3D visualization with comprehensive global data, we create an immersive experience that brings countries, cultures, and statistics to life.
-
-Our mission is to make global data accessible, beautiful, and engaging for everyone - from students and researchers to travelers and curious minds who want to discover the pulse of our living planet.
+- Additional countries and data
+- New visualization modes
+- Enhanced mobile experience
+- Performance optimizations
+- Additional interactive features
 
 ---
 
-**LivingGlobe** - Where data meets beauty in an interactive 3D world! 🌍✨
+## **Enjoy exploring the world with LivingGlobe! 🌍✨**

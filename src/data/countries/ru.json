@@ -1,0 +1,1043 @@
+{
+  "iso2": "RU",
+  "iso3": "RUS",
+  "name": "Russia",
+  "region": "Europe/Asia",
+  "capital": "Moscow",
+  "population": 146200000,
+  "image": "/images/country/ru.svg",
+  "flag": "/images/flags/ru.png",
+  "currency": {
+    "code": "RUB",
+    "name": "Russian Ruble",
+    "symbol": "₽",
+    "image": "/images/currencies/rub.png"
+  },
+  "languages": ["Russian"],
+  "timezones": [
+    "UTC+02:00",
+    "UTC+03:00",
+    "UTC+04:00",
+    "UTC+05:00",
+    "UTC+06:00",
+    "UTC+07:00",
+    "UTC+08:00",
+    "UTC+09:00",
+    "UTC+10:00",
+    "UTC+11:00",
+    "UTC+12:00"
+  ],
+  "geography": {
+    "climateZones": ["Arctic", "Subarctic", "Continental", "Temperate"],
+    "geologicalFormations": [
+      {
+        "name": "Ural Mountains",
+        "type": "Mountain Range",
+        "description": "Mountain range separating European and Asian Russia"
+      },
+      {
+        "name": "Siberian Plain",
+        "type": "Plain",
+        "description": "Vast lowland region in northern Asia"
+      },
+      {
+        "name": "Caucasus Mountains",
+        "type": "Mountain Range",
+        "description": "Mountain range between Europe and Asia"
+      }
+    ],
+    "naturalDisasters": [
+      {
+        "type": "Earthquake",
+        "name": "Sakhalin Earthquake",
+        "year": 1995,
+        "impact": "Major earthquake in far eastern Russia"
+      },
+      {
+        "type": "Wildfire",
+        "name": "Siberian Wildfires",
+        "year": "Annual",
+        "impact": "Regular massive forest fires in Siberia"
+      }
+    ],
+    "majorWaterBodies": [
+      {
+        "name": "Arctic Ocean",
+        "type": "Ocean",
+        "coastline": "North Coast"
+      },
+      {
+        "name": "Pacific Ocean",
+        "type": "Ocean",
+        "coastline": "East Coast"
+      },
+      {
+        "name": "Black Sea",
+        "type": "Sea",
+        "coastline": "South Coast"
+      },
+      {
+        "name": "Lake Baikal",
+        "type": "Lake",
+        "description": "World's deepest and oldest freshwater lake"
+      }
+    ]
+  },
+  "heritage": {
+    "independenceDate": "June 12, 1990",
+    "foundingEvent": "Russian Federation Declaration of Sovereignty",
+    "majorHistoricalFigures": [
+      {
+        "name": "Peter the Great",
+        "role": "Tsar",
+        "period": "1682-1725",
+        "achievement": "Modernized Russia and founded St. Petersburg"
+      },
+      {
+        "name": "Catherine the Great",
+        "role": "Empress",
+        "period": "1762-1796",
+        "achievement": "Expanded Russian territory and promoted arts"
+      },
+      {
+        "name": "Vladimir Lenin",
+        "role": "Revolutionary Leader",
+        "period": "1917-1924",
+        "achievement": "Led Bolshevik Revolution and founded Soviet Union"
+      }
+    ],
+    "colonialHistory": [
+      {
+        "period": "1547-1917",
+        "description": "Russian Empire expansion across Eurasia"
+      },
+      {
+        "period": "1922-1991",
+        "description": "Soviet Union period"
+      }
+    ],
+    "unescoSites": [
+      {
+        "name": "Kremlin and Red Square",
+        "year": 1990,
+        "type": "Cultural"
+      },
+      {
+        "name": "Historic Centre of Saint Petersburg",
+        "year": 1990,
+        "type": "Cultural"
+      },
+      {
+        "name": "Lake Baikal",
+        "year": 1996,
+        "type": "Natural"
+      },
+      {
+        "name": "Golden Mountains of Altai",
+        "year": 1998,
+        "type": "Natural"
+      }
+    ]
+  },
+  "politics": {
+    "currentLeaders": [
+      {
+        "position": "President",
+        "name": "Vladimir Putin",
+        "party": "United Russia",
+        "termStart": "May 7, 2012"
+      },
+      {
+        "position": "Prime Minister",
+        "name": "Mikhail Mishustin",
+        "party": "Independent",
+        "termStart": "January 16, 2020"
+      }
+    ],
+    "governmentType": "Federal Semi-Presidential Republic",
+    "internationalMemberships": [
+      "United Nations (UN)",
+      "BRICS",
+      "Shanghai Cooperation Organisation (SCO)",
+      "Eurasian Economic Union (EAEU)",
+      "Commonwealth of Independent States (CIS)"
+    ]
+  },
+  "economy": {
+    "gdp": 1829734000000,
+    "gdpPerCapita": 12575,
+    "majorIndustries": [
+      "Oil and Gas",
+      "Mining",
+      "Defense",
+      "Machinery",
+      "Chemicals",
+      "Agriculture",
+      "Forestry"
+    ],
+    "topExports": [
+      {
+        "product": "Crude Petroleum",
+        "value": 123500000000
+      },
+      {
+        "product": "Refined Petroleum",
+        "value": 66200000000
+      },
+      {
+        "product": "Petroleum Gas",
+        "value": 26300000000
+      },
+      {
+        "product": "Coal Briquettes",
+        "value": 17600000000
+      }
+    ],
+    "topImports": [
+      {
+        "product": "Cars",
+        "value": 10800000000
+      },
+      {
+        "product": "Packaged Medicaments",
+        "value": 8900000000
+      },
+      {
+        "product": "Vehicle Parts",
+        "value": 4200000000
+      },
+      {
+        "product": "Broadcasting Equipment",
+        "value": 3800000000
+      }
+    ],
+    "employmentRate": 95.1,
+    "employmentSectors": {
+      "services": 62.3,
+      "industry": 32.0,
+      "agriculture": 5.7
+    }
+  },
+  "culture": {
+    "officialLanguages": ["Russian"],
+    "regionalLanguages": [
+      "Tatar",
+      "Ukrainian",
+      "Bashkir",
+      "Chuvash",
+      "Chechen"
+    ],
+    "religionDemographics": {
+      "Christianity": 71.0,
+      "Unaffiliated": 15.0,
+      "Islam": 10.0,
+      "Other": 4.0
+    },
+    "nationalFestivals": [
+      {
+        "name": "New Year",
+        "date": "January 1",
+        "description": "Most important holiday in Russia"
+      },
+      {
+        "name": "Maslenitsa",
+        "date": "February-March",
+        "description": "Traditional Slavic festival before Lent"
+      },
+      {
+        "name": "Victory Day",
+        "date": "May 9",
+        "description": "Commemorates victory in World War II"
+      }
+    ],
+    "traditionalFoods": [
+      {
+        "name": "Borscht",
+        "description": "Beetroot soup popular in Eastern Europe"
+      },
+      {
+        "name": "Beef Stroganoff",
+        "description": "Sautéed beef in sour cream sauce"
+      },
+      {
+        "name": "Blini",
+        "description": "Thin pancakes served with various toppings"
+      },
+      {
+        "name": "Caviar",
+        "description": "Luxury delicacy from sturgeon fish"
+      }
+    ],
+    "nationalSymbols": {
+      "flag": "White, Blue, and Red Tricolor",
+      "emblem": "Double-headed Eagle",
+      "anthem": "State Anthem of the Russian Federation",
+      "flower": "Chamomile",
+      "bird": "Double-headed Eagle",
+      "animal": "Eurasian Brown Bear"
+    }
+  },
+  "education": {
+    "literacyRate": 99.7,
+    "educationSystem": "Free public education, strong emphasis on sciences",
+    "famousScientists": [
+      {
+        "name": "Dmitri Mendeleev",
+        "field": "Chemistry",
+        "achievement": "Created the periodic table of elements"
+      },
+      {
+        "name": "Yuri Gagarin",
+        "field": "Space Exploration",
+        "achievement": "First human in space"
+      },
+      {
+        "name": "Ivan Pavlov",
+        "field": "Psychology",
+        "achievement": "Classical conditioning research"
+      }
+    ],
+    "nobelPrizeWinners": 32
+  },
+  "tourism": {
+    "mostVisitedCities": [
+      {
+        "name": "Moscow",
+        "visitors": 25000000,
+        "attractions": ["Red Square", "Kremlin", "St. Basil's Cathedral"]
+      },
+      {
+        "name": "St. Petersburg",
+        "visitors": 8500000,
+        "attractions": [
+          "Hermitage Museum",
+          "Peterhof Palace",
+          "Mariinsky Theatre"
+        ]
+      },
+      {
+        "name": "Sochi",
+        "visitors": 6200000,
+        "attractions": [
+          "Black Sea Resort",
+          "Olympic Park",
+          "Caucasus Mountains"
+        ]
+      }
+    ],
+    "adventureActivities": [
+      "Trans-Siberian Railway",
+      "Lake Baikal Tours",
+      "Arctic Expeditions",
+      "Kamchatka Wildlife",
+      "Golden Ring Tours"
+    ],
+    "transportation": {
+      "airports": "Major airports in Moscow, St. Petersburg, Sochi",
+      "railways": "Extensive rail network including Trans-Siberian Railway",
+      "highways": "Federal highway system"
+    },
+    "visaRequirements": "Visa required for most visitors"
+  },
+  "demographics": {
+    "populationGrowth": [
+      { "year": 2020, "population": 145912025 },
+      { "year": 2021, "population": 145805947 },
+      { "year": 2022, "population": 145478097 },
+      { "year": 2023, "population": 144444359 }
+    ],
+    "urbanRural": {
+      "urban": 74.4,
+      "rural": 25.6
+    },
+    "lifeExpectancy": {
+      "total": 72.6,
+      "male": 67.5,
+      "female": 77.8
+    },
+    "ageDistribution": {
+      "youth": 17.6,
+      "workingAge": 66.7,
+      "elderly": 15.7
+    }
+  },
+  "scienceTechnology": {
+    "spaceMissions": [
+      {
+        "name": "Sputnik 1",
+        "year": 1957,
+        "achievement": "First artificial satellite"
+      },
+      {
+        "name": "Vostok 1",
+        "year": 1961,
+        "achievement": "First human spaceflight with Yuri Gagarin"
+      },
+      {
+        "name": "International Space Station",
+        "year": 1998,
+        "achievement": "Major partner in ISS construction and operation"
+      }
+    ],
+    "techStartups": [
+      "Yandex",
+      "Mail.ru Group",
+      "Kaspersky Lab",
+      "ABBYY",
+      "JetBrains"
+    ],
+    "patents": 33896,
+    "breakthroughs": [
+      {
+        "year": 1869,
+        "invention": "Periodic Table",
+        "inventor": "Dmitri Mendeleev"
+      },
+      {
+        "year": 1957,
+        "invention": "Artificial Satellite",
+        "inventor": "Soviet Space Program"
+      },
+      {
+        "year": 1895,
+        "invention": "Radio",
+        "inventor": "Alexander Popov"
+      }
+    ]
+  },
+  "sportsEntertainment": {
+    "nationalSports": ["Ice Hockey", "Football (Soccer)", "Figure Skating"],
+    "olympicPerformance": {
+      "totalMedals": 1681,
+      "goldMedals": 473,
+      "silverMedals": 470,
+      "bronzeMedals": 738
+    },
+    "popularMovies": [
+      "Soviet cinema classics",
+      "Tarkovsky films",
+      "Modern Russian cinema"
+    ],
+    "musicArtists": [
+      "Pyotr Ilyich Tchaikovsky",
+      "Sergei Rachmaninoff",
+      "Igor Stravinsky",
+      "t.A.T.u.",
+      "Dima Bilan"
+    ],
+    "worldRecords": [
+      {
+        "record": "Largest country by land area",
+        "value": "17.1 million km²"
+      },
+      {
+        "record": "First nation to send human to space",
+        "value": "Yuri Gagarin, 1961"
+      }
+    ]
+  },
+  "history": [
+    {
+      "year": 862,
+      "description": "Traditional founding of Russian state by Rurik"
+    },
+    {
+      "year": 1547,
+      "description": "Ivan the Terrible becomes first Tsar of Russia"
+    },
+    {
+      "year": 1917,
+      "description": "Russian Revolution overthrows Tsarist regime"
+    },
+    {
+      "year": 1991,
+      "description": "Dissolution of Soviet Union, Russian Federation established"
+    },
+    {
+      "year": 2014,
+      "description": "Annexation of Crimea from Ukraine"
+    }
+  ],
+  "states": [
+    { "name": "Adygea", "capital": "Maykop", "slug": "adygea" },
+    {
+      "name": "Altai Republic",
+      "capital": "Gorno-Altaysk",
+      "slug": "altai-republic"
+    },
+    { "name": "Altai Krai", "capital": "Barnaul", "slug": "altai-krai" },
+    {
+      "name": "Amur Oblast",
+      "capital": "Blagoveshchensk",
+      "slug": "amur-oblast"
+    },
+    {
+      "name": "Arkhangelsk Oblast",
+      "capital": "Arkhangelsk",
+      "slug": "arkhangelsk-oblast"
+    },
+    {
+      "name": "Astrakhan Oblast",
+      "capital": "Astrakhan",
+      "slug": "astrakhan-oblast"
+    },
+    { "name": "Bashkortostan", "capital": "Ufa", "slug": "bashkortostan" },
+    {
+      "name": "Belgorod Oblast",
+      "capital": "Belgorod",
+      "slug": "belgorod-oblast"
+    },
+    {
+      "name": "Bryansk Oblast",
+      "capital": "Bryansk",
+      "slug": "bryansk-oblast"
+    },
+    { "name": "Buryatia", "capital": "Ulan-Ude", "slug": "buryatia" },
+    {
+      "name": "Chechen Republic",
+      "capital": "Grozny",
+      "slug": "chechen-republic"
+    },
+    {
+      "name": "Chelyabinsk Oblast",
+      "capital": "Chelyabinsk",
+      "slug": "chelyabinsk-oblast"
+    },
+    {
+      "name": "Chukotka Autonomous Okrug",
+      "capital": "Anadyr",
+      "slug": "chukotka"
+    },
+    {
+      "name": "Chuvash Republic",
+      "capital": "Cheboksary",
+      "slug": "chuvash-republic"
+    },
+    { "name": "Dagestan", "capital": "Makhachkala", "slug": "dagestan" },
+    { "name": "Ingushetia", "capital": "Magas", "slug": "ingushetia" },
+    {
+      "name": "Irkutsk Oblast",
+      "capital": "Irkutsk",
+      "slug": "irkutsk-oblast"
+    },
+    {
+      "name": "Ivanovo Oblast",
+      "capital": "Ivanovo",
+      "slug": "ivanovo-oblast"
+    },
+    {
+      "name": "Jewish Autonomous Oblast",
+      "capital": "Birobidzhan",
+      "slug": "jewish-autonomous-oblast"
+    },
+    {
+      "name": "Kabardino-Balkaria",
+      "capital": "Nalchik",
+      "slug": "kabardino-balkaria"
+    },
+    {
+      "name": "Kaliningrad Oblast",
+      "capital": "Kaliningrad",
+      "slug": "kaliningrad-oblast"
+    },
+    { "name": "Kalmykia", "capital": "Elista", "slug": "kalmykia" },
+    { "name": "Kaluga Oblast", "capital": "Kaluga", "slug": "kaluga-oblast" },
+    {
+      "name": "Kamchatka Krai",
+      "capital": "Petropavlovsk-Kamchatsky",
+      "slug": "kamchatka-krai"
+    },
+    {
+      "name": "Karachay-Cherkess Republic",
+      "capital": "Cherkessk",
+      "slug": "karachay-cherkess"
+    },
+    { "name": "Karelia", "capital": "Petrozavodsk", "slug": "karelia" },
+    {
+      "name": "Kemerovo Oblast",
+      "capital": "Kemerovo",
+      "slug": "kemerovo-oblast"
+    },
+    {
+      "name": "Khabarovsk Krai",
+      "capital": "Khabarovsk",
+      "slug": "khabarovsk-krai"
+    },
+    { "name": "Khakassia", "capital": "Abakan", "slug": "khakassia" },
+    {
+      "name": "Khanty-Mansi Autonomous Okrug",
+      "capital": "Khanty-Mansiysk",
+      "slug": "khanty-mansi"
+    },
+    { "name": "Kirov Oblast", "capital": "Kirov", "slug": "kirov-oblast" },
+    {
+      "name": "Komi Republic",
+      "capital": "Syktyvkar",
+      "slug": "komi-republic"
+    },
+    {
+      "name": "Kostroma Oblast",
+      "capital": "Kostroma",
+      "slug": "kostroma-oblast"
+    },
+    {
+      "name": "Krasnodar Krai",
+      "capital": "Krasnodar",
+      "slug": "krasnodar-krai"
+    },
+    {
+      "name": "Krasnoyarsk Krai",
+      "capital": "Krasnoyarsk",
+      "slug": "krasnoyarsk-krai"
+    },
+    { "name": "Kurgan Oblast", "capital": "Kurgan", "slug": "kurgan-oblast" },
+    { "name": "Kursk Oblast", "capital": "Kursk", "slug": "kursk-oblast" },
+    {
+      "name": "Leningrad Oblast",
+      "capital": "St. Petersburg",
+      "slug": "leningrad-oblast"
+    },
+    {
+      "name": "Lipetsk Oblast",
+      "capital": "Lipetsk",
+      "slug": "lipetsk-oblast"
+    },
+    {
+      "name": "Magadan Oblast",
+      "capital": "Magadan",
+      "slug": "magadan-oblast"
+    },
+    { "name": "Mari El Republic", "capital": "Yoshkar-Ola", "slug": "mari-el" },
+    { "name": "Mordovia", "capital": "Saransk", "slug": "mordovia" },
+    { "name": "Moscow", "capital": "Moscow", "slug": "moscow" },
+    { "name": "Moscow Oblast", "capital": "Moscow", "slug": "moscow-oblast" },
+    {
+      "name": "Murmansk Oblast",
+      "capital": "Murmansk",
+      "slug": "murmansk-oblast"
+    },
+    {
+      "name": "Nizhny Novgorod Oblast",
+      "capital": "Nizhny Novgorod",
+      "slug": "nizhny-novgorod-oblast"
+    },
+    {
+      "name": "North Ossetia–Alania",
+      "capital": "Vladikavkaz",
+      "slug": "north-ossetia"
+    },
+    {
+      "name": "Novgorod Oblast",
+      "capital": "Veliky Novgorod",
+      "slug": "novgorod-oblast"
+    },
+    {
+      "name": "Novosibirsk Oblast",
+      "capital": "Novosibirsk",
+      "slug": "novosibirsk-oblast"
+    },
+    { "name": "Omsk Oblast", "capital": "Omsk", "slug": "omsk-oblast" },
+    {
+      "name": "Orenburg Oblast",
+      "capital": "Orenburg",
+      "slug": "orenburg-oblast"
+    },
+    { "name": "Oral Oblast", "capital": "Orel", "slug": "orel-oblast" },
+    { "name": "Penza Oblast", "capital": "Penza", "slug": "penza-oblast" },
+    { "name": "Perm Krai", "capital": "Perm", "slug": "perm-krai" },
+    {
+      "name": "Primorsky Krai",
+      "capital": "Vladivostok",
+      "slug": "primorsky-krai"
+    },
+    { "name": "Pskov Oblast", "capital": "Pskov", "slug": "pskov-oblast" },
+    {
+      "name": "Rostov Oblast",
+      "capital": "Rostov-on-Don",
+      "slug": "rostov-oblast"
+    },
+    { "name": "Ryazan Oblast", "capital": "Ryazan", "slug": "ryazan-oblast" },
+    {
+      "name": "Saint Petersburg",
+      "capital": "Saint Petersburg",
+      "slug": "st-petersburg"
+    },
+    {
+      "name": "Sakha Republic",
+      "capital": "Yakutsk",
+      "slug": "sakha-republic"
+    },
+    {
+      "name": "Sakhalin Oblast",
+      "capital": "Yuzhno-Sakhalinsk",
+      "slug": "sakhalin-oblast"
+    },
+    { "name": "Samara Oblast", "capital": "Samara", "slug": "samara-oblast" },
+    {
+      "name": "Saratov Oblast",
+      "capital": "Saratov",
+      "slug": "saratov-oblast"
+    },
+    {
+      "name": "Smolensk Oblast",
+      "capital": "Smolensk",
+      "slug": "smolensk-oblast"
+    },
+    {
+      "name": "Stavropol Krai",
+      "capital": "Stavropol",
+      "slug": "stavropol-krai"
+    },
+    {
+      "name": "Sverdlovsk Oblast",
+      "capital": "Yekaterinburg",
+      "slug": "sverdlovsk-oblast"
+    },
+    { "name": "Tambov Oblast", "capital": "Tambov", "slug": "tambov-oblast" },
+    { "name": "Tatarstan", "capital": "Kazan", "slug": "tatarstan" },
+    { "name": "Tomsk Oblast", "capital": "Tomsk", "slug": "tomsk-oblast" },
+    { "name": "Tuva", "capital": "Kyzyl", "slug": "tuva" },
+    { "name": "Tula Oblast", "capital": "Tula", "slug": "tula-oblast" },
+    { "name": "Tver Oblast", "capital": "Tver", "slug": "tver-oblast" },
+    { "name": "Tyumen Oblast", "capital": "Tyumen", "slug": "tyumen-oblast" },
+    {
+      "name": "Udmurt Republic",
+      "capital": "Izhevsk",
+      "slug": "udmurt-republic"
+    },
+    {
+      "name": "Ulyanovsk Oblast",
+      "capital": "Ulyanovsk",
+      "slug": "ulyanovsk-oblast"
+    },
+    {
+      "name": "Vladimir Oblast",
+      "capital": "Vladimir",
+      "slug": "vladimir-oblast"
+    },
+    {
+      "name": "Volgograd Oblast",
+      "capital": "Volgograd",
+      "slug": "volgograd-oblast"
+    }
+  ],
+  "famousCities": [
+    {
+      "name": "Moscow",
+      "whyFamous": "Capital city, political center, Red Square and Kremlin",
+      "slug": "moscow",
+      "image": "/images/cities/russia/moscow.jpg"
+    },
+    {
+      "name": "St. Petersburg",
+      "whyFamous": "Cultural capital, former imperial capital, Hermitage Museum",
+      "slug": "st-petersburg",
+      "image": "/images/cities/russia/st-petersburg.jpg"
+    },
+    {
+      "name": "Vladivostok",
+      "whyFamous": "Pacific port city, terminus of Trans-Siberian Railway",
+      "slug": "vladivostok",
+      "image": "/images/cities/russia/vladivostok.jpg"
+    },
+    {
+      "name": "Sochi",
+      "whyFamous": "Black Sea resort, 2014 Winter Olympics host",
+      "slug": "sochi",
+      "image": "/images/cities/russia/sochi.jpg"
+    },
+    {
+      "name": "Kazan",
+      "whyFamous": "Capital of Tatarstan, multicultural city with Kremlin",
+      "slug": "kazan",
+      "image": "/images/cities/russia/kazan.jpg"
+    },
+    {
+      "name": "Novosibirsk",
+      "whyFamous": "Largest city in Siberia, major scientific and industrial center",
+      "slug": "novosibirsk",
+      "image": "/images/cities/russia/novosibirsk.jpg"
+    },
+    {
+      "name": "Yekaterinburg",
+      "whyFamous": "Ural Mountains gateway, industrial and cultural hub",
+      "slug": "yekaterinburg",
+      "image": "/images/cities/russia/yekaterinburg.jpg"
+    },
+    {
+      "name": "Nizhny Novgorod",
+      "whyFamous": "Historic trade city, kremlin and Volga River port",
+      "slug": "nizhny-novgorod",
+      "image": "/images/cities/russia/nizhny-novgorod.jpg"
+    },
+    {
+      "name": "Samara",
+      "whyFamous": "Volga River city, aerospace and space industry center",
+      "slug": "samara",
+      "image": "/images/cities/russia/samara.jpg"
+    },
+    {
+      "name": "Vladimir",
+      "whyFamous": "Historic city on the Golden Ring, medieval cathedrals",
+      "slug": "vladimir",
+      "image": "/images/cities/russia/vladimir.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "slug": "red-square",
+      "name": "Red Square",
+      "city": "Moscow",
+      "coordinates": {
+        "lat": 55.7539,
+        "lng": 37.6208
+      },
+      "whyFamous": "Historic square in Moscow, heart of Russian power",
+      "imagePath": "/images/landmarks/russia/red-square.jpg"
+    },
+    {
+      "slug": "hermitage-museum",
+      "name": "Hermitage Museum",
+      "city": "St. Petersburg",
+      "coordinates": {
+        "lat": 59.9398,
+        "lng": 30.3146
+      },
+      "whyFamous": "One of the world's largest and oldest museums",
+      "imagePath": "/images/landmarks/russia/hermitage-museum.jpg"
+    },
+    {
+      "slug": "lake-baikal",
+      "name": "Lake Baikal",
+      "city": "Siberia",
+      "coordinates": {
+        "lat": 53.5587,
+        "lng": 108.165
+      },
+      "whyFamous": "World's deepest and oldest freshwater lake",
+      "imagePath": "/images/landmarks/russia/lake-baikal.jpg"
+    },
+    {
+      "slug": "trans-siberian-railway",
+      "name": "Trans-Siberian Railway",
+      "city": "Multiple cities",
+      "coordinates": {
+        "lat": 55.7558,
+        "lng": 37.6176
+      },
+      "whyFamous": "Longest railway line in the world",
+      "imagePath": "/images/landmarks/russia/trans-siberian-railway.jpg"
+    },
+    {
+      "slug": "kazan-kremlin",
+      "name": "Kazan Kremlin",
+      "city": "Kazan",
+      "coordinates": {
+        "lat": 55.7979,
+        "lng": 49.1056
+      },
+      "whyFamous": "UNESCO World Heritage site and historic fortress in Tatarstan",
+      "imagePath": "/images/landmarks/russia/kazan-kremlin.jpg"
+    },
+    {
+      "slug": "sochi-olympic-park",
+      "name": "Sochi Olympic Park",
+      "city": "Sochi",
+      "coordinates": {
+        "lat": 43.4025,
+        "lng": 39.9556
+      },
+      "whyFamous": "Main venue for 2014 Winter Olympics",
+      "imagePath": "/images/landmarks/russia/sochi-olympic-park.jpg"
+    },
+    {
+      "slug": "saint-basil-cathedral",
+      "name": "Saint Basil's Cathedral",
+      "city": "Moscow",
+      "coordinates": {
+        "lat": 55.7525,
+        "lng": 37.6231
+      },
+      "whyFamous": "Iconic cathedral with colorful onion domes on Red Square",
+      "imagePath": "/images/landmarks/russia/saint-basil-cathedral.jpg"
+    },
+    {
+      "slug": "catherine-palace",
+      "name": "Catherine Palace",
+      "city": "Pushkin",
+      "coordinates": {
+        "lat": 59.7169,
+        "lng": 30.3956
+      },
+      "whyFamous": "Opulent rococo palace, famous for the Amber Room",
+      "imagePath": "/images/landmarks/russia/catherine-palace.jpg"
+    },
+    {
+      "slug": "mount-elbrus",
+      "name": "Mount Elbrus",
+      "city": "Caucasus",
+      "coordinates": {
+        "lat": 43.355,
+        "lng": 42.445
+      },
+      "whyFamous": "Highest mountain in Russia and Europe",
+      "imagePath": "/images/landmarks/russia/mount-elbrus.jpg"
+    },
+    {
+      "slug": "vladimir-suzdal",
+      "name": "Vladimir-Suzdal Kremlin",
+      "city": "Vladimir",
+      "coordinates": {
+        "lat": 56.1292,
+        "lng": 40.4074
+      },
+      "whyFamous": "Historic cities on the Golden Ring with medieval cathedrals",
+      "imagePath": "/images/landmarks/russia/vladimir-suzdal.jpg"
+    }
+  ],
+  "rivers": [
+    {
+      "slug": "volga-river",
+      "name": "Volga River",
+      "length": 3531,
+      "countries": ["Russia"],
+      "source": "Valdai Hills",
+      "mouth": "Caspian Sea",
+      "imagePath": "/images/rivers/russia/volga-river.jpg",
+      "pathCoordinates": [
+        { "lat": 57.1522, "lng": 32.2619 },
+        { "lat": 45.7167, "lng": 47.7667 }
+      ]
+    },
+    {
+      "slug": "yenisei-river",
+      "name": "Yenisei River",
+      "length": 3487,
+      "countries": ["Russia", "Mongolia"],
+      "source": "Mongolia",
+      "mouth": "Kara Sea",
+      "imagePath": "/images/rivers/russia/yenisei-river.jpg",
+      "pathCoordinates": [
+        { "lat": 50.4, "lng": 99.9833 },
+        { "lat": 71.8167, "lng": 82.6833 }
+      ]
+    },
+    {
+      "slug": "ob-river",
+      "name": "Ob River",
+      "length": 3650,
+      "countries": ["Russia"],
+      "source": "Altai Mountains",
+      "mouth": "Gulf of Ob",
+      "imagePath": "/images/rivers/russia/ob-river.jpg",
+      "pathCoordinates": [
+        { "lat": 52.3667, "lng": 85.0333 },
+        { "lat": 66.6333, "lng": 66.5333 }
+      ]
+    },
+    {
+      "slug": "amur-river",
+      "name": "Amur River",
+      "length": 2824,
+      "countries": ["Russia", "China"],
+      "source": "Hanka Mountains",
+      "mouth": "Sea of Okhotsk",
+      "imagePath": "/images/rivers/russia/amur-river.jpg",
+      "pathCoordinates": [
+        { "lat": 50.2, "lng": 136.7 },
+        { "lat": 53.3, "lng": 140.3 }
+      ]
+    },
+    {
+      "slug": "dnieper-river",
+      "name": "Dnieper River",
+      "length": 2201,
+      "countries": ["Russia", "Belarus", "Ukraine"],
+      "source": "Smolensk Heights, Russia",
+      "mouth": "Black Sea",
+      "imagePath": "/images/rivers/russia/dnieper-river.jpg",
+      "pathCoordinates": [
+        { "lat": 54.0, "lng": 32.0 },
+        { "lat": 46.0, "lng": 31.5 }
+      ]
+    },
+    {
+      "slug": "lakhta-river",
+      "name": "Lena River",
+      "length": 4400,
+      "countries": ["Russia"],
+      "source": "Baikal Mountains",
+      "mouth": "Laptev Sea",
+      "imagePath": "/images/rivers/russia/lena-river.jpg",
+      "pathCoordinates": [
+        { "lat": 55.5, "lng": 109.0 },
+        { "lat": 72.0, "lng": 126.0 }
+      ]
+    }
+  ],
+  "institutions": [
+    {
+      "slug": "moscow-state-university",
+      "name": "Moscow State University",
+      "city": "Moscow",
+      "founded": 1755,
+      "globalRank": 74,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/russia/moscow-state-university.jpg"
+    },
+    {
+      "slug": "st-petersburg-state-university",
+      "name": "St. Petersburg State University",
+      "city": "St. Petersburg",
+      "founded": 1724,
+      "globalRank": 225,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/russia/st-petersburg-state-university.jpg"
+    },
+    {
+      "slug": "novosibirsk-state-university",
+      "name": "Novosibirsk State University",
+      "city": "Novosibirsk",
+      "founded": 1959,
+      "globalRank": 250,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/russia/novosibirsk-state-university.jpg"
+    },
+    {
+      "slug": "moscow-institute-physics-technology",
+      "name": "Moscow Institute of Physics and Technology",
+      "city": "Moscow",
+      "founded": 1946,
+      "globalRank": 290,
+      "type": "Public Technical University",
+      "imagePath": "/images/institutions/russia/moscow-institute-physics-technology.jpg"
+    },
+    {
+      "slug": "bauman-moscow-state-technical-university",
+      "name": "Bauman Moscow State Technical University",
+      "city": "Moscow",
+      "founded": 1830,
+      "globalRank": 350,
+      "type": "Public Technical University",
+      "imagePath": "/images/institutions/russia/bauman-moscow-state-technical-university.jpg"
+    },
+    {
+      "slug": "tomsk-state-university",
+      "name": "Tomsk State University",
+      "city": "Tomsk",
+      "founded": 1878,
+      "globalRank": 400,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/russia/tomsk-state-university.jpg"
+    },
+    {
+      "slug": "peoples-friendship-university",
+      "name": "Peoples' Friendship University of Russia",
+      "city": "Moscow",
+      "founded": 1960,
+      "globalRank": 420,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/russia/peoples-friendship-university.jpg"
+    }
+  ]
+}

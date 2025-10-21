@@ -68,6 +68,9 @@ export class UIController {
     document.addEventListener("wheel", (e) => {
       this.handleZoom(e);
     });
+
+    // Initialize footer
+    this.initFooter();
   }
 
   switchDataMode(mode) {
@@ -294,5 +297,43 @@ export class UIController {
         this.showModeChangeNotification("URL copied to clipboard");
       });
     }
+  }
+
+  // Initialize footer functionality
+  initFooter() {
+    // Create footer toggle button
+    const toggleButton = document.createElement("button");
+    toggleButton.className = "footer-toggle";
+    toggleButton.textContent = "ℹ️ Info";
+    toggleButton.title = "Show/Hide Information Footer";
+    document.body.appendChild(toggleButton);
+
+    const footer = document.getElementById("app-footer");
+    let footerVisible = false;
+
+    toggleButton.addEventListener("click", () => {
+      footerVisible = !footerVisible;
+      if (footerVisible) {
+        footer.classList.add("visible");
+        toggleButton.textContent = "✕ Close";
+      } else {
+        footer.classList.remove("visible");
+        toggleButton.textContent = "ℹ️ Info";
+      }
+    });
+
+    // Auto-show footer briefly on load
+    setTimeout(() => {
+      footer.classList.add("visible");
+      footerVisible = true;
+      toggleButton.textContent = "✕ Close";
+
+      // Auto-hide after 5 seconds
+      setTimeout(() => {
+        footer.classList.remove("visible");
+        footerVisible = false;
+        toggleButton.textContent = "ℹ️ Info";
+      }, 5000);
+    }, 2000);
   }
 }

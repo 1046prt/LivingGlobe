@@ -1,0 +1,900 @@
+{
+  "iso2": "JP",
+  "iso3": "JPN",
+  "name": "Japan",
+  "region": "Asia",
+  "capital": "Tokyo",
+  "population": 125800000,
+  "image": "/images/country/jp.svg",
+  "flag": "/images/flags/japan.png",
+  "currency": {
+    "code": "JPY",
+    "name": "Japanese Yen",
+    "symbol": "¥",
+    "image": "/images/currencies/jpy.png"
+  },
+  "languages": ["Japanese"],
+  "timezones": ["UTC+09:00"],
+  "history": [
+    {
+      "year": 1603,
+      "description": "Tokugawa shogunate established, beginning of Edo period"
+    },
+    {
+      "year": 1868,
+      "description": "Meiji Restoration begins modernization of Japan"
+    },
+    {
+      "year": 1945,
+      "description": "End of World War II, beginning of post-war reconstruction"
+    },
+    {
+      "year": 1964,
+      "description": "Tokyo Olympics showcase Japan's post-war recovery"
+    },
+    {
+      "year": 1989,
+      "description": "Beginning of Heisei era, economic bubble period"
+    }
+  ],
+  "states": [
+    { "name": "Hokkaido", "capital": "Sapporo", "slug": "hokkaido" },
+    { "name": "Aomori", "capital": "Aomori", "slug": "aomori" },
+    { "name": "Iwate", "capital": "Morioka", "slug": "iwate" },
+    { "name": "Miyagi", "capital": "Sendai", "slug": "miyagi" },
+    { "name": "Akita", "capital": "Akita", "slug": "akita" },
+    { "name": "Yamagata", "capital": "Yamagata", "slug": "yamagata" },
+    { "name": "Fukushima", "capital": "Fukushima", "slug": "fukushima" },
+    { "name": "Ibaraki", "capital": "Mito", "slug": "ibaraki" },
+    { "name": "Tochigi", "capital": "Utsunomiya", "slug": "tochigi" },
+    { "name": "Gunma", "capital": "Maebashi", "slug": "gunma" },
+    { "name": "Saitama", "capital": "Saitama", "slug": "saitama" },
+    { "name": "Chiba", "capital": "Chiba", "slug": "chiba" },
+    { "name": "Tokyo", "capital": "Tokyo", "slug": "tokyo" },
+    { "name": "Kanagawa", "capital": "Yokohama", "slug": "kanagawa" },
+    { "name": "Niigata", "capital": "Niigata", "slug": "niigata" },
+    { "name": "Toyama", "capital": "Toyama", "slug": "toyama" },
+    { "name": "Ishikawa", "capital": "Kanazawa", "slug": "ishikawa" },
+    { "name": "Fukui", "capital": "Fukui", "slug": "fukui" },
+    { "name": "Yamanashi", "capital": "Kofu", "slug": "yamanashi" },
+    { "name": "Nagano", "capital": "Nagano", "slug": "nagano" },
+    { "name": "Gifu", "capital": "Gifu", "slug": "gifu" },
+    { "name": "Shizuoka", "capital": "Shizuoka", "slug": "shizuoka" },
+    { "name": "Aichi", "capital": "Nagoya", "slug": "aichi" },
+    { "name": "Mie", "capital": "Tsu", "slug": "mie" },
+    { "name": "Shiga", "capital": "Otsu", "slug": "shiga" },
+    { "name": "Kyoto", "capital": "Kyoto", "slug": "kyoto" },
+    { "name": "Osaka", "capital": "Osaka", "slug": "osaka" },
+    { "name": "Hyogo", "capital": "Kobe", "slug": "hyogo" },
+    { "name": "Nara", "capital": "Nara", "slug": "nara" },
+    { "name": "Wakayama", "capital": "Wakayama", "slug": "wakayama" },
+    { "name": "Tottori", "capital": "Tottori", "slug": "tottori" },
+    { "name": "Shimane", "capital": "Matsue", "slug": "shimane" },
+    { "name": "Okayama", "capital": "Okayama", "slug": "okayama" },
+    { "name": "Hiroshima", "capital": "Hiroshima", "slug": "hiroshima" },
+    { "name": "Yamaguchi", "capital": "Yamaguchi", "slug": "yamaguchi" },
+    { "name": "Tokushima", "capital": "Tokushima", "slug": "tokushima" },
+    { "name": "Kagawa", "capital": "Takamatsu", "slug": "kagawa" },
+    { "name": "Ehime", "capital": "Matsuyama", "slug": "ehime" },
+    { "name": "Kochi", "capital": "Kochi", "slug": "kochi" },
+    { "name": "Fukuoka", "capital": "Fukuoka", "slug": "fukuoka" },
+    { "name": "Saga", "capital": "Saga", "slug": "saga" },
+    { "name": "Nagasaki", "capital": "Nagasaki", "slug": "nagasaki" },
+    { "name": "Kumamoto", "capital": "Kumamoto", "slug": "kumamoto" },
+    { "name": "Oita", "capital": "Oita", "slug": "oita" },
+    { "name": "Miyazaki", "capital": "Miyazaki", "slug": "miyazaki" },
+    { "name": "Kagoshima", "capital": "Kagoshima", "slug": "kagoshima" },
+    { "name": "Okinawa", "capital": "Naha", "slug": "okinawa" }
+  ],
+  "famousCities": [
+    {
+      "name": "Tokyo",
+      "whyFamous": "Capital and largest city, global center of technology and pop culture",
+      "slug": "tokyo",
+      "image": "/images/cities/japan/tokyo.jpg"
+    },
+    {
+      "name": "Kyoto",
+      "whyFamous": "Former imperial capital, thousands of temples and traditional culture",
+      "slug": "kyoto",
+      "image": "/images/cities/japan/kyoto.jpg"
+    },
+    {
+      "name": "Osaka",
+      "whyFamous": "Kitchen of Japan, famous for food culture and commerce",
+      "slug": "osaka",
+      "image": "/images/cities/japan/osaka.jpg"
+    },
+    {
+      "name": "Hiroshima",
+      "whyFamous": "Peace memorial city, site of atomic bombing in WWII",
+      "slug": "hiroshima",
+      "image": "/images/cities/japan/hiroshima.jpg"
+    },
+    {
+      "name": "Nara",
+      "whyFamous": "Ancient capital, famous for deer park and Buddhist temples",
+      "slug": "nara",
+      "image": "/images/cities/japan/nara.jpg"
+    },
+    {
+      "name": "Sapporo",
+      "whyFamous": "Famous for its winter snow festival, beer, and skiing",
+      "slug": "sapporo",
+      "image": "/images/cities/japan/sapporo.jpg"
+    },
+    {
+      "name": "Fukuoka",
+      "whyFamous": "Major port city in Kyushu, known for food culture and shopping",
+      "slug": "fukuoka",
+      "image": "/images/cities/japan/fukuoka.jpg"
+    },
+    {
+      "name": "Nagoya",
+      "whyFamous": "Industrial hub, home to Toyota and historic Nagoya Castle",
+      "slug": "nagoya",
+      "image": "/images/cities/japan/nagoya.jpg"
+    },
+    {
+      "name": "Kobe",
+      "whyFamous": "Famous for Kobe beef, port city, and scenic harbor",
+      "slug": "kobe",
+      "image": "/images/cities/japan/kobe.jpg"
+    },
+    {
+      "name": "Yokohama",
+      "whyFamous": "Major port city near Tokyo, known for Chinatown and Minato Mirai",
+      "slug": "yokohama",
+      "image": "/images/cities/japan/yokohama.jpg"
+    },
+    {
+      "name": "Kanazawa",
+      "whyFamous": "Renowned for preserved Edo-era districts, gardens, and samurai culture",
+      "slug": "kanazawa",
+      "image": "/images/cities/japan/kanazawa.jpg"
+    },
+    {
+      "name": "Hakone",
+      "whyFamous": "Famous for hot springs, views of Mount Fuji, and scenic landscapes",
+      "slug": "hakone",
+      "image": "/images/cities/japan/hakone.jpg"
+    }
+  ],
+  "landmarks": [
+    {
+      "slug": "mount-fuji",
+      "name": "Mount Fuji",
+      "city": "Honshu",
+      "coordinates": { "lat": 35.3606, "lng": 138.7274 },
+      "whyFamous": "Sacred mountain and symbol of Japan, UNESCO World Heritage site",
+      "imagePath": "/images/landmarks/japan/mount-fuji.jpg"
+    },
+    {
+      "slug": "tokyo-tower",
+      "name": "Tokyo Tower",
+      "city": "Tokyo",
+      "coordinates": { "lat": 35.6586, "lng": 139.7454 },
+      "whyFamous": "Communications tower inspired by Eiffel Tower, symbol of post-war recovery",
+      "imagePath": "/images/landmarks/japan/tokyo-tower.jpg"
+    },
+    {
+      "slug": "shibuya-crossing",
+      "name": "Shibuya Crossing",
+      "city": "Tokyo",
+      "coordinates": { "lat": 35.6595, "lng": 139.7005 },
+      "whyFamous": "One of the busiest pedestrian crossings in the world, iconic Tokyo landmark",
+      "imagePath": "/images/landmarks/japan/shibuya-crossing.jpg"
+    },
+    {
+      "slug": "fushimi-inari-shrine",
+      "name": "Fushimi Inari Shrine",
+      "city": "Kyoto",
+      "coordinates": { "lat": 34.9671, "lng": 135.7727 },
+      "whyFamous": "Thousands of vermillion torii gates creating tunnels up the mountain",
+      "imagePath": "/images/landmarks/japan/fushimi-inari-shrine.jpg"
+    },
+    {
+      "slug": "golden-pavilion",
+      "name": "Golden Pavilion (Kinkaku-ji)",
+      "city": "Kyoto",
+      "coordinates": { "lat": 35.0394, "lng": 135.7292 },
+      "whyFamous": "Gold-covered Buddhist temple, one of Japan's most photographed buildings",
+      "imagePath": "/images/landmarks/japan/golden-pavilion.jpg"
+    },
+    {
+      "slug": "osaka-castle",
+      "name": "Osaka Castle",
+      "city": "Osaka",
+      "coordinates": { "lat": 34.6873, "lng": 135.5259 },
+      "whyFamous": "Historic castle and symbol of Osaka, surrounded by beautiful parklands",
+      "imagePath": "/images/landmarks/japan/osaka-castle.jpg"
+    },
+    {
+      "slug": "hiroshima-peace-memorial",
+      "name": "Hiroshima Peace Memorial",
+      "city": "Hiroshima",
+      "coordinates": { "lat": 34.3955, "lng": 132.4536 },
+      "whyFamous": "Remains of the atomic bomb dome, symbol of peace and remembrance",
+      "imagePath": "/images/landmarks/japan/hiroshima-peace-memorial.jpg"
+    },
+    {
+      "slug": "nara-deer-park",
+      "name": "Nara Deer Park",
+      "city": "Nara",
+      "coordinates": { "lat": 34.6851, "lng": 135.8438 },
+      "whyFamous": "Famous for freely roaming deer and Todai-ji Temple with giant Buddha statue",
+      "imagePath": "/images/landmarks/japan/nara-deer-park.jpg"
+    },
+    {
+      "slug": "sapporo-snow-festival",
+      "name": "Sapporo Snow Festival",
+      "city": "Sapporo",
+      "coordinates": { "lat": 43.0621, "lng": 141.3544 },
+      "whyFamous": "Annual festival featuring massive snow and ice sculptures",
+      "imagePath": "/images/landmarks/japan/sapporo-snow-festival.jpg"
+    },
+    {
+      "slug": "fukuoka-castle-ruins",
+      "name": "Fukuoka Castle Ruins",
+      "city": "Fukuoka",
+      "coordinates": { "lat": 33.5953, "lng": 130.4017 },
+      "whyFamous": "Historical castle ruins in Maizuru Park, popular for cherry blossoms",
+      "imagePath": "/images/landmarks/japan/fukuoka-castle-ruins.jpg"
+    },
+    {
+      "slug": "nagoya-castle",
+      "name": "Nagoya Castle",
+      "city": "Nagoya",
+      "coordinates": { "lat": 35.1856, "lng": 136.8997 },
+      "whyFamous": "Famous for its golden shachihoko (roof ornaments) and historical significance",
+      "imagePath": "/images/landmarks/japan/nagoya-castle.jpg"
+    },
+    {
+      "slug": "hakone-open-air-museum",
+      "name": "Hakone Open-Air Museum",
+      "city": "Hakone",
+      "coordinates": { "lat": 35.2326, "lng": 139.1056 },
+      "whyFamous": "Famous outdoor sculpture museum with stunning natural landscapes",
+      "imagePath": "/images/landmarks/japan/hakone-open-air-museum.jpg"
+    }
+  ],
+  "rivers": [
+    {
+      "slug": "shinano-river",
+      "name": "Shinano River",
+      "length": 367,
+      "countries": ["Japan"],
+      "source": "Mount Kobushi",
+      "mouth": "Sea of Japan",
+      "imagePath": "/images/rivers/japan/shinano-river.jpg",
+      "pathCoordinates": [
+        { "lat": 35.95, "lng": 138.7167 },
+        { "lat": 37.9167, "lng": 139.0333 }
+      ]
+    },
+    {
+      "slug": "tone-river",
+      "name": "Tone River",
+      "length": 322,
+      "countries": ["Japan"],
+      "source": "Mount Ominakami",
+      "mouth": "Pacific Ocean",
+      "imagePath": "/images/rivers/japan/tone-river.jpg",
+      "pathCoordinates": [
+        { "lat": 36.95, "lng": 139.2167 },
+        { "lat": 35.7667, "lng": 140.8333 }
+      ]
+    },
+    {
+      "slug": "kiso-river",
+      "name": "Kiso River",
+      "length": 229,
+      "countries": ["Japan"],
+      "source": "Mount Hachimori",
+      "mouth": "Ise Bay",
+      "imagePath": "/images/rivers/japan/kiso-river.jpg",
+      "pathCoordinates": [
+        { "lat": 35.45, "lng": 137.1 },
+        { "lat": 35.0, "lng": 136.9 }
+      ]
+    },
+    {
+      "slug": "yodo-river",
+      "name": "Yodo River",
+      "length": 75,
+      "countries": ["Japan"],
+      "source": "Lake Biwa",
+      "mouth": "Osaka Bay",
+      "imagePath": "/images/rivers/japan/yodo-river.jpg",
+      "pathCoordinates": [
+        { "lat": 35.15, "lng": 135.95 },
+        { "lat": 34.68, "lng": 135.5 }
+      ]
+    },
+    {
+      "slug": "kuma-river",
+      "name": "Kuma River",
+      "length": 115,
+      "countries": ["Japan"],
+      "source": "Mount Chokai",
+      "mouth": "Yatsushiro Sea",
+      "imagePath": "/images/rivers/japan/kuma-river.jpg",
+      "pathCoordinates": [
+        { "lat": 32.55, "lng": 130.95 },
+        { "lat": 32.0, "lng": 130.65 }
+      ]
+    },
+    {
+      "slug": "nagano-river",
+      "name": "Nagano River",
+      "length": 210,
+      "countries": ["Japan"],
+      "source": "Mount Norikura",
+      "mouth": "Sea of Japan",
+      "imagePath": "/images/rivers/japan/nagano-river.jpg",
+      "pathCoordinates": [
+        { "lat": 36.1, "lng": 137.8 },
+        { "lat": 36.8, "lng": 137.5 }
+      ]
+    },
+    {
+      "slug": "fuji-river",
+      "name": "Fuji River",
+      "length": 128,
+      "countries": ["Japan"],
+      "source": "Mount Nokogiri",
+      "mouth": "Suruga Bay",
+      "imagePath": "/images/rivers/japan/fuji-river.jpg",
+      "pathCoordinates": [
+        { "lat": 35.5, "lng": 138.5 },
+        { "lat": 35.0, "lng": 138.6 }
+      ]
+    },
+    {
+      "slug": "shibetsu-river",
+      "name": "Shibetsu River",
+      "length": 50,
+      "countries": ["Japan"],
+      "source": "Mount Shibetsu",
+      "mouth": "Pacific Ocean",
+      "imagePath": "/images/rivers/japan/shibetsu-river.jpg",
+      "pathCoordinates": [
+        { "lat": 43.5, "lng": 144.9 },
+        { "lat": 43.6, "lng": 145.2 }
+      ]
+    },
+    {
+      "slug": "katsura-river",
+      "name": "Katsura River",
+      "length": 120,
+      "countries": ["Japan"],
+      "source": "Mount Hiei",
+      "mouth": "Yodo River",
+      "imagePath": "/images/rivers/japan/katsura-river.jpg",
+      "pathCoordinates": [
+        { "lat": 35.05, "lng": 135.7 },
+        { "lat": 34.9, "lng": 135.5 }
+      ]
+    },
+    {
+      "slug": "arakawa-river",
+      "name": "Arakawa River",
+      "length": 173,
+      "countries": ["Japan"],
+      "source": "Mount Kobushi",
+      "mouth": "Tokyo Bay",
+      "imagePath": "/images/rivers/japan/arakawa-river.jpg",
+      "pathCoordinates": [
+        { "lat": 35.95, "lng": 138.7 },
+        { "lat": 35.65, "lng": 139.75 }
+      ]
+    }
+  ],
+  "institutions": [
+    {
+      "slug": "university-of-tokyo",
+      "name": "University of Tokyo",
+      "city": "Tokyo",
+      "founded": 1877,
+      "globalRank": 23,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/japan/university-of-tokyo.jpg"
+    },
+    {
+      "slug": "kyoto-university",
+      "name": "Kyoto University",
+      "city": "Kyoto",
+      "founded": 1897,
+      "globalRank": 36,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/japan/kyoto-university.jpg"
+    },
+    {
+      "slug": "osaka-university",
+      "name": "Osaka University",
+      "city": "Osaka",
+      "founded": 1931,
+      "globalRank": 68,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/japan/osaka-university.jpg"
+    },
+    {
+      "slug": "hiroshima-university",
+      "name": "Hiroshima University",
+      "city": "Hiroshima",
+      "founded": 1949,
+      "globalRank": 401,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/japan/hiroshima-university.jpg"
+    },
+    {
+      "slug": "nara-university",
+      "name": "Nara University",
+      "city": "Nara",
+      "founded": 1886,
+      "globalRank": 501,
+      "type": "Public University",
+      "imagePath": "/images/institutions/japan/nara-university.jpg"
+    },
+    {
+      "slug": "hokkaido-university",
+      "name": "Hokkaido University",
+      "city": "Sapporo",
+      "founded": 1876,
+      "globalRank": 78,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/japan/hokkaido-university.jpg"
+    },
+    {
+      "slug": "fukuoka-university",
+      "name": "Fukuoka University",
+      "city": "Fukuoka",
+      "founded": 1934,
+      "globalRank": 601,
+      "type": "Private University",
+      "imagePath": "/images/institutions/japan/fukuoka-university.jpg"
+    },
+    {
+      "slug": "nagoya-university",
+      "name": "Nagoya University",
+      "city": "Nagoya",
+      "founded": 1939,
+      "globalRank": 120,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/japan/nagoya-university.jpg"
+    },
+    {
+      "slug": "kobe-university",
+      "name": "Kobe University",
+      "city": "Kobe",
+      "founded": 1902,
+      "globalRank": 401,
+      "type": "Public Research University",
+      "imagePath": "/images/institutions/japan/kobe-university.jpg"
+    },
+    {
+      "slug": "yokohama-national-university",
+      "name": "Yokohama National University",
+      "city": "Yokohama",
+      "founded": 1949,
+      "globalRank": 601,
+      "type": "Public University",
+      "imagePath": "/images/institutions/japan/yokohama-national-university.jpg"
+    },
+    {
+      "slug": "kanazawa-university",
+      "name": "Kanazawa University",
+      "city": "Kanazawa",
+      "founded": 1949,
+      "globalRank": 701,
+      "type": "Public University",
+      "imagePath": "/images/institutions/japan/kanazawa-university.jpg"
+    },
+    {
+      "slug": "hakone-art-university",
+      "name": "Hakone Art University",
+      "city": "Hakone",
+      "founded": 1960,
+      "globalRank": 801,
+      "type": "Private University",
+      "imagePath": "/images/institutions/japan/hakone-art-university.jpg"
+    }
+  ],
+  "geography": {
+    "climateZones": ["Subtropical", "Temperate", "Subarctic"],
+    "geologicalFormations": [
+      {
+        "name": "Japanese Alps",
+        "type": "Mountain Range",
+        "description": "Mountain ranges in central Honshu including Mount Fuji"
+      },
+      {
+        "name": "Ring of Fire",
+        "type": "Volcanic Arc",
+        "description": "Japan sits on active volcanic belt with over 100 active volcanoes"
+      },
+      {
+        "name": "Japanese Archipelago",
+        "type": "Island Chain",
+        "description": "Chain of 6,852 islands formed by volcanic activity"
+      }
+    ],
+    "naturalDisasters": [
+      {
+        "type": "Earthquake/Tsunami",
+        "name": "Great East Japan Earthquake",
+        "year": 2011,
+        "impact": "Magnitude 9.0 earthquake and tsunami causing nuclear disaster"
+      },
+      {
+        "type": "Earthquake",
+        "name": "Great Hanshin Earthquake",
+        "year": 1995,
+        "impact": "Magnitude 7.3 earthquake that devastated Kobe"
+      }
+    ],
+    "majorWaterBodies": [
+      {
+        "name": "Pacific Ocean",
+        "type": "Ocean",
+        "coastline": "East Coast"
+      },
+      {
+        "name": "Sea of Japan",
+        "type": "Sea",
+        "coastline": "West Coast"
+      },
+      {
+        "name": "Seto Inland Sea",
+        "type": "Sea",
+        "coastline": "Between Honshu, Shikoku, and Kyushu"
+      }
+    ]
+  },
+  "heritage": {
+    "independenceDate": "N/A (Never colonized)",
+    "foundingEvent": "Founding of Japan traditionally dated to 660 BC",
+    "majorHistoricalFigures": [
+      {
+        "name": "Emperor Meiji",
+        "role": "Emperor",
+        "period": "1868-1912",
+        "achievement": "Led Japan's modernization and transformation into world power"
+      },
+      {
+        "name": "Tokugawa Ieyasu",
+        "role": "Shogun",
+        "period": "1603-1605",
+        "achievement": "Founded Tokugawa shogunate, brought peace and stability"
+      },
+      {
+        "name": "Prince Shotoku",
+        "role": "Prince Regent",
+        "period": "593-622",
+        "achievement": "Promoted Buddhism and Chinese culture, wrote first constitution"
+      }
+    ],
+    "colonialHistory": [
+      {
+        "period": "1910-1945",
+        "description": "Japanese colonial empire including Korea, Taiwan, and Manchuria"
+      },
+      {
+        "period": "1945-1952",
+        "description": "Allied occupation under General MacArthur"
+      }
+    ],
+    "unescoSites": [
+      {
+        "name": "Mount Fuji",
+        "year": 2013,
+        "type": "Cultural"
+      },
+      {
+        "name": "Historic Monuments of Ancient Kyoto",
+        "year": 1994,
+        "type": "Cultural"
+      },
+      {
+        "name": "Hiroshima Peace Memorial",
+        "year": 1996,
+        "type": "Cultural"
+      },
+      {
+        "name": "Shrines and Temples of Nikko",
+        "year": 1999,
+        "type": "Cultural"
+      }
+    ]
+  },
+  "politics": {
+    "currentLeaders": [
+      {
+        "position": "Prime Minister",
+        "name": "Shigeru Ishiba",
+        "party": "Liberal Democratic Party",
+        "termStart": "October 1, 2024"
+      },
+      {
+        "position": "Emperor",
+        "name": "Emperor Naruhito",
+        "party": "N/A",
+        "termStart": "May 1, 2019"
+      }
+    ],
+    "governmentType": "Constitutional Monarchy, Parliamentary Democracy",
+    "internationalMemberships": [
+      "United Nations (UN)",
+      "Group of Seven (G7)",
+      "Group of Twenty (G20)",
+      "Asia-Pacific Economic Cooperation (APEC)",
+      "Association of Southeast Asian Nations (ASEAN) Plus Three",
+      "Comprehensive and Progressive Trans-Pacific Partnership (CPTPP)"
+    ]
+  },
+  "economy": {
+    "gdp": 4937000000000,
+    "gdpPerCapita": 39285,
+    "majorIndustries": [
+      "Automotive",
+      "Electronics",
+      "Machinery",
+      "Steel",
+      "Shipbuilding",
+      "Chemicals",
+      "Robotics"
+    ],
+    "topExports": [
+      {
+        "product": "Cars",
+        "value": 98500000000
+      },
+      {
+        "product": "Integrated Circuits",
+        "value": 48200000000
+      },
+      {
+        "product": "Vehicle Parts",
+        "value": 45800000000
+      },
+      {
+        "product": "Machinery",
+        "value": 40100000000
+      }
+    ],
+    "topImports": [
+      {
+        "product": "Crude Petroleum",
+        "value": 78900000000
+      },
+      {
+        "product": "Liquefied Natural Gas",
+        "value": 48300000000
+      },
+      {
+        "product": "Coal",
+        "value": 38700000000
+      },
+      {
+        "product": "Integrated Circuits",
+        "value": 35200000000
+      }
+    ],
+    "employmentRate": 97.4,
+    "employmentSectors": {
+      "services": 70.9,
+      "industry": 25.8,
+      "agriculture": 3.3
+    }
+  },
+  "culture": {
+    "officialLanguages": ["Japanese"],
+    "regionalLanguages": ["Ainu", "Ryukyuan", "Japanese Sign Language"],
+    "religionDemographics": {
+      "Shinto": 70.5,
+      "Buddhism": 67.2,
+      "Christianity": 1.5,
+      "Non-religious": 57.1,
+      "Other": 3.7
+    },
+    "nationalFestivals": [
+      {
+        "name": "Cherry Blossom Festival (Hanami)",
+        "date": "March-May",
+        "description": "Traditional custom of enjoying the beauty of cherry blossoms"
+      },
+      {
+        "name": "Golden Week",
+        "date": "Late April - Early May",
+        "description": "Week of national holidays including Constitution Day and Children's Day"
+      },
+      {
+        "name": "Obon Festival",
+        "date": "Mid-August",
+        "description": "Buddhist festival honoring ancestors"
+      }
+    ],
+    "traditionalFoods": [
+      {
+        "name": "Sushi",
+        "description": "Traditional dish of vinegared rice with fish and vegetables"
+      },
+      {
+        "name": "Ramen",
+        "description": "Noodle soup with various toppings and broths"
+      },
+      {
+        "name": "Tempura",
+        "description": "Light, crispy battered and fried seafood and vegetables"
+      },
+      {
+        "name": "Kaiseki",
+        "description": "Traditional multi-course haute cuisine"
+      }
+    ],
+    "nationalSymbols": {
+      "flag": "Hinomaru (Rising Sun)",
+      "emblem": "Imperial Seal",
+      "anthem": "Kimigayo",
+      "flower": "Cherry Blossom (Sakura)",
+      "animal": "Japanese Macaque",
+      "bird": "Green Pheasant"
+    }
+  },
+  "education": {
+    "literacyRate": 99.0,
+    "educationSystem": "6-3-3-4 system: 6 years elementary, 3 years junior high, 3 years senior high, 4 years university",
+    "famousScientists": [
+      {
+        "name": "Hideki Yukawa",
+        "field": "Physics",
+        "achievement": "Nobel Prize for predicting existence of mesons"
+      },
+      {
+        "name": "Shinya Yamanaka",
+        "field": "Medicine",
+        "achievement": "Nobel Prize for induced pluripotent stem cell research"
+      },
+      {
+        "name": "Akira Yoshino",
+        "field": "Chemistry",
+        "achievement": "Nobel Prize for development of lithium-ion batteries"
+      }
+    ],
+    "nobelPrizeWinners": 29
+  },
+  "tourism": {
+    "mostVisitedCities": [
+      {
+        "name": "Tokyo",
+        "visitors": 14000000,
+        "attractions": ["Tokyo Tower", "Senso-ji Temple", "Imperial Palace"]
+      },
+      {
+        "name": "Kyoto",
+        "visitors": 5500000,
+        "attractions": [
+          "Fushimi Inari",
+          "Golden Pavilion",
+          "Arashiyama Bamboo Grove"
+        ]
+      },
+      {
+        "name": "Osaka",
+        "visitors": 4800000,
+        "attractions": ["Osaka Castle", "Dotonbori", "Universal Studios"]
+      }
+    ],
+    "adventureActivities": [
+      "Mount Fuji Climbing",
+      "Hot Spring (Onsen) Tours",
+      "Cherry Blossom Viewing",
+      "Traditional Temple Visits",
+      "Bullet Train (Shinkansen) Journeys"
+    ],
+    "transportation": {
+      "airports": "Narita, Haneda, Kansai, and regional airports",
+      "railways": "Extensive rail network including Shinkansen bullet trains",
+      "highways": "National expressway system"
+    },
+    "visaRequirements": "Visa-free for many countries up to 90 days, working holiday agreements"
+  },
+  "demographics": {
+    "populationGrowth": [
+      { "year": 2020, "population": 125710000 },
+      { "year": 2021, "population": 125502000 },
+      { "year": 2022, "population": 125124989 },
+      { "year": 2023, "population": 124612530 }
+    ],
+    "urbanRural": {
+      "urban": 91.8,
+      "rural": 8.2
+    },
+    "lifeExpectancy": {
+      "total": 84.3,
+      "male": 81.1,
+      "female": 87.6
+    },
+    "ageDistribution": {
+      "youth": 12.0,
+      "workingAge": 59.4,
+      "elderly": 28.6
+    }
+  },
+  "scienceTechnology": {
+    "spaceMissions": [
+      {
+        "name": "Hayabusa Missions",
+        "year": "2003-2020",
+        "achievement": "Sample return missions from asteroids"
+      },
+      {
+        "name": "Akatsuki",
+        "year": 2010,
+        "achievement": "Venus climate orbiter mission"
+      },
+      {
+        "name": "International Space Station",
+        "year": "1998-present",
+        "achievement": "Kibo laboratory module contribution"
+      }
+    ],
+    "techStartups": [
+      "Sony",
+      "Nintendo",
+      "SoftBank",
+      "Rakuten",
+      "Toyota",
+      "Honda"
+    ],
+    "patents": 307969,
+    "breakthroughs": [
+      {
+        "year": 1979,
+        "invention": "Walkman",
+        "inventor": "Sony"
+      },
+      {
+        "year": 1991,
+        "invention": "Lithium-ion Battery",
+        "inventor": "Akira Yoshino"
+      },
+      {
+        "year": 1985,
+        "invention": "Game Boy",
+        "inventor": "Nintendo"
+      }
+    ]
+  },
+  "sportsEntertainment": {
+    "nationalSports": ["Sumo", "Baseball", "Football", "Martial Arts"],
+    "olympicPerformance": {
+      "totalMedals": 523,
+      "goldMedals": 169,
+      "silverMedals": 150,
+      "bronzeMedals": 178
+    },
+    "popularMovies": [
+      "Studio Ghibli Films",
+      "Seven Samurai",
+      "Godzilla Series"
+    ],
+    "musicArtists": [
+      "Hikaru Utada",
+      "X Japan",
+      "Perfume",
+      "One Ok Rock",
+      "Babymetal"
+    ],
+    "worldRecords": [
+      {
+        "record": "Highest life expectancy",
+        "value": "84.3 years average"
+      },
+      {
+        "record": "Most vending machines per capita",
+        "value": "1 per 23 people"
+      }
+    ]
+  }
+}
