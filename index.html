@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="LivingGlobe - Explore the world through an interactive 3D globe with real-time data, country information, and beautiful visualizations"
+    />
+    <meta
+      name="keywords"
+      content="3D globe, interactive map, world data, countries, visualization, Three.js"
+    />
+    <meta name="author" content="LivingGlobe" />
+    <title>LivingGlobe - Interactive 3D Globe</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>"
+    />
+    <link rel="stylesheet" href="./src/styles/main.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- Loading Screen -->
+      <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+          <div class="globe-loader"></div>
+          <h2>Loading LivingGlobe...</h2>
+          <p>Preparing your journey around the world</p>
+        </div>
+      </div>
+
+      <!-- Main Globe Container -->
+      <div id="globe-container" class="globe-container"></div>
+
+      <!-- Help Button -->
+      <div id="help-button" class="help-button" title="Help & Instructions">
+        <span>?</span>
+      </div>
+
+      <!-- Help Modal -->
+      <div id="help-modal" class="help-modal hidden">
+        <div class="help-content">
+          <button id="close-help" class="close-btn">&times;</button>
+          <h2>🌍 Welcome to LivingGlobe</h2>
+
+          <div class="help-section">
+            <h3>What is LivingGlobe?</h3>
+            <p>
+              LivingGlobe is an interactive 3D globe that brings the world to
+              your fingertips. Explore countries, discover cultures, and
+              visualize global data in real-time through beautiful, engaging
+              visualizations.
+            </p>
+          </div>
+
+          <div class="help-section">
+            <h3>🎮 How to Use</h3>
+            <div class="help-controls">
+              <div class="help-item">
+                <span class="help-icon">🖱️</span>
+                <div>
+                  <strong>Rotate Globe</strong>
+                  <p>
+                    Click and drag anywhere on the globe to rotate it around.
+                    Explore different regions of the world.
+                  </p>
+                </div>
+              </div>
+              <div class="help-item">
+                <span class="help-icon">🔍</span>
+                <div>
+                  <strong>Zoom In/Out</strong>
+                  <p>
+                    Use your mouse wheel or trackpad to zoom in for a closer
+                    look or zoom out for a wider view.
+                  </p>
+                </div>
+              </div>
+              <div class="help-item">
+                <span class="help-icon">🎯</span>
+                <div>
+                  <strong>Hover for Quick Info</strong>
+                  <p>
+                    Move your mouse over any red country marker to see a tooltip
+                    with basic information.
+                  </p>
+                </div>
+              </div>
+              <div class="help-item">
+                <span class="help-icon">👆</span>
+                <div>
+                  <strong>Click for Details</strong>
+                  <p>
+                    Click on any country marker to open a detailed information
+                    panel with comprehensive data.
+                  </p>
+                </div>
+              </div>
+              <div class="help-item">
+                <span class="help-icon">🎨</span>
+                <div>
+                  <strong>Switch Data Modes</strong>
+                  <p>
+                    Use the control panel on the left to switch between
+                    different data visualizations like Population, GDP,
+                    Environment, and Culture.
+                  </p>
+                </div>
+              </div>
+              <div class="help-item">
+                <span class="help-icon">🌅</span>
+                <div>
+                  <strong>Day/Night Mode</strong>
+                  <p>
+                    Toggle between day and night views to see different
+                    perspectives of Earth.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="help-section">
+            <h3>🌟 Features</h3>
+            <ul>
+              <li>Interactive 3D globe with smooth rotation</li>
+              <li>40+ countries with comprehensive data</li>
+              <li>Real-time country information and statistics</li>
+              <li>Multiple data visualization modes</li>
+              <li>Beautiful day/night transitions</li>
+              <li>Responsive design for all devices</li>
+            </ul>
+          </div>
+
+          <div class="help-section">
+            <h3>💡 Tips</h3>
+            <ul>
+              <li>Country names appear as floating labels around the globe</li>
+              <li>Red markers pulse to indicate interactive countries</li>
+              <li>Use the close (×) button to close information panels</li>
+              <li>
+                The globe continues rotating automatically when not being
+                dragged
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- UI Controls -->
+      <div id="controls-panel" class="controls-panel">
+        <div class="control-group">
+          <h3>Data Layers</h3>
+          <button
+            id="population-btn"
+            class="control-btn active"
+            data-mode="population"
+          >
+            Population
+          </button>
+          <button id="gdp-btn" class="control-btn" data-mode="gdp">GDP</button>
+          <button
+            id="environment-btn"
+            class="control-btn"
+            data-mode="environment"
+          >
+            Environment
+          </button>
+          <button id="culture-btn" class="control-btn" data-mode="culture">
+            Culture
+          </button>
+        </div>
+
+        <div class="control-group">
+          <h3>View Mode</h3>
+          <button id="day-mode" class="control-btn active" data-view="day">
+            Day
+          </button>
+          <button id="night-mode" class="control-btn" data-view="night">
+            Night
+          </button>
+        </div>
+
+        <div class="control-group">
+          <h3>Controls</h3>
+          <div
+            style="
+              font-size: 12px;
+              color: rgba(255, 255, 255, 0.7);
+              line-height: 1.4;
+            "
+          >
+            <p>🖱️ <strong>Drag</strong> to rotate globe</p>
+            <p>🎯 <strong>Hover</strong> over markers for info</p>
+            <p>👆 <strong>Click</strong> markers for details</p>
+            <p>🔍 <strong>Scroll</strong> to zoom</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Info Panel -->
+      <div id="info-panel" class="info-panel hidden">
+        <div class="info-content">
+          <button id="close-info" class="close-btn">&times;</button>
+          <h2 id="country-name"></h2>
+          <div id="country-data"></div>
+        </div>
+      </div>
+
+      <!-- Tooltip -->
+      <div id="tooltip" class="tooltip hidden">
+        <div class="tooltip-content"></div>
+      </div>
+    </div>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
