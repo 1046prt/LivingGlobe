@@ -282,5 +282,33 @@ class LivingGlobe {
   }
 }
 
+// Handle development popup
+function initDevPopup() {
+  const devPopup = document.getElementById("dev-popup");
+  const continueBtn = document.getElementById("continue-btn");
+
+  if (continueBtn) {
+    continueBtn.addEventListener("click", () => {
+      devPopup.classList.add("hidden");
+      setTimeout(() => {
+        devPopup.style.display = "none";
+      }, 500);
+    });
+  }
+
+  // Auto-hide after 10 seconds if user doesn't interact
+  setTimeout(() => {
+    if (devPopup && !devPopup.classList.contains("hidden")) {
+      devPopup.classList.add("hidden");
+      setTimeout(() => {
+        devPopup.style.display = "none";
+      }, 500);
+    }
+  }, 10000);
+}
+
+// Initialize development popup
+initDevPopup();
+
 // Initialize the application
 new LivingGlobe();
