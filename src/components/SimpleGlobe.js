@@ -201,7 +201,9 @@ export class SimpleGlobe {
 
     if (!panel || !nameEl || !dataEl) return;
 
-    nameEl.innerHTML = `${country.flag || "🌍"} ${country.name}`;
+    nameEl.innerHTML = `${country.flag || "🌍"} ${country.name} (${
+      country.iso2 || ""
+    })`;
 
     let content = `
       <div class="data-section">
@@ -230,65 +232,74 @@ export class SimpleGlobe {
           <span class="data-label">Currency</span>
           <span>${
             country.currencyData
-              ? `${country.currencyData.name} (${country.currencyData.code})`
+              ? `${country.currencyData.name} (${country.currencyData.code}) ${country.currencyData.symbol}`
               : country.currency || "N/A"
           }</span>
         </div>
         <div class="data-item">
-          <span class="data-label">Independence</span>
-          <span>${country.independence || "N/A"}</span>
-        </div>
-      </div>
-
-      <div class="data-section">
-        <h4>💰 Economic Data</h4>
-        <div class="data-item">
-          <span class="data-label">GDP</span>
-          <span>$${((country.gdp || 0) / 1000000000).toFixed(2)}B</span>
-        </div>
-        <div class="data-item">
-          <span class="data-label">GDP per Capita</span>
-          <span>$${(country.gdpPerCapita || 0).toLocaleString()}</span>
-        </div>
-        <div class="data-item">
-          <span class="data-label">Employment Rate</span>
-          <span>${country.economy?.employmentRate || "N/A"}%</span>
-        </div>
-      </div>
-
-      <div class="data-section">
-        <h4>👥 Demographics</h4>
-        <div class="data-item">
-          <span class="data-label">Life Expectancy</span>
+          <span class="data-label">Timezones</span>
           <span>${
-            country.lifeExpectancy ||
-            country.demographics?.lifeExpectancy?.total ||
-            "N/A"
-          } years</span>
-        </div>
-        <div class="data-item">
-          <span class="data-label">Literacy Rate</span>
-          <span>${
-            country.literacyRate || country.education?.literacyRate || "N/A"
-          }%</span>
-        </div>
-        <div class="data-item">
-          <span class="data-label">Urban Population</span>
-          <span>${
-            country.urbanPopulation ||
-            country.demographics?.urbanRural?.urban ||
-            "N/A"
-          }%</span>
+            Array.isArray(country.timezones)
+              ? country.timezones.join(", ")
+              : "N/A"
+          }</span>
         </div>
       </div>`;
 
-    // Add government information if available
+    // Heritage & History
+    if (country.heritage) {
+      content += `
+        <div class="data-section">
+          <h4>🏛️ Heritage & History</h4>
+          <div class="data-item">
+            <span class="data-label">Independence</span>
+            <span>${country.heritage.independenceDate || "N/A"}</span>
+          </div>
+          <div class="data-item">
+            <span class="data-label">Founding Event</span>
+            <span>${country.heritage.foundingEvent || "N/A"}</span>
+          </div>`;
+
+      if (
+        country.heritage.majorHistoricalFigures &&
+        country.heritage.majorHistoricalFigures.length > 0
+      ) {
+        const figure = country.heritage.majorHistoricalFigures[0];
+        content += `
+          <div class="data-item">
+            <span class="data-label">Historical Figure</span>
+            <span>${figure.name} - ${figure.role} (${figure.period})</span>
+          </div>`;
+      }
+
+      if (
+        country.heritage.unescoSites &&
+        country.heritage.unescoSites.length > 0
+      ) {
+        content += `
+          <div class="data-item">
+            <span class="data-label">UNESCO Sites</span>
+            <span>${country.heritage.unescoSites.length} sites</span>
+          </div>`;
+
+        country.heritage.unescoSites.slice(0, 3).forEach((site) => {
+          content += `
+            <div class="data-item">
+              <span class="data-label">${site.name}</span>
+              <span>${site.type} (${site.year})</span>
+            </div>`;
+        });
+      }
+      content += `</div>`;
+    }
+
+    // Government & Politics
     if (country.politics) {
       content += `
         <div class="data-section">
-          <h4>🏛️ Government</h4>
+          <h4>🏛️ Government & Politics</h4>
           <div class="data-item">
-            <span class="data-label">Type</span>
+            <span class="data-label">Government Type</span>
             <span>${country.politics.governmentType || "N/A"}</span>
           </div>`;
 
@@ -296,85 +307,531 @@ export class SimpleGlobe {
         country.politics.currentLeaders &&
         country.politics.currentLeaders.length > 0
       ) {
-        const leader = country.politics.currentLeaders[0];
+        country.politics.currentLeaders.forEach((leader) => {
+          content += `
+            <div class="data-item">
+              <span class="data-label">${leader.position}</span>
+              <span>${leader.name} (${leader.party || "N/A"})</span>
+            </div>`;
+        });
+      }
+
+      if (
+        country.politics.internationalMemberships &&
+        country.politics.internationalMemberships.length > 0
+      ) {
         content += `
           <div class="data-item">
-            <span class="data-label">${leader.position}</span>
-            <span>${leader.name} (${leader.party || "N/A"})</span>
+            <span class="data-label">International Memberships</span>
+            <span>${country.politics.internationalMemberships
+              .slice(0, 3)
+              .join(", ")}${
+          country.politics.internationalMemberships.length > 3 ? "..." : ""
+        }</span>
           </div>`;
       }
       content += `</div>`;
     }
 
-    // Add cultural information if available
+    // Economy
+    if (country.economy) {
+      content += `
+        <div class="data-section">
+          <h4>💰 Economy</h4>
+          <div class="data-item">
+            <span class="data-label">GDP</span>
+            <span>$${((country.economy.gdp || 0) / 1000000000).toFixed(
+              2
+            )}B</span>
+          </div>
+          <div class="data-item">
+            <span class="data-label">GDP per Capita</span>
+            <span>$${(
+              country.economy.gdpPerCapita || 0
+            ).toLocaleString()}</span>
+          </div>
+          <div class="data-item">
+            <span class="data-label">Employment Rate</span>
+            <span>${country.economy.employmentRate || "N/A"}%</span>
+          </div>`;
+
+      if (
+        country.economy.majorIndustries &&
+        country.economy.majorIndustries.length > 0
+      ) {
+        content += `
+          <div class="data-item">
+            <span class="data-label">Major Industries</span>
+            <span>${country.economy.majorIndustries
+              .slice(0, 4)
+              .join(", ")}</span>
+          </div>`;
+      }
+
+      if (country.economy.topExports && country.economy.topExports.length > 0) {
+        const topExport = country.economy.topExports[0];
+        content += `
+          <div class="data-item">
+            <span class="data-label">Top Export</span>
+            <span>${topExport.product} ($${(
+          topExport.value / 1000000000
+        ).toFixed(1)}B)</span>
+          </div>`;
+      }
+
+      if (country.economy.employmentSectors) {
+        content += `
+          <div class="data-item">
+            <span class="data-label">Employment Sectors</span>
+            <span>Services: ${country.economy.employmentSectors.services}%, Industry: ${country.economy.employmentSectors.industry}%, Agriculture: ${country.economy.employmentSectors.agriculture}%</span>
+          </div>`;
+      }
+      content += `</div>`;
+    }
+
+    // Demographics
+    if (country.demographics) {
+      content += `
+        <div class="data-section">
+          <h4>👥 Demographics</h4>`;
+
+      if (country.demographics.lifeExpectancy) {
+        content += `
+          <div class="data-item">
+            <span class="data-label">Life Expectancy</span>
+            <span>${country.demographics.lifeExpectancy.total} years (M: ${country.demographics.lifeExpectancy.male}, F: ${country.demographics.lifeExpectancy.female})</span>
+          </div>`;
+      }
+
+      if (country.demographics.urbanRural) {
+        content += `
+          <div class="data-item">
+            <span class="data-label">Urban/Rural</span>
+            <span>Urban: ${country.demographics.urbanRural.urban}%, Rural: ${country.demographics.urbanRural.rural}%</span>
+          </div>`;
+      }
+
+      if (country.demographics.ageDistribution) {
+        content += `
+          <div class="data-item">
+            <span class="data-label">Age Distribution</span>
+            <span>Youth: ${country.demographics.ageDistribution.youth}%, Working: ${country.demographics.ageDistribution.workingAge}%, Elderly: ${country.demographics.ageDistribution.elderly}%</span>
+          </div>`;
+      }
+      content += `</div>`;
+    }
+
+    // Culture
     if (country.culture) {
       content += `
         <div class="data-section">
           <h4>🎭 Culture</h4>`;
 
       if (
-        country.culture.nationalFestivals &&
-        country.culture.nationalFestivals.length > 0
+        country.culture.officialLanguages &&
+        country.culture.officialLanguages.length > 0
       ) {
         content += `
           <div class="data-item">
-            <span class="data-label">Major Festival</span>
-            <span>${country.culture.nationalFestivals[0].name}</span>
+            <span class="data-label">Official Languages</span>
+            <span>${country.culture.officialLanguages.join(", ")}</span>
           </div>`;
+      }
+
+      if (country.culture.religionDemographics) {
+        const religions = Object.entries(
+          country.culture.religionDemographics
+        ).slice(0, 3);
+        content += `
+          <div class="data-item">
+            <span class="data-label">Major Religions</span>
+            <span>${religions
+              .map(([religion, percent]) => `${religion}: ${percent}%`)
+              .join(", ")}</span>
+          </div>`;
+      }
+
+      if (
+        country.culture.nationalFestivals &&
+        country.culture.nationalFestivals.length > 0
+      ) {
+        country.culture.nationalFestivals.slice(0, 2).forEach((festival) => {
+          content += `
+            <div class="data-item">
+              <span class="data-label">${festival.name}</span>
+              <span>${festival.date} - ${festival.description}</span>
+            </div>`;
+        });
       }
 
       if (
         country.culture.traditionalFoods &&
         country.culture.traditionalFoods.length > 0
       ) {
-        content += `
-          <div class="data-item">
-            <span class="data-label">Traditional Food</span>
-            <span>${country.culture.traditionalFoods[0].name}</span>
-          </div>`;
+        country.culture.traditionalFoods.slice(0, 2).forEach((food) => {
+          content += `
+            <div class="data-item">
+              <span class="data-label">${food.name}</span>
+              <span>${food.description}</span>
+            </div>`;
+        });
       }
 
+      if (country.culture.nationalSymbols) {
+        content += `
+          <div class="data-item">
+            <span class="data-label">National Symbols</span>
+            <span>Anthem: ${
+              country.culture.nationalSymbols.anthem || "N/A"
+            }, Bird: ${
+          country.culture.nationalSymbols.bird || "N/A"
+        }, Flower: ${country.culture.nationalSymbols.flower || "N/A"}</span>
+          </div>`;
+      }
       content += `</div>`;
     }
 
-    // Add tourism information if available
-    if (country.tourism && country.tourism.mostVisitedCities) {
+    // Education
+    if (country.education) {
+      content += `
+        <div class="data-section">
+          <h4>🎓 Education</h4>
+          <div class="data-item">
+            <span class="data-label">Literacy Rate</span>
+            <span>${country.education.literacyRate || "N/A"}%</span>
+          </div>
+          <div class="data-item">
+            <span class="data-label">Education System</span>
+            <span>${country.education.educationSystem || "N/A"}</span>
+          </div>
+          <div class="data-item">
+            <span class="data-label">Nobel Prize Winners</span>
+            <span>${country.education.nobelPrizeWinners || "N/A"}</span>
+          </div>`;
+
+      if (
+        country.education.famousScientists &&
+        country.education.famousScientists.length > 0
+      ) {
+        const scientist = country.education.famousScientists[0];
+        content += `
+          <div class="data-item">
+            <span class="data-label">Notable Scientist</span>
+            <span>${scientist.name} - ${scientist.field} (${scientist.achievement})</span>
+          </div>`;
+      }
+      content += `</div>`;
+    }
+
+    // Tourism
+    if (country.tourism) {
       content += `
         <div class="data-section">
           <h4>🏖️ Tourism</h4>`;
 
-      const topCity = country.tourism.mostVisitedCities[0];
-      if (topCity) {
+      if (
+        country.tourism.mostVisitedCities &&
+        country.tourism.mostVisitedCities.length > 0
+      ) {
+        country.tourism.mostVisitedCities.slice(0, 3).forEach((city) => {
+          content += `
+            <div class="data-item">
+              <span class="data-label">${city.name}</span>
+              <span>${(city.visitors || 0).toLocaleString()} visitors - ${
+            city.attractions ? city.attractions.slice(0, 2).join(", ") : ""
+          }</span>
+            </div>`;
+        });
+      }
+
+      if (
+        country.tourism.adventureActivities &&
+        country.tourism.adventureActivities.length > 0
+      ) {
         content += `
           <div class="data-item">
-            <span class="data-label">Top Destination</span>
-            <span>${topCity.name} (${(
-          topCity.visitors || 0
-        ).toLocaleString()} visitors)</span>
+            <span class="data-label">Adventure Activities</span>
+            <span>${country.tourism.adventureActivities
+              .slice(0, 3)
+              .join(", ")}</span>
           </div>`;
       }
 
+      if (country.tourism.visaRequirements) {
+        content += `
+          <div class="data-item">
+            <span class="data-label">Visa Requirements</span>
+            <span>${country.tourism.visaRequirements}</span>
+          </div>`;
+      }
       content += `</div>`;
     }
 
-    // Add UNESCO sites if available
-    if (
-      country.heritage &&
-      country.heritage.unescoSites &&
-      country.heritage.unescoSites.length > 0
-    ) {
+    // Geography
+    if (country.geography) {
       content += `
         <div class="data-section">
-          <h4>🏛️ UNESCO Sites</h4>
+          <h4>🌍 Geography</h4>`;
+
+      if (
+        country.geography.climateZones &&
+        country.geography.climateZones.length > 0
+      ) {
+        content += `
           <div class="data-item">
-            <span class="data-label">Total Sites</span>
-            <span>${country.heritage.unescoSites.length}</span>
-          </div>
+            <span class="data-label">Climate Zones</span>
+            <span>${country.geography.climateZones.join(", ")}</span>
+          </div>`;
+      }
+
+      if (
+        country.geography.geologicalFormations &&
+        country.geography.geologicalFormations.length > 0
+      ) {
+        country.geography.geologicalFormations
+          .slice(0, 2)
+          .forEach((formation) => {
+            content += `
+            <div class="data-item">
+              <span class="data-label">${formation.name}</span>
+              <span>${formation.type} - ${formation.description}</span>
+            </div>`;
+          });
+      }
+
+      if (
+        country.geography.majorWaterBodies &&
+        country.geography.majorWaterBodies.length > 0
+      ) {
+        country.geography.majorWaterBodies.slice(0, 2).forEach((water) => {
+          content += `
+            <div class="data-item">
+              <span class="data-label">${water.name}</span>
+              <span>${water.type}${
+            water.coastline ? ` - ${water.coastline}` : ""
+          }${water.description ? ` - ${water.description}` : ""}</span>
+            </div>`;
+        });
+      }
+      content += `</div>`;
+    }
+
+    // Science & Technology
+    if (country.scienceTechnology) {
+      content += `
+        <div class="data-section">
+          <h4>🔬 Science & Technology</h4>`;
+
+      if (country.scienceTechnology.patents) {
+        content += `
           <div class="data-item">
-            <span class="data-label">Notable Site</span>
-            <span>${country.heritage.unescoSites[0].name}</span>
-          </div>
-        </div>`;
+            <span class="data-label">Patents</span>
+            <span>${country.scienceTechnology.patents.toLocaleString()}</span>
+          </div>`;
+      }
+
+      if (
+        country.scienceTechnology.techStartups &&
+        country.scienceTechnology.techStartups.length > 0
+      ) {
+        content += `
+          <div class="data-item">
+            <span class="data-label">Tech Companies</span>
+            <span>${country.scienceTechnology.techStartups
+              .slice(0, 4)
+              .join(", ")}</span>
+          </div>`;
+      }
+
+      if (
+        country.scienceTechnology.spaceMissions &&
+        country.scienceTechnology.spaceMissions.length > 0
+      ) {
+        const mission = country.scienceTechnology.spaceMissions[0];
+        content += `
+          <div class="data-item">
+            <span class="data-label">Space Mission</span>
+            <span>${mission.name} (${mission.year}) - ${mission.achievement}</span>
+          </div>`;
+      }
+
+      if (
+        country.scienceTechnology.breakthroughs &&
+        country.scienceTechnology.breakthroughs.length > 0
+      ) {
+        const breakthrough = country.scienceTechnology.breakthroughs[0];
+        content += `
+          <div class="data-item">
+            <span class="data-label">Innovation</span>
+            <span>${breakthrough.invention} (${breakthrough.year}) by ${breakthrough.inventor}</span>
+          </div>`;
+      }
+      content += `</div>`;
+    }
+
+    // Sports & Entertainment
+    if (country.sportsEntertainment) {
+      content += `
+        <div class="data-section">
+          <h4>🏆 Sports & Entertainment</h4>`;
+
+      if (
+        country.sportsEntertainment.nationalSports &&
+        country.sportsEntertainment.nationalSports.length > 0
+      ) {
+        content += `
+          <div class="data-item">
+            <span class="data-label">National Sports</span>
+            <span>${country.sportsEntertainment.nationalSports.join(
+              ", "
+            )}</span>
+          </div>`;
+      }
+
+      if (country.sportsEntertainment.olympicPerformance) {
+        const olympic = country.sportsEntertainment.olympicPerformance;
+        content += `
+          <div class="data-item">
+            <span class="data-label">Olympic Medals</span>
+            <span>Total: ${olympic.totalMedals} (🥇${olympic.goldMedals} 🥈${olympic.silverMedals} 🥉${olympic.bronzeMedals})</span>
+          </div>`;
+      }
+
+      if (
+        country.sportsEntertainment.musicArtists &&
+        country.sportsEntertainment.musicArtists.length > 0
+      ) {
+        content += `
+          <div class="data-item">
+            <span class="data-label">Famous Artists</span>
+            <span>${country.sportsEntertainment.musicArtists
+              .slice(0, 3)
+              .join(", ")}</span>
+          </div>`;
+      }
+
+      if (
+        country.sportsEntertainment.worldRecords &&
+        country.sportsEntertainment.worldRecords.length > 0
+      ) {
+        const record = country.sportsEntertainment.worldRecords[0];
+        content += `
+          <div class="data-item">
+            <span class="data-label">World Record</span>
+            <span>${record.record}: ${record.value}</span>
+          </div>`;
+      }
+      content += `</div>`;
+    }
+
+    // Famous Cities
+    if (country.famousCities && country.famousCities.length > 0) {
+      content += `
+        <div class="data-section">
+          <h4>🏙️ Famous Cities</h4>`;
+
+      country.famousCities.slice(0, 4).forEach((city) => {
+        content += `
+          <div class="data-item">
+            <span class="data-label">${city.name}</span>
+            <span>${city.whyFamous}</span>
+          </div>`;
+      });
+      content += `</div>`;
+    }
+
+    // Landmarks
+    if (country.landmarks && country.landmarks.length > 0) {
+      content += `
+        <div class="data-section">
+          <h4>🗿 Famous Landmarks</h4>`;
+
+      country.landmarks.slice(0, 4).forEach((landmark) => {
+        content += `
+          <div class="data-item">
+            <span class="data-label">${landmark.name}</span>
+            <span>${landmark.city} - ${landmark.whyFamous}</span>
+          </div>`;
+      });
+      content += `</div>`;
+    }
+
+    // Rivers
+    if (country.rivers && country.rivers.length > 0) {
+      content += `
+        <div class="data-section">
+          <h4>🌊 Major Rivers</h4>`;
+
+      country.rivers.slice(0, 3).forEach((river) => {
+        content += `
+          <div class="data-item">
+            <span class="data-label">${river.name}</span>
+            <span>${river.length}km - ${river.source} to ${river.mouth}</span>
+          </div>`;
+      });
+      content += `</div>`;
+    }
+
+    // Institutions
+    if (country.institutions && country.institutions.length > 0) {
+      content += `
+        <div class="data-section">
+          <h4>🎓 Top Institutions</h4>`;
+
+      country.institutions.slice(0, 3).forEach((institution) => {
+        content += `
+          <div class="data-item">
+            <span class="data-label">${institution.name}</span>
+            <span>${institution.city} - Founded ${institution.founded} (Rank: ${institution.globalRank})</span>
+          </div>`;
+      });
+      content += `</div>`;
+    }
+
+    // States/Provinces
+    if (country.states && country.states.length > 0) {
+      content += `
+        <div class="data-section">
+          <h4>🗺️ States/Provinces</h4>
+          <div class="data-item">
+            <span class="data-label">Total States/Provinces</span>
+            <span>${country.states.length}</span>
+          </div>`;
+
+      country.states.slice(0, 6).forEach((state) => {
+        content += `
+          <div class="data-item">
+            <span class="data-label">${state.name}</span>
+            <span>Capital: ${state.capital}</span>
+          </div>`;
+      });
+
+      if (country.states.length > 6) {
+        content += `
+          <div class="data-item">
+            <span class="data-label">And More...</span>
+            <span>${
+              country.states.length - 6
+            } additional states/provinces</span>
+          </div>`;
+      }
+      content += `</div>`;
+    }
+
+    // Historical Timeline
+    if (country.history && country.history.length > 0) {
+      content += `
+        <div class="data-section">
+          <h4>📜 Historical Timeline</h4>`;
+
+      country.history.slice(0, 5).forEach((event) => {
+        content += `
+          <div class="data-item">
+            <span class="data-label">${event.year}</span>
+            <span>${event.description}</span>
+          </div>`;
+      });
+      content += `</div>`;
     }
 
     dataEl.innerHTML = content;
