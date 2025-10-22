@@ -323,7 +323,7 @@ export class SimpleGlobe {
       originalPosition: new THREE.Vector3(x * 1.15, y * 1.15, z * 1.15),
     };
 
-    this.scene.add(sprite);
+    this.globeMesh.add(sprite);
   }
 
   createSimpleCountries() {
@@ -396,7 +396,7 @@ export class SimpleGlobe {
       };
 
       this.countryMarkers.push(markerGroup);
-      this.scene.add(markerGroup);
+      this.globeMesh.add(markerGroup);
 
       // Add enhanced country name label
       this.createCountryLabel(country.name, x, y, z);
@@ -1214,7 +1214,7 @@ export class SimpleGlobe {
       this.cloudsMesh.rotation.y += this.rotationSpeed * 1.2; // Clouds move slightly faster
     }
 
-    // Animate markers with subtle effects
+    // Animate markers with subtle effects (they now rotate automatically with the globe)
     this.countryMarkers.forEach((markerGroup, index) => {
       const userData = markerGroup.userData;
 
@@ -1235,7 +1235,7 @@ export class SimpleGlobe {
       );
     });
 
-    // Update country labels to always face camera
+    // Update country labels (they now rotate automatically with the globe)
     this.updateCountryLabels();
   }
 
@@ -1244,7 +1244,7 @@ export class SimpleGlobe {
     const camera = this.scene.userData.camera;
     if (!camera) return;
 
-    // Update all label sprites to face the camera
+    // Update all label sprites to rotate with globe and face the camera
     this.scene.traverse((child) => {
       if (child.userData && child.userData.isLabel) {
         // Make label face camera

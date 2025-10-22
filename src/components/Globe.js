@@ -491,7 +491,7 @@ export class Globe {
       mesh.userData = { country, lat, lon };
 
       this.countryMeshes.push(mesh);
-      this.scene.add(mesh);
+      this.globeMesh.add(mesh);
 
       // Add a subtle glow ring around major countries
       if (country.population > 100000000) {
@@ -514,7 +514,7 @@ export class Globe {
     ring.lookAt(position.clone().multiplyScalar(2));
 
     this.countryMeshes.push(ring);
-    this.scene.add(ring);
+    this.globeMesh.add(ring);
   }
 
   latLonToVector3(lat, lon, radius = 1) {
