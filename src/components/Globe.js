@@ -632,6 +632,21 @@ export class Globe {
     const panel = document.getElementById("info-panel");
     const nameEl = document.getElementById("country-name");
     const dataEl = document.getElementById("country-data");
+    const flagEl = document.getElementById("country-flag");
+
+    // Show country flag image
+    if (flagEl && country.iso2) {
+      const flagCode = country.iso2.toLowerCase();
+      const flagPath =
+        flagCode === "jp"
+          ? `/src/data/flags/${flagCode}.jpg`
+          : `/src/data/flags/${flagCode}.png`;
+
+      flagEl.innerHTML = `<img src="${flagPath}" alt="${country.name} flag" onerror="this.style.display='none'">`;
+      flagEl.classList.remove("hidden");
+    } else if (flagEl) {
+      flagEl.classList.add("hidden");
+    }
 
     nameEl.innerHTML = `${country.flag || "🌍"} ${country.name}`;
     dataEl.innerHTML = `

@@ -225,6 +225,20 @@ export class DataManager {
     return flags[iso2] || "🌍";
   }
 
+  getCountryFlagImage(iso2) {
+    if (!iso2) return null;
+
+    const flagCode = iso2.toLowerCase();
+    const flagPath = `/src/data/flags/${flagCode}.png`;
+
+    // Check if jpg version exists for specific countries
+    if (flagCode === "jp") {
+      return `/src/data/flags/${flagCode}.jpg`;
+    }
+
+    return flagPath;
+  }
+
   generateComprehensiveCountries() {
     const countries = [
       {
@@ -242,6 +256,7 @@ export class DataManager {
         government: "Federal Republic",
         independence: "1776-07-04",
         flag: "🇺🇸",
+        iso2: "US",
       },
       {
         name: "China",
@@ -258,6 +273,7 @@ export class DataManager {
         government: "Communist State",
         independence: "1949-10-01",
         flag: "🇨🇳",
+        iso2: "CN",
       },
       {
         name: "Japan",
@@ -274,6 +290,7 @@ export class DataManager {
         government: "Constitutional Monarchy",
         independence: "660 BC",
         flag: "🇯🇵",
+        iso2: "JP",
       },
       {
         name: "Germany",
@@ -290,6 +307,7 @@ export class DataManager {
         government: "Federal Republic",
         independence: "1871-01-18",
         flag: "🇩🇪",
+        iso2: "DE",
       },
       {
         name: "United Kingdom",
@@ -306,6 +324,7 @@ export class DataManager {
         government: "Constitutional Monarchy",
         independence: "927 AD",
         flag: "🇬🇧",
+        iso2: "GB",
       },
       {
         name: "France",
@@ -322,6 +341,7 @@ export class DataManager {
         government: "Republic",
         independence: "843 AD",
         flag: "🇫🇷",
+        iso2: "FR",
       },
       {
         name: "India",
@@ -338,6 +358,7 @@ export class DataManager {
         government: "Federal Republic",
         independence: "1947-08-15",
         flag: "🇮🇳",
+        iso2: "IN",
       },
       {
         name: "Italy",
@@ -354,6 +375,7 @@ export class DataManager {
         government: "Republic",
         independence: "1861-03-17",
         flag: "🇮🇹",
+        iso2: "IT",
       },
       {
         name: "Brazil",
@@ -370,6 +392,7 @@ export class DataManager {
         government: "Federal Republic",
         independence: "1822-09-07",
         flag: "🇧🇷",
+        iso2: "BR",
       },
       {
         name: "Canada",
@@ -386,6 +409,7 @@ export class DataManager {
         government: "Constitutional Monarchy",
         independence: "1867-07-01",
         flag: "🇨🇦",
+        iso2: "CA",
       },
       {
         name: "Russia",
@@ -402,6 +426,7 @@ export class DataManager {
         government: "Federal Republic",
         independence: "1991-12-25",
         flag: "🇷🇺",
+        iso2: "RU",
       },
       {
         name: "South Korea",
@@ -434,6 +459,7 @@ export class DataManager {
         government: "Constitutional Monarchy",
         independence: "1901-01-01",
         flag: "🇦🇺",
+        iso2: "AU",
       },
       {
         name: "Spain",
@@ -450,6 +476,7 @@ export class DataManager {
         government: "Constitutional Monarchy",
         independence: "1479 AD",
         flag: "🇪🇸",
+        iso2: "ES",
       },
       {
         name: "Mexico",
@@ -466,6 +493,7 @@ export class DataManager {
         government: "Federal Republic",
         independence: "1821-09-27",
         flag: "🇲🇽",
+        iso2: "MX",
       },
       {
         name: "Indonesia",
@@ -562,6 +590,7 @@ export class DataManager {
         government: "Federal Republic",
         independence: "1816-07-09",
         flag: "🇦🇷",
+        iso2: "AR",
       },
       {
         name: "Egypt",
