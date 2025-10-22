@@ -24,15 +24,11 @@ export class SimpleGlobe {
   }
 
   async init() {
-    console.log("SimpleGlobe: Creating realistic globe...");
-
     await this.createRealisticEarth();
     this.createAtmosphere();
     this.createClouds();
     this.createStarField();
     this.createSimpleCountries();
-
-    console.log("SimpleGlobe: Realistic globe created successfully");
   }
 
   async createRealisticEarth() {
@@ -48,8 +44,6 @@ export class SimpleGlobe {
     this.globeMesh.receiveShadow = true;
     this.globeMesh.castShadow = true;
     this.scene.add(this.globeMesh);
-
-    console.log("Globe mesh created and added to scene");
   }
 
   createEarthDayTexture() {
@@ -328,11 +322,6 @@ export class SimpleGlobe {
 
   createSimpleCountries() {
     const countries = this.dataManager.getCountries();
-    console.log(
-      "SimpleGlobe: Creating enhanced markers for",
-      countries.length,
-      "countries"
-    );
 
     countries.forEach((country, index) => {
       const lat = country.lat || 0;

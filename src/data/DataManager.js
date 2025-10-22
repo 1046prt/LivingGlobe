@@ -8,16 +8,10 @@ export class DataManager {
     try {
       // Load country data from JSON files
       await this.loadCountriesFromFiles();
-      console.log(
-        "LivingGlobe: Loaded",
-        this.countries.length,
-        "countries with comprehensive data"
-      );
     } catch (error) {
       console.error("Failed to load country data:", error);
       // Fallback to generated data if files fail to load
       this.countries = this.generateComprehensiveCountries();
-      console.log("LivingGlobe: Using fallback data");
     }
   }
 

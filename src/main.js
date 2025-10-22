@@ -18,44 +18,28 @@ class LivingGlobe {
 
   async init() {
     try {
-      console.log("LivingGlobe: Starting initialization...");
-
       // Initialize Three.js scene
       this.initThreeJS();
-      console.log("LivingGlobe: Three.js scene initialized");
 
       // Initialize data manager
       this.dataManager = new DataManager();
       await this.dataManager.loadInitialData();
-      console.log("LivingGlobe: Data manager loaded");
 
       // Initialize globe
-      console.log(
-        "LivingGlobe: Creating globe with",
-        this.dataManager.getCountries().length,
-        "countries"
-      );
       this.globe = new Globe(this.scene, this.dataManager);
       // Pass camera reference to the scene for raycasting
       this.scene.userData.camera = this.camera;
 
-      console.log("LivingGlobe: About to initialize globe...");
       await this.globe.init();
-      console.log("LivingGlobe: Globe initialized successfully");
 
       // Initialize UI controller
       this.uiController = new UIController(this.globe, this.dataManager);
-      console.log("LivingGlobe: UI controller initialized");
 
       // Start render loop
       this.animate();
-      console.log("LivingGlobe: Animation loop started");
 
       // Hide loading screen
       this.hideLoadingScreen();
-      console.log(
-        "LivingGlobe: Loading screen hidden - initialization complete!"
-      );
     } catch (error) {
       console.error("Failed to initialize LivingGlobe:", error);
       console.error("Error stack:", error.stack);
@@ -101,8 +85,6 @@ class LivingGlobe {
     this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     this.renderer.setClearColor(0x000011, 1); // Deep space color
 
-    console.log("Renderer created successfully");
-
     // Add renderer to DOM
     const container = document.getElementById("globe-container");
     container.appendChild(this.renderer.domElement);
@@ -129,8 +111,6 @@ class LivingGlobe {
 
     // Store sun light for reference
     this.sunLight = sunLight;
-
-    console.log("Lights added to scene");
   }
 
   initCameraControls() {

@@ -232,9 +232,8 @@ export class UIController {
     event.preventDefault();
 
     // This would be implemented with proper camera controls
-    // For now, just log the zoom direction
+    // For now, just track the zoom direction
     const zoomDirection = event.deltaY > 0 ? "out" : "in";
-    console.log("Zoom", zoomDirection);
   }
 
   toggleRotation() {
@@ -258,8 +257,6 @@ export class UIController {
       const liveData = await this.dataManager.fetchLiveData(this.currentMode);
       // Update visualizations with new data
       this.globe.updateDataVisualization(this.currentMode);
-
-      console.log("Data refreshed for mode:", this.currentMode);
     } catch (error) {
       console.error("Failed to refresh data:", error);
     }

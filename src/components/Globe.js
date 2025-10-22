@@ -25,18 +25,13 @@ export class Globe {
 
   async init() {
     try {
-      console.log("LivingGlobe: Initializing globe...");
       await this.createGlobe();
-      console.log("LivingGlobe: Globe created");
 
       this.createAtmosphere();
-      console.log("LivingGlobe: Atmosphere created");
 
       await this.createCountries();
-      console.log("LivingGlobe: Countries created:", this.countryMeshes.length);
 
       this.updateDataVisualization();
-      console.log("LivingGlobe: Globe initialization complete");
     } catch (error) {
       console.error("LivingGlobe: Error during globe initialization:", error);
       throw error;
@@ -45,24 +40,17 @@ export class Globe {
 
   async createGlobe() {
     try {
-      console.log("LivingGlobe: Creating sphere geometry...");
       const geometry = new THREE.SphereGeometry(1, 64, 64);
 
-      console.log("LivingGlobe: Creating textures...");
       // Create realistic Earth textures
       const earthTexture = this.createEarthTexture();
-      console.log("LivingGlobe: Earth texture created");
 
       const bumpTexture = this.createBumpTexture();
-      console.log("LivingGlobe: Bump texture created");
 
       const specularTexture = this.createSpecularTexture();
-      console.log("LivingGlobe: Specular texture created");
 
       const nightTexture = this.createNightTexture();
-      console.log("LivingGlobe: Night texture created");
 
-      console.log("LivingGlobe: Creating material...");
       const material = new THREE.MeshPhongMaterial({
         map: earthTexture,
         bumpMap: bumpTexture,
@@ -73,7 +61,6 @@ export class Globe {
         transparent: false,
       });
 
-      console.log("LivingGlobe: Creating mesh...");
       this.globeMesh = new THREE.Mesh(geometry, material);
       this.globeMesh.receiveShadow = true;
       this.globeMesh.castShadow = true;
@@ -82,13 +69,10 @@ export class Globe {
       this.nightTexture = nightTexture;
       this.dayTexture = earthTexture;
 
-      console.log("LivingGlobe: Adding globe to scene...");
       this.scene.add(this.globeMesh);
 
-      console.log("LivingGlobe: Creating clouds...");
       // Add clouds layer
       this.createClouds();
-      console.log("LivingGlobe: Globe creation complete");
     } catch (error) {
       console.error("LivingGlobe: Error in createGlobe:", error);
       throw error;
@@ -97,7 +81,6 @@ export class Globe {
 
   createEarthTexture() {
     try {
-      console.log("LivingGlobe: Creating earth texture canvas...");
       const canvas = document.createElement("canvas");
       canvas.width = 1024; // Reduced size for better performance
       canvas.height = 512;
@@ -125,7 +108,6 @@ export class Globe {
 
       // Add realistic continents
       this.drawContinents(ctx, canvas.width, canvas.height);
-      console.log("LivingGlobe: Earth texture canvas completed");
       return new THREE.CanvasTexture(canvas);
     } catch (error) {
       console.error("LivingGlobe: Error creating earth texture:", error);
